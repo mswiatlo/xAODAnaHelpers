@@ -1,0 +1,13 @@
+.. _exhale_define_ReturnCheckConfig_8h_1ac778393437d493afa57a362d10056f61:
+
+Define RETURN_CHECK_CONFIG
+==========================
+
+- Defined in :ref:`file_xAODAnaHelpers_tools_ReturnCheckConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: RETURN_CHECK_CONFIG

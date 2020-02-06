@@ -1,0 +1,13 @@
+.. _exhale_function_HLTJetRoIBuilder_8cxx_1a212e405e496f9121e34fde14ae54b485:
+
+Function ClassImp(HLTJetRoIBuilder)
+===================================
+
+- Defined in :ref:`file_Root_HLTJetRoIBuilder.cxx`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ClassImp(HLTJetRoIBuilder)

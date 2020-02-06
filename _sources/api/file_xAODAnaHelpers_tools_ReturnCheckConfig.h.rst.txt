@@ -1,0 +1,44 @@
+
+.. _file_xAODAnaHelpers_tools_ReturnCheckConfig.h:
+
+File ReturnCheckConfig.h
+========================
+
+|exhale_lsh| :ref:`Parent directory <dir_xAODAnaHelpers_tools>` (``xAODAnaHelpers/tools``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``xAODAnaHelpers/tools/ReturnCheckConfig.h``)
+---------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_xAODAnaHelpers_tools_ReturnCheckConfig.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``AsgTools/MessageCheck.h``
+
+
+
+
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_ReturnCheckConfig_8h_1ac778393437d493afa57a362d10056f61`
+

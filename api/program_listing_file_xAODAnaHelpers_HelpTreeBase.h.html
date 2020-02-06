@@ -1,0 +1,622 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Program Listing for File HelpTreeBase.h &mdash; xAODAnaHelpers e83c6ca documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> xAODAnaHelpers
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                e83c6ca
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../Intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Installing.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../UsingUs.html">xAH_run.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Algorithms.html">Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Community.html">Community</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQs.html">xAH FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../API.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Doxygen API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">xAODAnaHelpers</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Program Listing for File HelpTreeBase.h</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/program_listing_file_xAODAnaHelpers_HelpTreeBase.h.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="program-listing-for-file-helptreebase-h">
+<span id="program-listing-file-xaodanahelpers-helptreebase-h"></span><h1>Program Listing for File HelpTreeBase.h<a class="headerlink" href="#program-listing-for-file-helptreebase-h" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_xAODAnaHelpers_HelpTreeBase.h.html#file-xaodanahelpers-helptreebase-h"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">xAODAnaHelpers/HelpTreeBase.h</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/********************************************************</span>
+<span class="cm"> * HelpTreeBase:</span>
+<span class="cm"> *</span>
+<span class="cm"> * This class is meant to help the user write out a tree.</span>
+<span class="cm"> * Some branches are included by default while others</span>
+<span class="cm"> * need to be added by the user</span>
+<span class="cm"> *</span>
+<span class="cm"> * John Alison (john.alison@cern.ch)</span>
+<span class="cm"> * Gabriel Facini (gabriel.facini@cern.ch)</span>
+<span class="cm"> * Marco Milesi (marco.milesi@cern.ch)</span>
+<span class="cm"> * Jeff Dandoy (jeff.dandoy@cern.ch)</span>
+<span class="cm"> *</span>
+<span class="cm"> ********************************************************/</span>
+
+<span class="c1">// Dear emacs, this is -*-c++-*-</span>
+<span class="cp">#ifndef xAODAnaHelpers_HelpTreeBase_H</span>
+<span class="cp">#define xAODAnaHelpers_HelpTreeBase_H</span>
+
+
+<span class="cp">#include</span> <span class="cpf">&quot;xAODEventInfo/EventInfo.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODEgamma/ElectronContainer.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODEgamma/PhotonContainer.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODCaloEvent/CaloClusterContainer.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODMuon/MuonContainer.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODJet/JetContainer.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODTrigger/JetRoIContainer.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODTruth/TruthParticleContainer.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODTau/TauJetContainer.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODMissingET/MissingETContainer.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODTracking/TrackParticleContainer.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;xAODAnaHelpers/HelperClasses.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODAnaHelpers/EventInfo.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODAnaHelpers/MetContainer.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODAnaHelpers/JetContainer.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODAnaHelpers/L1JetContainer.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODAnaHelpers/VertexContainer.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODAnaHelpers/ElectronContainer.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODAnaHelpers/PhotonContainer.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODAnaHelpers/ClusterContainer.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODAnaHelpers/FatJetContainer.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODAnaHelpers/TruthContainer.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODAnaHelpers/TrackContainer.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODAnaHelpers/MuonContainer.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODAnaHelpers/TauContainer.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODRootAccess/TEvent.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODRootAccess/TStore.h&quot;</span><span class="cp"></span>
+
+
+<span class="cp">#include</span> <span class="cpf">&lt;map&gt;</span><span class="cp"></span>
+
+<span class="c1">// root includes</span>
+<span class="cp">#include</span> <span class="cpf">&quot;TTree.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;TFile.h&quot;</span><span class="cp"></span>
+
+<span class="k">namespace</span> <span class="n">TrigConf</span> <span class="p">{</span>
+  <span class="k">class</span> <span class="nc">xAODConfigTool</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">namespace</span> <span class="n">Trig</span> <span class="p">{</span>
+  <span class="k">class</span> <span class="nc">TrigDecisionTool</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">typedef</span> <span class="n">SG</span><span class="o">::</span><span class="n">AuxElement</span><span class="o">::</span><span class="n">Accessor</span><span class="o">&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="kt">float</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">floatAccessor</span> <span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">HelpTreeBase</span> <span class="p">{</span>
+
+<span class="k">public</span><span class="o">:</span>
+
+  <span class="n">HelpTreeBase</span><span class="p">(</span><span class="n">xAOD</span><span class="o">::</span><span class="n">TEvent</span> <span class="o">*</span><span class="n">event</span><span class="p">,</span> <span class="n">TTree</span><span class="o">*</span> <span class="n">tree</span><span class="p">,</span> <span class="n">TFile</span><span class="o">*</span> <span class="n">file</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">units</span> <span class="o">=</span> <span class="mf">1e3</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">debug</span> <span class="o">=</span> <span class="nb">false</span><span class="p">,</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">TStore</span><span class="o">*</span> <span class="n">store</span> <span class="o">=</span> <span class="k">nullptr</span> <span class="p">);</span>
+  <span class="n">HelpTreeBase</span><span class="p">(</span><span class="n">TTree</span><span class="o">*</span> <span class="n">tree</span><span class="p">,</span> <span class="n">TFile</span><span class="o">*</span> <span class="n">file</span><span class="p">,</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">TEvent</span> <span class="o">*</span><span class="n">event</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">,</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">TStore</span><span class="o">*</span> <span class="n">store</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">units</span> <span class="o">=</span> <span class="mf">1e3</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">debug</span> <span class="o">=</span> <span class="nb">false</span> <span class="p">);</span>
+  <span class="k">virtual</span> <span class="o">~</span><span class="n">HelpTreeBase</span><span class="p">();</span>
+
+  <span class="kt">void</span> <span class="nf">AddEvent</span>         <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">detailStr</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">AddTrigger</span>       <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">detailStr</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">AddJetTrigger</span>    <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">detailStr</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">AddMuons</span>         <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">detailStr</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">muonName</span> <span class="o">=</span> <span class="s">&quot;muon&quot;</span><span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">AddElectrons</span>     <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">detailStr</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">elecName</span> <span class="o">=</span> <span class="s">&quot;el&quot;</span><span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">AddPhotons</span>       <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">detailStr</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">photonName</span> <span class="o">=</span> <span class="s">&quot;ph&quot;</span><span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">AddClusters</span>      <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">detailStr</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">clusterName</span> <span class="o">=</span> <span class="s">&quot;cl&quot;</span><span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">AddJets</span>          <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">detailStr</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">jetName</span> <span class="o">=</span> <span class="s">&quot;jet&quot;</span><span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">AddL1Jets</span>        <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">jetName</span>   <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">AddTruthParts</span>    <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">detailStr</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">truthName</span> <span class="o">=</span> <span class="s">&quot;xAH_truth&quot;</span><span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">AddTrackParts</span>    <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">detailStr</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">trackName</span> <span class="o">=</span> <span class="s">&quot;trk&quot;</span><span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">AddVertices</span>      <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">detailStr</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">vertexName</span> <span class="o">=</span> <span class="s">&quot;vertex&quot;</span><span class="p">);</span> <span class="c1">// options for detailStr: &quot;all&quot; or &quot;primary&quot;</span>
+  <span class="kt">void</span> <span class="nf">AddTruthVertices</span> <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">detailStr</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">vertexName</span> <span class="o">=</span> <span class="s">&quot;truth_vertex&quot;</span><span class="p">);</span> <span class="c1">// options for detailStr: &quot;all&quot; or &quot;primary&quot;</span>
+
+  <span class="kt">void</span> <span class="nf">AddFatJets</span>     <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">detailStr</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">fatjetName</span> <span class="o">=</span> <span class="s">&quot;fatjet&quot;</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">subjetDetailStr</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">suffix</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">AddTruthFatJets</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">detailStr</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">truthFatJetName</span> <span class="o">=</span> <span class="s">&quot;truth_fatjet&quot;</span><span class="p">);</span>
+
+  <span class="kt">void</span> <span class="nf">AddTaus</span>        <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">detailStr</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">tauName</span> <span class="o">=</span> <span class="s">&quot;tau&quot;</span><span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">AddMET</span>         <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">detailStr</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">metName</span> <span class="o">=</span> <span class="s">&quot;met&quot;</span><span class="p">);</span>
+
+  <span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">FatJetCollectionName</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">fatjetName</span> <span class="o">=</span> <span class="s">&quot;fatjet&quot;</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">suffix</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">);</span>
+
+  <span class="n">xAOD</span><span class="o">::</span><span class="n">TEvent</span><span class="o">*</span> <span class="n">m_event</span><span class="p">;</span>
+  <span class="n">xAOD</span><span class="o">::</span><span class="n">TStore</span><span class="o">*</span> <span class="n">m_store</span><span class="p">;</span>
+
+  <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">m_vertexContainerName</span> <span class="o">=</span> <span class="s">&quot;PrimaryVertices&quot;</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">m_truthVertexContainerName</span> <span class="o">=</span> <span class="s">&quot;TruthVertices&quot;</span><span class="p">;</span>
+
+  <span class="c1">// control which branches are filled</span>
+  <span class="n">HelperClasses</span><span class="o">::</span><span class="n">TriggerInfoSwitch</span><span class="o">*</span>    <span class="n">m_trigInfoSwitch</span><span class="p">;</span>
+
+  <span class="n">std</span><span class="o">::</span><span class="n">string</span>                  <span class="n">m_triggerSelection</span><span class="p">;</span>
+  <span class="n">TrigConf</span><span class="o">::</span><span class="n">xAODConfigTool</span><span class="o">*</span>    <span class="n">m_trigConfTool</span><span class="p">;</span>
+  <span class="n">Trig</span><span class="o">::</span><span class="n">TrigDecisionTool</span><span class="o">*</span>      <span class="n">m_trigDecTool</span><span class="p">;</span>
+
+  <span class="kt">void</span> <span class="nf">FillEvent</span><span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">EventInfo</span><span class="o">*</span> <span class="n">eventInfo</span><span class="p">,</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">TEvent</span><span class="o">*</span> <span class="n">event</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">,</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">VertexContainer</span><span class="o">*</span> <span class="n">vertices</span> <span class="o">=</span> <span class="k">nullptr</span> <span class="p">);</span>
+
+  <span class="kt">void</span> <span class="nf">FillTrigger</span><span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">EventInfo</span><span class="o">*</span> <span class="n">eventInfo</span> <span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">FillJetTrigger</span><span class="p">();</span>
+
+  <span class="kt">void</span> <span class="nf">FillMuons</span><span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">MuonContainer</span><span class="o">*</span> <span class="n">muons</span><span class="p">,</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Vertex</span><span class="o">*</span> <span class="n">primaryVertex</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">muonName</span> <span class="o">=</span> <span class="s">&quot;muon&quot;</span> <span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">FillMuon</span><span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Muon</span><span class="o">*</span> <span class="n">muon</span><span class="p">,</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Vertex</span><span class="o">*</span> <span class="n">primaryVertex</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">muonName</span> <span class="o">=</span> <span class="s">&quot;muon&quot;</span> <span class="p">);</span>
+
+  <span class="kt">void</span> <span class="nf">FillElectrons</span><span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">ElectronContainer</span><span class="o">*</span> <span class="n">electrons</span><span class="p">,</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Vertex</span><span class="o">*</span> <span class="n">primaryVertex</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">elecName</span> <span class="o">=</span> <span class="s">&quot;el&quot;</span> <span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">FillElectron</span> <span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Electron</span><span class="o">*</span> <span class="n">elec</span><span class="p">,</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Vertex</span><span class="o">*</span> <span class="n">primaryVertex</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">elecName</span> <span class="o">=</span> <span class="s">&quot;el&quot;</span> <span class="p">);</span>
+
+  <span class="kt">void</span> <span class="nf">FillPhotons</span><span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">PhotonContainer</span><span class="o">*</span> <span class="n">photons</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">photonName</span> <span class="o">=</span> <span class="s">&quot;ph&quot;</span> <span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">FillPhoton</span> <span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Photon</span><span class="o">*</span>          <span class="n">photon</span><span class="p">,</span>  <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">photonName</span> <span class="o">=</span> <span class="s">&quot;ph&quot;</span> <span class="p">);</span>
+
+  <span class="kt">void</span> <span class="nf">FillClusters</span><span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">CaloClusterContainer</span><span class="o">*</span> <span class="n">clusters</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">clusterName</span> <span class="o">=</span> <span class="s">&quot;cl&quot;</span> <span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">FillCluster</span> <span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">CaloCluster</span><span class="o">*</span>          <span class="n">cluster</span><span class="p">,</span>  <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">clusterName</span> <span class="o">=</span> <span class="s">&quot;cl&quot;</span> <span class="p">);</span>
+
+  <span class="kt">void</span> <span class="nf">FillJets</span><span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">JetContainer</span><span class="o">*</span> <span class="n">jets</span><span class="p">,</span> <span class="kt">int</span> <span class="n">pvLocation</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">jetName</span> <span class="o">=</span> <span class="s">&quot;jet&quot;</span> <span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">FillJet</span><span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Jet</span><span class="o">*</span> <span class="n">jet_itr</span><span class="p">,</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Vertex</span><span class="o">*</span> <span class="n">pv</span><span class="p">,</span> <span class="kt">int</span> <span class="n">pvLocation</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">jetName</span> <span class="o">=</span> <span class="s">&quot;jet&quot;</span> <span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">FillL1Jets</span><span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">JetRoIContainer</span><span class="o">*</span> <span class="n">jets</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">jetName</span> <span class="o">=</span> <span class="s">&quot;L1Jet&quot;</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">sortL1Jets</span> <span class="o">=</span> <span class="nb">false</span> <span class="p">);</span>
+
+  <span class="kt">void</span> <span class="nf">FillTruth</span><span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">TruthParticleContainer</span><span class="o">*</span> <span class="n">truth</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">truthName</span> <span class="o">=</span> <span class="s">&quot;xAH_truth&quot;</span> <span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">FillTruth</span><span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">TruthParticle</span><span class="o">*</span> <span class="n">truthPart</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">truthName</span> <span class="p">);</span>
+
+  <span class="kt">void</span> <span class="nf">FillTracks</span><span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">TrackParticleContainer</span><span class="o">*</span> <span class="n">tracks</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">trackName</span> <span class="o">=</span> <span class="s">&quot;trk&quot;</span> <span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">FillTrack</span><span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">TrackParticle</span><span class="o">*</span> <span class="n">trackPart</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">trackName</span> <span class="p">);</span>
+
+  <span class="kt">void</span> <span class="nf">FillVertices</span><span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">VertexContainer</span><span class="o">*</span> <span class="n">vertices</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">vertexName</span> <span class="o">=</span> <span class="s">&quot;vertex&quot;</span> <span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">FillTruthVertices</span><span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">TruthVertexContainer</span><span class="o">*</span> <span class="n">truthVertices</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">truthVertexName</span> <span class="o">=</span> <span class="s">&quot;truth_vertex&quot;</span> <span class="p">);</span>
+
+  <span class="kt">void</span> <span class="nf">FillFatJets</span><span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">JetContainer</span><span class="o">*</span> <span class="n">fatJets</span> <span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">fatjetName</span> <span class="o">=</span> <span class="s">&quot;fatjet&quot;</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">suffix</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">FillFatJet</span> <span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Jet</span><span class="o">*</span> <span class="n">fatjet_itr</span><span class="p">,</span>        <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">fatjetName</span> <span class="o">=</span> <span class="s">&quot;fatjet&quot;</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">suffix</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">);</span>
+
+  <span class="kt">void</span> <span class="nf">FillTruthFatJets</span><span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">JetContainer</span><span class="o">*</span> <span class="n">truthFatJets</span><span class="p">,</span>     <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">truthFatJetName</span><span class="o">=</span><span class="s">&quot;truth_fatjet&quot;</span> <span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">FillTruthFatJet</span> <span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Jet</span><span class="o">*</span>          <span class="n">truth_fatjet_itr</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">truthFatJetName</span><span class="o">=</span><span class="s">&quot;truth_fatjet&quot;</span> <span class="p">);</span>
+
+  <span class="kt">void</span> <span class="nf">FillTaus</span><span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">TauJetContainer</span><span class="o">*</span> <span class="n">taus</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">tauName</span> <span class="o">=</span> <span class="s">&quot;tau&quot;</span> <span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">FillTau</span> <span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">TauJet</span><span class="o">*</span> <span class="n">tau</span><span class="p">,</span>           <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">tauName</span> <span class="o">=</span> <span class="s">&quot;tau&quot;</span> <span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">FillMET</span><span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">MissingETContainer</span><span class="o">*</span> <span class="n">met</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">metName</span> <span class="o">=</span> <span class="s">&quot;met&quot;</span> <span class="p">);</span>
+
+  <span class="kt">void</span> <span class="nf">Fill</span><span class="p">();</span>
+  <span class="kt">void</span> <span class="nf">ClearEvent</span><span class="p">();</span>
+  <span class="kt">void</span> <span class="nf">ClearTrigger</span><span class="p">();</span>
+  <span class="kt">void</span> <span class="nf">ClearJetTrigger</span><span class="p">();</span>
+  <span class="kt">void</span> <span class="nf">ClearMuons</span>         <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">jetName</span> <span class="o">=</span> <span class="s">&quot;muon&quot;</span><span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">ClearElectrons</span>     <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">elecName</span> <span class="o">=</span> <span class="s">&quot;el&quot;</span><span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">ClearPhotons</span>       <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">photonName</span> <span class="o">=</span> <span class="s">&quot;ph&quot;</span><span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">ClearClusters</span>      <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">clusterName</span> <span class="o">=</span> <span class="s">&quot;cl&quot;</span><span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">ClearJets</span>          <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">jetName</span> <span class="o">=</span> <span class="s">&quot;jet&quot;</span><span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">ClearL1Jets</span>        <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">jetName</span> <span class="o">=</span> <span class="s">&quot;L1Jet&quot;</span><span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">ClearTruth</span>         <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">truthName</span><span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">ClearTracks</span>        <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">trackName</span><span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">ClearFatJets</span>       <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">fatjetName</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">suffix</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">ClearTruthFatJets</span>  <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">truthFatJetName</span> <span class="o">=</span> <span class="s">&quot;truth_fatjet&quot;</span><span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">ClearTaus</span>          <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">tauName</span> <span class="o">=</span> <span class="s">&quot;tau&quot;</span> <span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">ClearMET</span>           <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">metName</span> <span class="o">=</span> <span class="s">&quot;met&quot;</span><span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">ClearVertices</span>      <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">vertexName</span> <span class="o">=</span> <span class="s">&quot;vertex&quot;</span><span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">ClearTruthVertices</span> <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">vertexName</span> <span class="o">=</span> <span class="s">&quot;truth_vertex&quot;</span><span class="p">);</span>
+
+  <span class="kt">bool</span> <span class="nf">writeTo</span><span class="p">(</span> <span class="n">TFile</span> <span class="o">*</span><span class="n">file</span> <span class="p">);</span>
+
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">AddEventUser</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">detailStr</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">)</span>      <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">m_debug</span><span class="p">)</span> <span class="n">Info</span><span class="p">(</span><span class="s">&quot;AddEventUser&quot;</span><span class="p">,</span><span class="s">&quot;Empty function called from HelpTreeBase %s&quot;</span><span class="p">,</span><span class="n">detailStr</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+    <span class="k">return</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">AddTriggerUser</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">detailStr</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">)</span>      <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">m_debug</span><span class="p">)</span> <span class="n">Info</span><span class="p">(</span><span class="s">&quot;AddTriggerUser&quot;</span><span class="p">,</span><span class="s">&quot;Empty function called from HelpTreeBase %s&quot;</span><span class="p">,</span><span class="n">detailStr</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+    <span class="k">return</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">AddJetTriggerUser</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">detailStr</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">)</span>      <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">m_debug</span><span class="p">)</span> <span class="n">Info</span><span class="p">(</span><span class="s">&quot;AddJetTriggerUser&quot;</span><span class="p">,</span><span class="s">&quot;Empty function called from HelpTreeBase %s&quot;</span><span class="p">,</span><span class="n">detailStr</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+    <span class="k">return</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">AddMuonsUser</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">detailStr</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">muonName</span><span class="o">=</span><span class="s">&quot;muon&quot;</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">m_debug</span><span class="p">)</span> <span class="n">Info</span><span class="p">(</span><span class="s">&quot;AddMuonsUser&quot;</span><span class="p">,</span><span class="s">&quot;Empty function called from HelpTreeBase %s %s&quot;</span><span class="p">,</span><span class="n">detailStr</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span><span class="n">muonName</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+    <span class="k">return</span><span class="p">;</span>
+    <span class="p">};</span>
+
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">AddElectronsUser</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">detailStr</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">elecName</span><span class="o">=</span><span class="s">&quot;el&quot;</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">m_debug</span><span class="p">)</span> <span class="n">Info</span><span class="p">(</span><span class="s">&quot;AddElectronsUser&quot;</span><span class="p">,</span><span class="s">&quot;Empty function called from HelpTreeBase %s %s&quot;</span><span class="p">,</span><span class="n">detailStr</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span><span class="n">elecName</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+    <span class="k">return</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">AddPhotonsUser</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">detailStr</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">photonName</span><span class="o">=</span><span class="s">&quot;ph&quot;</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">m_debug</span><span class="p">)</span> <span class="n">Info</span><span class="p">(</span><span class="s">&quot;AddPhotonsUser&quot;</span><span class="p">,</span><span class="s">&quot;Empty function called from HelpTreeBase %s %s&quot;</span><span class="p">,</span><span class="n">detailStr</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span><span class="n">photonName</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+    <span class="k">return</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">AddClustersUser</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">detailStr</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">clusterName</span><span class="o">=</span><span class="s">&quot;cl&quot;</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">m_debug</span><span class="p">)</span> <span class="n">Info</span><span class="p">(</span><span class="s">&quot;AddClustersUser&quot;</span><span class="p">,</span><span class="s">&quot;Empty function called from HelpTreeBase %s %s&quot;</span><span class="p">,</span><span class="n">detailStr</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span><span class="n">clusterName</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+    <span class="k">return</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">AddJetsUser</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">detailStr</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">jetName</span> <span class="o">=</span> <span class="s">&quot;jet&quot;</span><span class="p">)</span>       <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">m_debug</span><span class="p">)</span> <span class="n">Info</span><span class="p">(</span><span class="s">&quot;AddJetsUser&quot;</span><span class="p">,</span><span class="s">&quot;Empty function called from HelpTreeBase %s %s&quot;</span><span class="p">,</span><span class="n">detailStr</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span> <span class="n">jetName</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+    <span class="k">return</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">AddTruthUser</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">truthName</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">detailStr</span> <span class="o">=</span> <span class="s">&quot;xAH_truth&quot;</span><span class="p">)</span>       <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">m_debug</span><span class="p">)</span> <span class="n">Info</span><span class="p">(</span><span class="s">&quot;AddTruthUser&quot;</span><span class="p">,</span><span class="s">&quot;Empty function called from HelpTreeBase %s %s&quot;</span><span class="p">,</span><span class="n">truthName</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span> <span class="n">detailStr</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+    <span class="k">return</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">AddTracksUser</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">trackName</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">detailStr</span> <span class="o">=</span> <span class="s">&quot;trk&quot;</span><span class="p">)</span>       <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">m_debug</span><span class="p">)</span> <span class="n">Info</span><span class="p">(</span><span class="s">&quot;AddTracksUser&quot;</span><span class="p">,</span><span class="s">&quot;Empty function called from HelpTreeBase %s %s&quot;</span><span class="p">,</span><span class="n">trackName</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span> <span class="n">detailStr</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+    <span class="k">return</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">AddFatJetsUser</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">detailStr</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">fatjetName</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">suffix</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">)</span>       <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">m_debug</span><span class="p">)</span> <span class="n">Info</span><span class="p">(</span><span class="s">&quot;AddFatJetsUser&quot;</span><span class="p">,</span><span class="s">&quot;Empty function called from HelpTreeBase %s for %s with suffix %s&quot;</span><span class="p">,</span> <span class="n">detailStr</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span> <span class="n">fatjetName</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span> <span class="n">suffix</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+    <span class="k">return</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">AddTruthFatJetsUser</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">detailStr</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">truthFatJetName</span> <span class="o">=</span> <span class="s">&quot;truth_fatjet&quot;</span><span class="p">)</span>       <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">m_debug</span><span class="p">)</span> <span class="n">Info</span><span class="p">(</span><span class="s">&quot;AddTruthFatJetsUser&quot;</span><span class="p">,</span><span class="s">&quot;Empty function called from HelpTreeBase %s for %s&quot;</span><span class="p">,</span> <span class="n">detailStr</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span> <span class="n">truthFatJetName</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+    <span class="k">return</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">AddTausUser</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">detailStr</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">tauName</span><span class="o">=</span><span class="s">&quot;tau&quot;</span><span class="p">)</span>   <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">m_debug</span><span class="p">)</span> <span class="n">Info</span><span class="p">(</span><span class="s">&quot;AddTausUser&quot;</span><span class="p">,</span><span class="s">&quot;Empty function called from HelpTreeBase %s %s&quot;</span><span class="p">,</span><span class="n">detailStr</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span><span class="n">tauName</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+    <span class="k">return</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">AddMETUser</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">detailStr</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">metName</span> <span class="o">=</span> <span class="s">&quot;met&quot;</span><span class="p">)</span>       <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">m_debug</span><span class="p">)</span> <span class="n">Info</span><span class="p">(</span><span class="s">&quot;AddMETUser&quot;</span><span class="p">,</span><span class="s">&quot;Empty function called from HelpTreeBase %s for %s&quot;</span><span class="p">,</span><span class="n">detailStr</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span> <span class="n">metName</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+    <span class="k">return</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">ClearEventUser</span>       <span class="p">()</span>     <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">};</span>
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">ClearTriggerUser</span>     <span class="p">()</span>   <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">};</span>
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">ClearMuonsUser</span>       <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="cm">/*muonName = muon&quot;*/</span><span class="p">)</span>     <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">};</span>
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">ClearElectronsUser</span>   <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="cm">/*elecName = &quot;el&quot;*/</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">};</span>
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">ClearPhotonsUser</span>     <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="cm">/*photonName = &quot;ph&quot;*/</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">};</span>
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">ClearClustersUser</span>    <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="cm">/*clusterName = &quot;cl&quot;*/</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">};</span>
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">ClearTruthUser</span>       <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="cm">/*truthName*/</span><span class="p">)</span>      <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">};</span>
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">ClearTracksUser</span>      <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="cm">/*trackName*/</span><span class="p">)</span>       <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">};</span>
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">ClearJetsUser</span>        <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="cm">/*jetName = &quot;jet&quot;*/</span> <span class="p">)</span>       <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">};</span>
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">ClearFatJetsUser</span>     <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="cm">/*fatjetName = &quot;fatjet&quot;*/</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="cm">/*suffix = &quot;&quot;*/</span><span class="p">)</span>   <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">};</span>
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">ClearTruthFatJetsUser</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="cm">/*truthFatJetName = &quot;truth_fatjet&quot;*/</span><span class="p">)</span>   <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">};</span>
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">ClearTausUser</span>        <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="cm">/*tauName = &quot;tau&quot;*/</span><span class="p">)</span>        <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">};</span>
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">ClearMETUser</span>         <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="cm">/*metName = &quot;met&quot;*/</span><span class="p">)</span>       <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">};</span>
+
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">FillEventUser</span>    <span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">EventInfo</span><span class="o">*</span>  <span class="p">)</span>        <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">};</span>
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">FillMuonsUser</span>    <span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Muon</span><span class="o">*</span><span class="p">,</span>        <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="cm">/*muonName = &quot;muon&quot;*/</span>  <span class="p">)</span>             <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">};</span>
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">FillElectronsUser</span><span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Electron</span><span class="o">*</span><span class="p">,</span>    <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="cm">/*elecName = &quot;el&quot;*/</span> <span class="p">)</span>     <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">};</span>
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">FillPhotonsUser</span>  <span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Photon</span><span class="o">*</span><span class="p">,</span>      <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="cm">/*photonName = &quot;ph&quot;*/</span> <span class="p">)</span>     <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">};</span>
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">FillClustersUser</span> <span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">CaloCluster</span><span class="o">*</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="cm">/*clusterName = &quot;cl&quot;*/</span> <span class="p">)</span>     <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">};</span>
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">FillJetsUser</span>     <span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Jet</span><span class="o">*</span><span class="p">,</span>         <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="cm">/*jetName = &quot;jet&quot;*/</span>  <span class="p">)</span>               <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">};</span>
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">FillTruthUser</span>    <span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">TruthParticle</span><span class="o">*</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="cm">/*truthName*/</span> <span class="p">)</span>               <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">};</span>
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">FillTracksUser</span>   <span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">TrackParticle</span><span class="o">*</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="cm">/*trackName*/</span> <span class="p">)</span>               <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">};</span>
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">FillFatJetsUser</span><span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Jet</span><span class="o">*</span> <span class="cm">/*jet*/</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="cm">/*fatjetName = &quot;fatjet&quot;*/</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="cm">/*suffix = &quot;&quot;*/</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">};</span>
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">FillTruthFatJetsUser</span><span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Jet</span><span class="o">*</span> <span class="cm">/*jet*/</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="cm">/*fatjetName = &quot;truth_fatjet&quot;*/</span>   <span class="p">)</span>            <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">};</span>
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">FillTausUser</span><span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">TauJet</span><span class="o">*</span><span class="p">,</span>           <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="cm">/*tauName = &quot;tau&quot;*/</span>  <span class="p">)</span>            <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">};</span>
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">FillMETUser</span><span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">MissingETContainer</span><span class="o">*</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="cm">/*metName = &quot;met&quot;*/</span> <span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">};</span>
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">FillTriggerUser</span><span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">EventInfo</span><span class="o">*</span>  <span class="p">)</span>      <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">};</span>
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">FillJetTriggerUser</span><span class="p">()</span>                            <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">};</span>
+
+ <span class="k">protected</span><span class="o">:</span>
+
+  <span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">U</span><span class="p">,</span> <span class="k">typename</span> <span class="n">V</span><span class="o">&gt;</span>
+    <span class="kt">void</span> <span class="n">safeFill</span><span class="p">(</span><span class="k">const</span> <span class="n">V</span><span class="o">*</span> <span class="n">xAODObj</span><span class="p">,</span> <span class="n">SG</span><span class="o">::</span><span class="n">AuxElement</span><span class="o">::</span><span class="n">ConstAccessor</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">accessor</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">U</span><span class="o">&gt;&amp;</span> <span class="n">destination</span><span class="p">,</span> <span class="n">U</span> <span class="n">defaultValue</span><span class="p">,</span> <span class="kt">int</span> <span class="n">m_units</span> <span class="o">=</span> <span class="mi">1</span><span class="p">);</span>
+
+  <span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">U</span><span class="p">,</span> <span class="k">typename</span> <span class="n">V</span><span class="o">&gt;</span>
+    <span class="kt">void</span> <span class="n">safeVecFill</span><span class="p">(</span><span class="k">const</span> <span class="n">V</span><span class="o">*</span> <span class="n">xAODObj</span><span class="p">,</span> <span class="n">SG</span><span class="o">::</span><span class="n">AuxElement</span><span class="o">::</span><span class="n">ConstAccessor</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="o">&gt;&amp;</span> <span class="n">accessor</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">U</span><span class="o">&gt;</span> <span class="o">&gt;&amp;</span> <span class="n">destination</span><span class="p">,</span> <span class="kt">int</span> <span class="n">m_units</span> <span class="o">=</span> <span class="mi">1</span><span class="p">);</span>
+
+  <span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+    <span class="kt">void</span> <span class="n">setBranch</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">varName</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span> <span class="n">localVectorPtr</span><span class="p">);</span>
+
+<span class="k">protected</span><span class="o">:</span>
+
+  <span class="n">TTree</span><span class="o">*</span> <span class="n">m_tree</span><span class="p">;</span>
+
+  <span class="kt">int</span> <span class="n">m_units</span><span class="p">;</span> <span class="c1">//For MeV to GeV conversion in output</span>
+
+  <span class="kt">bool</span> <span class="n">m_debug</span><span class="p">;</span>
+  <span class="kt">bool</span> <span class="n">m_isMC</span><span class="p">;</span>
+  <span class="kt">bool</span> <span class="n">m_nominalTree</span><span class="p">;</span>
+
+  <span class="c1">// event</span>
+  <span class="n">xAH</span><span class="o">::</span><span class="n">EventInfo</span><span class="o">*</span>      <span class="n">m_eventInfo</span><span class="p">;</span>
+
+  <span class="c1">// trigger</span>
+  <span class="kt">int</span> <span class="n">m_passL1</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">m_passHLT</span><span class="p">;</span>
+  <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">m_masterKey</span><span class="p">;</span>
+  <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">m_L1PSKey</span><span class="p">;</span>
+  <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">m_HLTPSKey</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span>  <span class="n">m_elTrigForMatching</span><span class="p">;</span>   <span class="cm">/* each event can have a list of electron trigger chains to which each electron could be matched.</span>
+<span class="cm">                           / This list is created when configuring ElectronSelector.cxx, where the electron trigger matching is actually performed</span>
+<span class="cm">                           */</span>
+
+  <span class="c1">// jet trigger</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">m_passedTriggers</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">m_disabledTriggers</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <span class="n">m_triggerPrescales</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <span class="n">m_triggerPrescalesLumi</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span>  <span class="n">m_isPassBitsNames</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">m_isPassBits</span><span class="p">;</span>
+
+  <span class="c1">//</span>
+  <span class="c1">//  Jets</span>
+  <span class="c1">//</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">xAH</span><span class="o">::</span><span class="n">JetContainer</span><span class="o">*&gt;</span> <span class="n">m_jets</span><span class="p">;</span>
+
+  <span class="c1">//</span>
+  <span class="c1">// L1 Jets</span>
+  <span class="c1">//</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">xAH</span><span class="o">::</span><span class="n">L1JetContainer</span><span class="o">*&gt;</span> <span class="n">m_l1Jets</span><span class="p">;</span>
+
+  <span class="c1">//</span>
+  <span class="c1">// Truth</span>
+  <span class="c1">//</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">xAH</span><span class="o">::</span><span class="n">TruthContainer</span><span class="o">*&gt;</span> <span class="n">m_truth</span><span class="p">;</span>
+
+  <span class="c1">//</span>
+  <span class="c1">// Tracks</span>
+  <span class="c1">//</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">xAH</span><span class="o">::</span><span class="n">TrackContainer</span><span class="o">*&gt;</span> <span class="n">m_tracks</span><span class="p">;</span>
+
+  <span class="c1">//</span>
+  <span class="c1">// fat jets</span>
+  <span class="c1">//</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">xAH</span><span class="o">::</span><span class="n">FatJetContainer</span><span class="o">*&gt;</span> <span class="n">m_fatjets</span><span class="p">;</span>
+
+  <span class="c1">//</span>
+  <span class="c1">// truth fat jets</span>
+  <span class="c1">//</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">xAH</span><span class="o">::</span><span class="n">FatJetContainer</span><span class="o">*&gt;</span> <span class="n">m_truth_fatjets</span><span class="p">;</span>
+
+  <span class="c1">//</span>
+  <span class="c1">// muons</span>
+  <span class="c1">//</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">xAH</span><span class="o">::</span><span class="n">MuonContainer</span><span class="o">*&gt;</span> <span class="n">m_muons</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">m_MuonRecoEff_SF_sysNames</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">m_MuonIsoEff_SF_sysNames</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">m_MuonTrigEff_SF_sysNames</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span>  <span class="n">m_MuonTTVAEff_SF_sysNames</span><span class="p">;</span>
+
+  <span class="c1">//</span>
+  <span class="c1">// electrons</span>
+  <span class="c1">//</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">xAH</span><span class="o">::</span><span class="n">ElectronContainer</span><span class="o">*&gt;</span> <span class="n">m_elecs</span><span class="p">;</span>
+
+  <span class="c1">//</span>
+  <span class="c1">// photons</span>
+  <span class="c1">//</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">xAH</span><span class="o">::</span><span class="n">PhotonContainer</span><span class="o">*&gt;</span> <span class="n">m_photons</span><span class="p">;</span>
+
+  <span class="c1">//</span>
+  <span class="c1">// clusters</span>
+  <span class="c1">//</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">xAH</span><span class="o">::</span><span class="n">ClusterContainer</span><span class="o">*&gt;</span> <span class="n">m_clusters</span><span class="p">;</span>
+
+
+  <span class="c1">//</span>
+  <span class="c1">// taus</span>
+  <span class="c1">//</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">xAH</span><span class="o">::</span><span class="n">TauContainer</span><span class="o">*&gt;</span> <span class="n">m_taus</span><span class="p">;</span>
+
+  <span class="c1">//</span>
+  <span class="c1">// met</span>
+  <span class="c1">//</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">xAH</span><span class="o">::</span><span class="n">MetContainer</span><span class="o">*</span> <span class="o">&gt;</span> <span class="n">m_met</span><span class="p">;</span>
+
+  <span class="c1">//</span>
+  <span class="c1">// vertices</span>
+  <span class="c1">//</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">xAH</span><span class="o">::</span><span class="n">VertexContainer</span><span class="o">*&gt;</span> <span class="n">m_vertices</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">xAH</span><span class="o">::</span><span class="n">VertexContainer</span><span class="o">*&gt;</span> <span class="n">m_truth_vertices</span><span class="p">;</span>
+
+<span class="p">};</span>
+
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">U</span><span class="p">,</span> <span class="k">typename</span> <span class="n">V</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">HelpTreeBase</span><span class="o">::</span><span class="n">safeFill</span><span class="p">(</span><span class="k">const</span> <span class="n">V</span><span class="o">*</span> <span class="n">xAODObj</span><span class="p">,</span> <span class="n">SG</span><span class="o">::</span><span class="n">AuxElement</span><span class="o">::</span><span class="n">ConstAccessor</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">accessor</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">U</span><span class="o">&gt;&amp;</span> <span class="n">destination</span><span class="p">,</span> <span class="n">U</span> <span class="n">defaultValue</span><span class="p">,</span> <span class="kt">int</span> <span class="n">m_units</span><span class="p">){</span>
+  <span class="k">if</span> <span class="p">(</span> <span class="n">accessor</span><span class="p">.</span><span class="n">isAvailable</span><span class="p">(</span> <span class="o">*</span><span class="n">xAODObj</span> <span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="n">destination</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span> <span class="n">accessor</span><span class="p">(</span> <span class="o">*</span><span class="n">xAODObj</span> <span class="p">)</span> <span class="o">/</span> <span class="n">m_units</span> <span class="p">);</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">destination</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span> <span class="n">defaultValue</span> <span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">U</span><span class="p">,</span> <span class="k">typename</span> <span class="n">V</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">HelpTreeBase</span><span class="o">::</span><span class="n">safeVecFill</span><span class="p">(</span><span class="k">const</span> <span class="n">V</span><span class="o">*</span> <span class="n">xAODObj</span><span class="p">,</span> <span class="n">SG</span><span class="o">::</span><span class="n">AuxElement</span><span class="o">::</span><span class="n">ConstAccessor</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="o">&gt;&amp;</span> <span class="n">accessor</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">U</span><span class="o">&gt;</span> <span class="o">&gt;&amp;</span> <span class="n">destination</span><span class="p">,</span> <span class="kt">int</span> <span class="n">m_units</span><span class="p">){</span>
+  <span class="n">destination</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">U</span><span class="o">&gt;</span><span class="p">()</span> <span class="p">);</span>
+
+  <span class="k">if</span> <span class="p">(</span> <span class="n">accessor</span><span class="p">.</span><span class="n">isAvailable</span><span class="p">(</span> <span class="o">*</span><span class="n">xAODObj</span> <span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">U</span> <span class="nl">itemInVec</span> <span class="p">:</span> <span class="n">accessor</span><span class="p">(</span><span class="o">*</span><span class="n">xAODObj</span><span class="p">))</span>        <span class="n">destination</span><span class="p">.</span><span class="n">back</span><span class="p">().</span><span class="n">push_back</span><span class="p">(</span><span class="n">itemInVec</span> <span class="o">/</span> <span class="n">m_units</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">HelpTreeBase</span><span class="o">::</span><span class="n">setBranch</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">varName</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span> <span class="n">localVectorPtr</span><span class="p">){</span>
+  <span class="n">m_tree</span><span class="o">-&gt;</span><span class="n">Branch</span><span class="p">((</span><span class="n">prefix</span><span class="o">+</span><span class="s">&quot;_&quot;</span><span class="o">+</span><span class="n">varName</span><span class="p">).</span><span class="n">c_str</span><span class="p">(),</span>        <span class="n">localVectorPtr</span><span class="p">);</span>
+<span class="p">}</span>
+
+
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2017, ATLAS Collaboration
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

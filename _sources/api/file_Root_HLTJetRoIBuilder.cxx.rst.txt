@@ -1,0 +1,80 @@
+
+.. _file_Root_HLTJetRoIBuilder.cxx:
+
+File HLTJetRoIBuilder.cxx
+=========================
+
+|exhale_lsh| :ref:`Parent directory <dir_Root>` (``Root``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``Root/HLTJetRoIBuilder.cxx``)
+------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_Root_HLTJetRoIBuilder.cxx.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``AthContainers/ConstDataVector.h``
+
+- ``AthContainers/DataVector.h``
+
+- ``EventLoop/Job.h``
+
+- ``EventLoop/StatusCode.h``
+
+- ``EventLoop/Worker.h``
+
+- ``TrigConfxAOD/xAODConfigTool.h``
+
+- ``TrigDecisionTool/TrigDecisionTool.h``
+
+- ``iostream``
+
+- ``vector``
+
+- ``xAODAnaHelpers/HLTJetRoIBuilder.h`` (:ref:`file_xAODAnaHelpers_HLTJetRoIBuilder.h`)
+
+- ``xAODAnaHelpers/HelperFunctions.h`` (:ref:`file_xAODAnaHelpers_HelperFunctions.h`)
+
+- ``xAODBase/IParticle.h``
+
+- ``xAODBase/IParticleContainer.h``
+
+- ``xAODBase/IParticleHelpers.h``
+
+- ``xAODCore/ShallowCopy.h``
+
+- ``xAODEventInfo/EventInfo.h``
+
+- ``xAODJet/Jet.h``
+
+- ``xAODJet/JetAuxContainer.h``
+
+- ``xAODJet/JetContainer.h``
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_HLTJetRoIBuilder_8cxx_1a212e405e496f9121e34fde14ae54b485`
+

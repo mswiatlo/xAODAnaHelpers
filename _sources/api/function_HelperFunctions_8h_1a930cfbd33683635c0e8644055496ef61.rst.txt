@@ -1,0 +1,13 @@
+.. _exhale_function_HelperFunctions_8h_1a930cfbd33683635c0e8644055496ef61:
+
+Function HelperFunctions::GetBTagMV2c20_CutStr
+==============================================
+
+- Defined in :ref:`file_xAODAnaHelpers_HelperFunctions.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: HelperFunctions::GetBTagMV2c20_CutStr(int)

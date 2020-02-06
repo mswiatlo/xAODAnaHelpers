@@ -1,0 +1,764 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Program Listing for File HLTJetRoIBuilder.cxx &mdash; xAODAnaHelpers e83c6ca documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> xAODAnaHelpers
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                e83c6ca
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../Intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Installing.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../UsingUs.html">xAH_run.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Algorithms.html">Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Community.html">Community</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQs.html">xAH FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../API.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Doxygen API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">xAODAnaHelpers</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Program Listing for File HLTJetRoIBuilder.cxx</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/program_listing_file_Root_HLTJetRoIBuilder.cxx.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="program-listing-for-file-hltjetroibuilder-cxx">
+<span id="program-listing-file-root-hltjetroibuilder-cxx"></span><h1>Program Listing for File HLTJetRoIBuilder.cxx<a class="headerlink" href="#program-listing-for-file-hltjetroibuilder-cxx" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_Root_HLTJetRoIBuilder.cxx.html#file-root-hltjetroibuilder-cxx"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">Root/HLTJetRoIBuilder.cxx</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/******************************************</span>
+<span class="cm"> *</span>
+<span class="cm"> * This class builds HLT jets and thier associated objects</span>
+<span class="cm"> *</span>
+<span class="cm"> * John Alison (john.alison@cern.ch)</span>
+<span class="cm"> *</span>
+<span class="cm"> *</span>
+<span class="cm"> ******************************************/</span>
+
+<span class="c1">// c++ include(s):</span>
+<span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
+
+<span class="c1">// EL include(s):</span>
+<span class="cp">#include</span> <span class="cpf">&lt;EventLoop/Job.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;EventLoop/StatusCode.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;EventLoop/Worker.h&gt;</span><span class="cp"></span>
+
+<span class="c1">// EDM include(s):</span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODEventInfo/EventInfo.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODJet/JetContainer.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODJet/JetAuxContainer.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODJet/Jet.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODBase/IParticleHelpers.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODBase/IParticleContainer.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODBase/IParticle.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;AthContainers/ConstDataVector.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;AthContainers/DataVector.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODCore/ShallowCopy.h&quot;</span><span class="cp"></span>
+
+<span class="c1">// package include(s):</span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODAnaHelpers/HelperFunctions.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xAODAnaHelpers/HLTJetRoIBuilder.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;TrigConfxAOD/xAODConfigTool.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;TrigDecisionTool/TrigDecisionTool.h&quot;</span><span class="cp"></span>
+
+<span class="c1">// this is needed to distribute the algorithm to the workers</span>
+<span class="n">ClassImp</span><span class="p">(</span><span class="n">HLTJetRoIBuilder</span><span class="p">)</span>
+
+<span class="n">HLTJetRoIBuilder</span> <span class="o">::</span> <span class="n">HLTJetRoIBuilder</span> <span class="p">()</span> <span class="o">:</span>
+  <span class="n">Algorithm</span><span class="p">(</span><span class="s">&quot;HLTJetRoIBuilder&quot;</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="p">}</span>
+
+
+<span class="n">EL</span><span class="o">::</span><span class="n">StatusCode</span> <span class="n">HLTJetRoIBuilder</span> <span class="o">::</span> <span class="n">setupJob</span> <span class="p">(</span><span class="n">EL</span><span class="o">::</span><span class="n">Job</span><span class="o">&amp;</span> <span class="n">job</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">ANA_MSG_DEBUG</span><span class="p">(</span> <span class="s">&quot;Calling setupJob&quot;</span><span class="p">);</span>
+  <span class="n">job</span><span class="p">.</span><span class="n">useXAOD</span> <span class="p">();</span>
+  <span class="n">xAOD</span><span class="o">::</span><span class="n">Init</span><span class="p">(</span> <span class="s">&quot;HLTJetRoIBuilder&quot;</span> <span class="p">).</span><span class="n">ignore</span><span class="p">();</span> <span class="c1">// call before opening first file</span>
+  <span class="k">return</span> <span class="n">EL</span><span class="o">::</span><span class="n">StatusCode</span><span class="o">::</span><span class="n">SUCCESS</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+
+<span class="n">EL</span><span class="o">::</span><span class="n">StatusCode</span> <span class="n">HLTJetRoIBuilder</span> <span class="o">::</span> <span class="n">histInitialize</span> <span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">ANA_CHECK</span><span class="p">(</span> <span class="n">xAH</span><span class="o">::</span><span class="n">Algorithm</span><span class="o">::</span><span class="n">algInitialize</span><span class="p">());</span>
+  <span class="k">return</span> <span class="n">EL</span><span class="o">::</span><span class="n">StatusCode</span><span class="o">::</span><span class="n">SUCCESS</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+
+<span class="n">EL</span><span class="o">::</span><span class="n">StatusCode</span> <span class="n">HLTJetRoIBuilder</span> <span class="o">::</span> <span class="n">fileExecute</span> <span class="p">()</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="n">EL</span><span class="o">::</span><span class="n">StatusCode</span><span class="o">::</span><span class="n">SUCCESS</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+
+<span class="n">EL</span><span class="o">::</span><span class="n">StatusCode</span> <span class="n">HLTJetRoIBuilder</span> <span class="o">::</span> <span class="n">changeInput</span> <span class="p">(</span><span class="kt">bool</span> <span class="cm">/*firstFile*/</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="n">EL</span><span class="o">::</span><span class="n">StatusCode</span><span class="o">::</span><span class="n">SUCCESS</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+
+<span class="n">EL</span><span class="o">::</span><span class="n">StatusCode</span> <span class="n">HLTJetRoIBuilder</span> <span class="o">::</span> <span class="n">initialize</span> <span class="p">()</span>
+<span class="p">{</span>
+
+  <span class="n">ANA_MSG_DEBUG</span><span class="p">(</span> <span class="s">&quot;Initializing HLTJetRoIBuilder Interface... &quot;</span><span class="p">);</span>
+
+  <span class="n">m_event</span> <span class="o">=</span> <span class="n">wk</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">xaodEvent</span><span class="p">();</span>
+  <span class="n">m_store</span> <span class="o">=</span> <span class="n">wk</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">xaodStore</span><span class="p">();</span>
+
+  <span class="c1">// Grab the TrigDecTool from the ToolStore</span>
+  <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">m_trigDecTool_handle</span><span class="p">.</span><span class="n">isUserConfigured</span><span class="p">()){</span>
+    <span class="n">ANA_MSG_FATAL</span><span class="p">(</span><span class="s">&quot;A configured &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_trigDecTool_handle</span><span class="p">.</span><span class="n">typeAndName</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; must have been previously created! Are you creating one in xAH::BasicEventSelection?&quot;</span> <span class="p">);</span>
+    <span class="k">return</span> <span class="n">EL</span><span class="o">::</span><span class="n">StatusCode</span><span class="o">::</span><span class="n">FAILURE</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="n">ANA_CHECK</span><span class="p">(</span> <span class="n">m_trigDecTool_handle</span><span class="p">.</span><span class="n">retrieve</span><span class="p">());</span>
+  <span class="n">ANA_MSG_DEBUG</span><span class="p">(</span><span class="s">&quot;Retrieved tool: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_trigDecTool_handle</span><span class="p">);</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="n">m_trigItem</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;split&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">::</span><span class="n">npos</span><span class="p">){</span>
+    <span class="n">m_jetName</span> <span class="o">=</span> <span class="s">&quot;SplitJet&quot;</span><span class="p">;</span>
+    <span class="n">m_vtxName</span> <span class="o">=</span> <span class="s">&quot;xPrimVx&quot;</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="n">m_trigItem</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;gsc&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">::</span><span class="n">npos</span><span class="p">){</span>
+    <span class="n">m_jetName</span> <span class="o">=</span> <span class="s">&quot;GSCJet&quot;</span><span class="p">;</span>
+    <span class="n">m_vtxName</span> <span class="o">=</span> <span class="s">&quot;xPrimVx&quot;</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="n">m_trigItem</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;FTK&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">::</span><span class="n">npos</span><span class="p">){</span>
+    <span class="n">m_trkName</span> <span class="o">=</span> <span class="s">&quot;InDetTrigTrackingxAODCnv_Bjet_FTK&quot;</span><span class="p">;</span>
+    <span class="n">m_vtxName</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">;</span>
+    <span class="c1">//m_vtxName = &quot;HLT_PrimVertexFTK&quot;;</span>
+  <span class="p">}</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="n">m_trigItem</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;FTKRefit&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">::</span><span class="n">npos</span><span class="p">){</span>
+    <span class="n">m_trkName</span> <span class="o">=</span> <span class="s">&quot;InDetTrigTrackingxAODCnv_Bjet_FTKRefit&quot;</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="n">m_trigItem</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;FTKVtx&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">::</span><span class="n">npos</span><span class="p">){</span>
+    <span class="n">m_trkName</span> <span class="o">=</span> <span class="s">&quot;InDetTrigTrackingxAODCnv_Bjet_IDTrig&quot;</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="n">ANA_MSG_INFO</span><span class="p">(</span><span class="s">&quot;HLTJetRoIBuilder::Configured &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_name</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; with &quot;</span><span class="p">);</span>
+  <span class="n">ANA_MSG_INFO</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\t</span><span class="s">m_trigItem: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_trigItem</span><span class="p">);</span>
+  <span class="n">ANA_MSG_INFO</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\t</span><span class="s">m_trigItemVeto: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_trigItemVeto</span><span class="p">);</span>
+  <span class="n">ANA_MSG_INFO</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\t</span><span class="s">m_trkName: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_trkName</span><span class="p">);</span>
+  <span class="n">ANA_MSG_INFO</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\t</span><span class="s">m_vtxName: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_vtxName</span><span class="p">);</span>
+  <span class="n">ANA_MSG_INFO</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\t</span><span class="s">m_jetName: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_jetName</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="n">EL</span><span class="o">::</span><span class="n">StatusCode</span><span class="o">::</span><span class="n">SUCCESS</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="n">EL</span><span class="o">::</span><span class="n">StatusCode</span> <span class="n">HLTJetRoIBuilder</span> <span class="o">::</span> <span class="n">execute</span> <span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">ANA_MSG_DEBUG</span><span class="p">(</span> <span class="s">&quot;Doing HLT JEt ROI Building... &quot;</span><span class="p">);</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="n">m_doHLTBJet</span><span class="p">){</span>
+    <span class="k">return</span> <span class="n">buildHLTBJets</span><span class="p">();</span>
+  <span class="p">}</span><span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">m_doHLTJet</span><span class="p">){</span>
+    <span class="k">return</span> <span class="n">buildHLTJets</span><span class="p">();</span>
+  <span class="p">}</span>
+
+
+
+  <span class="k">if</span><span class="p">(</span><span class="n">msgLvl</span><span class="p">(</span><span class="n">MSG</span><span class="o">::</span><span class="n">VERBOSE</span><span class="p">))</span> <span class="n">m_store</span><span class="o">-&gt;</span><span class="n">print</span><span class="p">();</span>
+
+  <span class="k">return</span> <span class="n">EL</span><span class="o">::</span><span class="n">StatusCode</span><span class="o">::</span><span class="n">SUCCESS</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+
+<span class="n">EL</span><span class="o">::</span><span class="n">StatusCode</span> <span class="n">HLTJetRoIBuilder</span> <span class="o">::</span> <span class="n">buildHLTBJets</span> <span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span><span class="s">&quot; &quot;</span>  <span class="p">);</span>
+  <span class="k">auto</span> <span class="n">triggerChainGroup</span> <span class="o">=</span> <span class="n">m_trigDecTool_handle</span><span class="o">-&gt;</span><span class="n">getChainGroup</span><span class="p">(</span><span class="n">m_trigItem</span><span class="p">);</span>
+
+  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">triggersUsed</span> <span class="o">=</span> <span class="n">triggerChainGroup</span><span class="o">-&gt;</span><span class="n">getListOfTriggers</span><span class="p">();</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">triggersAfterVeto</span><span class="p">;</span>
+  <span class="k">for</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="nl">trig</span> <span class="p">:</span> <span class="n">triggersUsed</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">trig</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;antimatchdr&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">::</span><span class="n">npos</span><span class="p">){</span>
+      <span class="k">continue</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span><span class="p">((</span><span class="n">m_trigItemVeto</span> <span class="o">!=</span> <span class="s">&quot;&quot;</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">trig</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">m_trigItemVeto</span><span class="p">)</span> <span class="o">!=</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">::</span><span class="n">npos</span><span class="p">)){</span>
+      <span class="k">continue</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">triggersAfterVeto</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">trig</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">m_trigItemAfterVeto</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">;</span>
+  <span class="kt">bool</span> <span class="n">firstItem</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+  <span class="k">for</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="nl">trig</span> <span class="p">:</span> <span class="n">triggersAfterVeto</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">firstItem</span><span class="p">)</span> <span class="n">m_trigItemAfterVeto</span> <span class="o">+=</span> <span class="n">trig</span><span class="p">;</span>
+    <span class="k">else</span>          <span class="n">m_trigItemAfterVeto</span> <span class="o">+=</span> <span class="s">&quot;||&quot;</span><span class="o">+</span><span class="n">trig</span><span class="p">;</span>
+    <span class="n">firstItem</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span><span class="n">m_name</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_trigItem</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; matches&quot;</span><span class="p">);</span>
+  <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span><span class="n">m_trigItemAfterVeto</span><span class="p">);</span>
+  <span class="k">auto</span> <span class="n">triggerChainGroupAfterVeto</span> <span class="o">=</span> <span class="n">m_trigDecTool_handle</span><span class="o">-&gt;</span><span class="n">getChainGroup</span><span class="p">(</span><span class="n">m_trigItemAfterVeto</span><span class="p">);</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">triggersUsedAfterVeto</span> <span class="o">=</span> <span class="n">triggerChainGroupAfterVeto</span><span class="o">-&gt;</span><span class="n">getListOfTriggers</span><span class="p">();</span>
+  <span class="k">for</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="nl">trig</span> <span class="p">:</span> <span class="n">triggersUsedAfterVeto</span><span class="p">){</span>
+    <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span><span class="s">&quot; </span><span class="se">\t</span><span class="s"> &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">trig</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">m_trigDecTool_handle</span><span class="o">-&gt;</span><span class="n">isPassed</span><span class="p">(</span><span class="n">trig</span><span class="p">))</span>
+      <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span><span class="s">&quot; </span><span class="se">\t</span><span class="s"> &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">trig</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; Passed &quot;</span>  <span class="p">);</span>
+  <span class="p">}</span>
+
+
+  <span class="c1">//</span>
+  <span class="c1">// Create the new container and its auxiliary store.</span>
+  <span class="c1">//</span>
+  <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span><span class="s">&quot;Creating the new container &quot;</span><span class="p">);</span>
+  <span class="n">xAOD</span><span class="o">::</span><span class="n">JetContainer</span><span class="o">*</span>     <span class="n">hltJets</span>    <span class="o">=</span> <span class="k">new</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">JetContainer</span><span class="p">();</span>
+  <span class="n">xAOD</span><span class="o">::</span><span class="n">JetAuxContainer</span><span class="o">*</span>  <span class="n">hltJetsAux</span> <span class="o">=</span> <span class="k">new</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">JetAuxContainer</span><span class="p">();</span>
+  <span class="n">hltJets</span><span class="o">-&gt;</span><span class="n">setStore</span><span class="p">(</span> <span class="n">hltJetsAux</span> <span class="p">);</span> <span class="c1">//&lt; Connect the two</span>
+
+  <span class="c1">//</span>
+  <span class="c1">//  For Adding Tracks to the Jet</span>
+  <span class="c1">//</span>
+  <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span><span class="s">&quot;Making the decorators &quot;</span><span class="p">);</span>
+  <span class="k">static</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Jet</span><span class="o">::</span><span class="n">Decorator</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">TrackParticle</span><span class="o">*&gt;</span> <span class="o">&gt;</span> <span class="n">m_track_decoration</span>      <span class="p">(</span><span class="s">&quot;HLTBJetTracks&quot;</span><span class="p">);</span>
+  <span class="k">static</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Jet</span><span class="o">::</span><span class="n">Decorator</span><span class="o">&lt;</span><span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Vertex</span><span class="o">*&gt;</span>                 <span class="n">m_vtx_decoration</span>        <span class="p">(</span><span class="s">&quot;HLTBJetTracks_vtx&quot;</span><span class="p">);</span>
+  <span class="k">static</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Jet</span><span class="o">::</span><span class="n">Decorator</span><span class="o">&lt;</span><span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Vertex</span><span class="o">*&gt;</span>                 <span class="n">m_vtx_decoration_bkg</span>    <span class="p">(</span><span class="s">&quot;HLTBJetTracks_vtx_bkg&quot;</span><span class="p">);</span>
+  <span class="k">static</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Jet</span><span class="o">::</span><span class="n">Decorator</span><span class="o">&lt;</span><span class="kt">char</span> <span class="o">&gt;</span>                               <span class="n">m_vtx_hadDummyPV</span>        <span class="p">(</span><span class="s">&quot;hadDummyPV&quot;</span><span class="p">);</span>
+  <span class="k">static</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Jet</span><span class="o">::</span><span class="n">Decorator</span><span class="o">&lt;</span><span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Vertex</span><span class="o">*&gt;</span>                 <span class="n">m_offline_vtx_decoration</span><span class="p">(</span><span class="s">&quot;offline_vtx&quot;</span><span class="p">);</span>
+
+  <span class="k">static</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Jet</span><span class="o">::</span><span class="n">Decorator</span><span class="o">&lt;</span><span class="kt">float</span> <span class="o">&gt;</span>                              <span class="n">m_bs_online_vz</span>       <span class="p">(</span><span class="s">&quot;bs_online_vz&quot;</span><span class="p">);</span>
+  <span class="k">static</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Jet</span><span class="o">::</span><span class="n">Decorator</span><span class="o">&lt;</span><span class="kt">float</span> <span class="o">&gt;</span>                              <span class="n">m_bs_online_vy</span>       <span class="p">(</span><span class="s">&quot;bs_online_vy&quot;</span><span class="p">);</span>
+  <span class="k">static</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Jet</span><span class="o">::</span><span class="n">Decorator</span><span class="o">&lt;</span><span class="kt">float</span> <span class="o">&gt;</span>                              <span class="n">m_bs_online_vx</span>       <span class="p">(</span><span class="s">&quot;bs_online_vx&quot;</span><span class="p">);</span>
+
+
+  <span class="c1">//</span>
+  <span class="c1">// get primary vertex</span>
+  <span class="c1">//</span>
+  <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span><span class="s">&quot;Getting the PV &quot;</span><span class="p">);</span>
+  <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">VertexContainer</span> <span class="o">*</span><span class="n">offline_vertices</span><span class="p">(</span><span class="k">nullptr</span><span class="p">);</span>
+  <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Vertex</span> <span class="o">*</span><span class="n">offline_pvx</span><span class="p">(</span><span class="k">nullptr</span><span class="p">);</span>
+  <span class="n">ANA_CHECK</span><span class="p">(</span> <span class="n">HelperFunctions</span><span class="o">::</span><span class="n">retrieve</span><span class="p">(</span><span class="n">offline_vertices</span><span class="p">,</span> <span class="n">m_vertexContainerName</span><span class="p">,</span> <span class="n">m_event</span><span class="p">,</span> <span class="n">m_store</span><span class="p">,</span> <span class="n">msg</span><span class="p">())</span> <span class="p">);</span>
+  <span class="n">offline_pvx</span> <span class="o">=</span> <span class="n">HelperFunctions</span><span class="o">::</span><span class="n">getPrimaryVertex</span><span class="p">(</span><span class="n">offline_vertices</span><span class="p">,</span> <span class="n">msg</span><span class="p">());</span>
+
+  <span class="c1">//</span>
+  <span class="c1">// get event info</span>
+  <span class="c1">//</span>
+  <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">EventInfo</span><span class="o">*</span> <span class="n">eventInfo</span><span class="p">(</span><span class="k">nullptr</span><span class="p">);</span>
+  <span class="n">ANA_CHECK</span><span class="p">(</span> <span class="n">HelperFunctions</span><span class="o">::</span><span class="n">retrieve</span><span class="p">(</span><span class="n">eventInfo</span><span class="p">,</span> <span class="n">m_eventInfoContainerName</span><span class="p">,</span> <span class="n">m_event</span><span class="p">,</span> <span class="n">m_store</span><span class="p">,</span> <span class="n">msg</span><span class="p">())</span> <span class="p">);</span>
+
+
+  <span class="c1">//</span>
+  <span class="c1">//  Make accessors/decorators</span>
+  <span class="c1">//</span>
+  <span class="k">static</span> <span class="n">SG</span><span class="o">::</span><span class="n">AuxElement</span><span class="o">::</span><span class="n">Decorator</span><span class="o">&lt;</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">BTagging</span><span class="o">*</span> <span class="o">&gt;</span> <span class="n">hltBTagDecor</span><span class="p">(</span> <span class="s">&quot;HLTBTag&quot;</span> <span class="p">);</span>
+
+  <span class="n">Trig</span><span class="o">::</span><span class="n">FeatureContainer</span> <span class="n">fc</span> <span class="o">=</span> <span class="n">m_trigDecTool_handle</span><span class="o">-&gt;</span><span class="n">features</span><span class="p">(</span><span class="n">m_trigItemAfterVeto</span><span class="p">,</span> <span class="n">TrigDefs</span><span class="o">::</span><span class="n">Physics</span> <span class="p">);</span>
+  <span class="n">Trig</span><span class="o">::</span><span class="n">FeatureContainer</span><span class="o">::</span><span class="n">combination_const_iterator</span> <span class="n">comb</span>   <span class="p">(</span><span class="n">fc</span><span class="p">.</span><span class="n">getCombinations</span><span class="p">().</span><span class="n">begin</span><span class="p">());</span>
+  <span class="n">Trig</span><span class="o">::</span><span class="n">FeatureContainer</span><span class="o">::</span><span class="n">combination_const_iterator</span> <span class="n">combEnd</span><span class="p">(</span><span class="n">fc</span><span class="p">.</span><span class="n">getCombinations</span><span class="p">().</span><span class="n">end</span><span class="p">());</span>
+  <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span> <span class="n">m_name</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; New Event --------------- &quot;</span><span class="p">);</span>
+  <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span> <span class="s">&quot; Event Pass? &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_trigDecTool_handle</span><span class="o">-&gt;</span><span class="n">isPassed</span><span class="p">(</span><span class="n">m_trigItemAfterVeto</span><span class="p">)</span> <span class="p">);</span>
+  <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span> <span class="s">&quot; comb size &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">fc</span><span class="p">.</span><span class="n">getCombinations</span><span class="p">().</span><span class="n">size</span><span class="p">());</span>
+  <span class="k">for</span><span class="p">(</span> <span class="p">;</span> <span class="n">comb</span><span class="o">!=</span><span class="n">combEnd</span> <span class="p">;</span> <span class="o">++</span><span class="n">comb</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="n">Trig</span><span class="o">::</span><span class="n">Feature</span><span class="o">&lt;</span><span class="n">xAOD</span><span class="o">::</span><span class="n">JetContainer</span><span class="o">&gt;</span> <span class="o">&gt;</span>            <span class="n">jetCollections</span>  <span class="o">=</span> <span class="n">comb</span><span class="o">-&gt;</span><span class="n">containerFeature</span><span class="o">&lt;</span><span class="n">xAOD</span><span class="o">::</span><span class="n">JetContainer</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m_jetName</span><span class="p">);</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="n">Trig</span><span class="o">::</span><span class="n">Feature</span><span class="o">&lt;</span><span class="n">xAOD</span><span class="o">::</span><span class="n">BTaggingContainer</span><span class="o">&gt;</span> <span class="o">&gt;</span>       <span class="n">bjetCollections</span> <span class="o">=</span> <span class="n">comb</span><span class="o">-&gt;</span><span class="n">containerFeature</span><span class="o">&lt;</span><span class="n">xAOD</span><span class="o">::</span><span class="n">BTaggingContainer</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;HLTBjetFex&quot;</span><span class="p">);</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="n">Trig</span><span class="o">::</span><span class="n">Feature</span><span class="o">&lt;</span><span class="n">xAOD</span><span class="o">::</span><span class="n">TrackParticleContainer</span><span class="o">&gt;</span> <span class="o">&gt;</span>  <span class="n">trkCollections</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">m_readHLTTracks</span><span class="p">)</span> <span class="n">trkCollections</span> <span class="o">=</span> <span class="n">comb</span><span class="o">-&gt;</span><span class="n">containerFeature</span><span class="o">&lt;</span><span class="n">xAOD</span><span class="o">::</span><span class="n">TrackParticleContainer</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m_trkName</span><span class="p">);</span>
+    <span class="c1">//std::vector&lt; Trig::Feature&lt;xAOD::TrackParticleContainer&gt; &gt;  ftfCollections  = comb-&gt;containerFeature&lt;xAOD::TrackParticleContainer&gt;(&quot;InDetTrigTrackingxAODCnv_Bjet_FTF&quot;);</span>
+
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Trig</span><span class="o">::</span><span class="n">Feature</span><span class="o">&lt;</span><span class="n">xAOD</span><span class="o">::</span><span class="n">VertexContainer</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">vtxCollections</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Trig</span><span class="o">::</span><span class="n">Feature</span><span class="o">&lt;</span><span class="n">xAOD</span><span class="o">::</span><span class="n">VertexContainer</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">backupVtxCollections</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">m_readHLTVtx</span><span class="p">){</span>
+      <span class="n">backupVtxCollections</span> <span class="o">=</span> <span class="n">comb</span><span class="o">-&gt;</span><span class="n">containerFeature</span><span class="o">&lt;</span><span class="n">xAOD</span><span class="o">::</span><span class="n">VertexContainer</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;EFHistoPrmVtx&quot;</span><span class="p">);</span>
+
+      <span class="k">if</span><span class="p">(</span><span class="n">m_vtxName</span><span class="p">.</span><span class="n">size</span><span class="p">()){</span>
+    <span class="n">vtxCollections</span> <span class="o">=</span> <span class="n">comb</span><span class="o">-&gt;</span><span class="n">containerFeature</span><span class="o">&lt;</span><span class="n">xAOD</span><span class="o">::</span><span class="n">VertexContainer</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m_vtxName</span><span class="p">);</span>
+      <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+    <span class="n">vtxCollections</span> <span class="o">=</span> <span class="n">comb</span><span class="o">-&gt;</span><span class="n">containerFeature</span><span class="o">&lt;</span><span class="n">xAOD</span><span class="o">::</span><span class="n">VertexContainer</span><span class="o">&gt;</span><span class="p">();</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">//ANA_MSG_INFO(&quot; Test Size &quot;);</span>
+    <span class="c1">//ANA_MSG_INFO(&quot; \tSplitJet: &quot; &lt;&lt; comb-&gt;containerFeature&lt;xAOD::JetContainer&gt;(&quot;SplitJet&quot;).size());</span>
+    <span class="c1">//ANA_MSG_INFO(&quot; \tGSCJet: &quot;   &lt;&lt; comb-&gt;containerFeature&lt;xAOD::JetContainer&gt;(&quot;GSCJet&quot;)  .size());</span>
+    <span class="c1">//ANA_MSG_INFO(&quot; \tEFJet:  &quot;   &lt;&lt; comb-&gt;containerFeature&lt;xAOD::JetContainer&gt;(&quot;EFJet&quot;)   .size());</span>
+    <span class="c1">//</span>
+    <span class="c1">//ANA_MSG_INFO(&quot; Test Size &quot; &lt;&lt; vtxCollections.size() &lt;&lt; &quot;  &#39;&quot; &lt;&lt; m_vtxName &lt;&lt; &quot;&#39;&quot;);</span>
+    <span class="c1">//ANA_MSG_INFO(&quot; Test Size2 &quot; &lt;&lt; vtxCollections.size());</span>
+    <span class="c1">//ANA_MSG_INFO(&quot; \tempty: &quot; &lt;&lt; comb-&gt;containerFeature&lt;xAOD::VertexContainer&gt;().size());</span>
+    <span class="c1">//ANA_MSG_INFO(&quot; \tEFHistoPrmVtx: &quot; &lt;&lt; comb-&gt;containerFeature&lt;xAOD::VertexContainer&gt;(&quot;EFHistoPrmVtx&quot;).size();</span>
+    <span class="c1">//ANA_MSG_INFO(&quot; \txPrimVx: &quot; &lt;&lt; comb-&gt;containerFeature&lt;xAOD::VertexContainer&gt;(&quot;xPrimVx&quot;).size());</span>
+    <span class="c1">//ANA_MSG_INFO(&quot; \tPrimVertexFTK &quot; &lt;&lt; comb-&gt;containerFeature&lt;xAOD::VertexContainer&gt;(&quot;PrimVertexFTK&quot;).size());</span>
+    <span class="c1">//ANA_MSG_INFO(&quot; \tPrimVertexFTKRaw &quot; &lt;&lt; comb-&gt;containerFeature&lt;xAOD::VertexContainer&gt;(&quot;PrimVertexFTKRaw&quot;).size());</span>
+    <span class="c1">//ANA_MSG_INFO(&quot; \tPrimVertexFTKRefit &quot; &lt;&lt; comb-&gt;containerFeature&lt;xAOD::VertexContainer&gt;(&quot;PrimVertexFTKRefit&quot;).size();</span>
+    <span class="c1">//ANA_MSG_INFO(&quot; \tHLT_PrimVertexFTK &quot; &lt;&lt; comb-&gt;containerFeature&lt;xAOD::VertexContainer&gt;(&quot;HLT_PrimVertexFTK&quot;).size());</span>
+
+    <span class="c1">//</span>
+    <span class="c1">//    std::vector&lt;Trig::Feature&lt;xAOD::VertexContainer&gt; &gt; EvtxCollections = comb-&gt;containerFeature&lt;xAOD::VertexContainer&gt;();</span>
+    <span class="c1">//    for ( unsigned ifeat=0 ; ifeat&lt;EvtxCollections.size() ; ifeat++ ) {</span>
+    <span class="c1">//      ANA_MSG_INFO(EvtxCollections.at(ifeat).label());</span>
+    <span class="c1">//      for( auto vtx_itr : *(EvtxCollections.at(ifeat).cptr()) ){</span>
+    <span class="c1">//        ANA_MSG_INFO(vtx_itr-&gt;vertexType() &lt;&lt; &quot; &quot;);</span>
+    <span class="c1">//      }</span>
+    <span class="c1">//    }</span>
+
+    <span class="kt">bool</span> <span class="n">isValid</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+
+    <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span><span class="s">&quot;ncontainers  &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">bjetCollections</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">jetCollections</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">!=</span> <span class="n">bjetCollections</span><span class="p">.</span><span class="n">size</span><span class="p">()){</span>
+      <span class="n">ANA_MSG_ERROR</span><span class="p">(</span><span class="s">&quot;Problem in container size: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_name</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; jets: &quot;</span><span class="o">&lt;&lt;</span> <span class="n">jetCollections</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; bjets: &quot;</span><span class="o">&lt;&lt;</span> <span class="n">bjetCollections</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+      <span class="n">isValid</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+
+      <span class="k">auto</span> <span class="n">triggerChainGroupAfterVeto</span> <span class="o">=</span> <span class="n">m_trigDecTool_handle</span><span class="o">-&gt;</span><span class="n">getChainGroup</span><span class="p">(</span><span class="n">m_trigItemAfterVeto</span><span class="p">);</span>
+      <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">triggersUsedAfterVeto</span> <span class="o">=</span> <span class="n">triggerChainGroupAfterVeto</span><span class="o">-&gt;</span><span class="n">getListOfTriggers</span><span class="p">();</span>
+      <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span><span class="s">&quot;Passed Triggers &quot;</span><span class="p">);</span>
+      <span class="k">for</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="nl">trig</span> <span class="p">:</span> <span class="n">triggersUsedAfterVeto</span><span class="p">){</span>
+        <span class="k">auto</span> <span class="n">trigChain</span> <span class="o">=</span> <span class="n">m_trigDecTool_handle</span><span class="o">-&gt;</span><span class="n">getChainGroup</span><span class="p">(</span><span class="n">trig</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">trigChain</span><span class="o">-&gt;</span><span class="n">isPassed</span><span class="p">())</span> <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span><span class="s">&quot; </span><span class="se">\t</span><span class="s"> &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">trig</span><span class="p">);</span>
+      <span class="p">}</span>
+
+    <span class="p">}</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">m_readHLTTracks</span> <span class="o">&amp;&amp;</span> <span class="n">jetCollections</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">!=</span> <span class="n">trkCollections</span><span class="p">.</span><span class="n">size</span><span class="p">()){</span>
+      <span class="n">ANA_MSG_ERROR</span><span class="p">(</span><span class="s">&quot;Problem in container size: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_name</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; jets: &quot;</span><span class="o">&lt;&lt;</span> <span class="n">jetCollections</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; trks: &quot;</span><span class="o">&lt;&lt;</span> <span class="n">trkCollections</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+      <span class="n">ANA_MSG_ERROR</span><span class="p">(</span><span class="s">&quot; Jet Collection &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_jetName</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; Trk Collection:  &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_trkName</span><span class="p">);</span>
+      <span class="n">isValid</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">//if(jetCollections.size() != ftfCollections.size()){</span>
+    <span class="c1">//  ANA_MSG_ERROR(&quot;Problem in container size: &quot; &lt;&lt; m_name  &lt;&lt; &quot; jets: &quot;&lt;&lt; jetCollections.size() &lt;&lt; &quot; ftfs: &quot;&lt;&lt; ftfCollections.size());</span>
+    <span class="c1">//  isValid = false;</span>
+    <span class="c1">//}</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">m_readHLTVtx</span><span class="p">){</span>
+      <span class="k">if</span><span class="p">(</span><span class="n">vtxCollections</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">jetCollections</span><span class="p">.</span><span class="n">size</span><span class="p">()){</span>
+    <span class="n">ANA_MSG_ERROR</span><span class="p">(</span><span class="s">&quot;Problem in container size: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_name</span>
+                       <span class="o">&lt;&lt;</span> <span class="s">&quot; jets: &quot;</span><span class="o">&lt;&lt;</span> <span class="n">jetCollections</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_jetName</span>
+                       <span class="o">&lt;&lt;</span> <span class="s">&quot; vtx: &quot;</span><span class="o">&lt;&lt;</span> <span class="n">vtxCollections</span><span class="p">.</span><span class="n">size</span><span class="p">()</span>  <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_vtxName</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span> <span class="kt">unsigned</span> <span class="n">ifeat</span><span class="o">=</span><span class="mi">0</span> <span class="p">;</span> <span class="n">ifeat</span><span class="o">&lt;</span><span class="n">vtxCollections</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="p">;</span> <span class="n">ifeat</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="n">ANA_MSG_INFO</span><span class="p">(</span><span class="s">&quot;Feture: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">ifeat</span><span class="p">);</span>
+      <span class="k">for</span><span class="p">(</span> <span class="k">auto</span> <span class="nl">vtx_itr</span> <span class="p">:</span> <span class="o">*</span><span class="p">(</span><span class="n">vtxCollections</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">ifeat</span><span class="p">).</span><span class="n">cptr</span><span class="p">())</span> <span class="p">){</span>
+        <span class="n">ANA_MSG_INFO</span><span class="p">(</span><span class="n">vtx_itr</span><span class="o">-&gt;</span><span class="n">vertexType</span><span class="p">());</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">isValid</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">isValid</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+
+    <span class="c1">//Loop over jets until a jet with track size &gt; 0 is found</span>
+
+    <span class="c1">// Declare variables here as same bs for all jets</span>
+    <span class="kt">float</span> <span class="n">var_bs_online_vx</span> <span class="o">=</span> <span class="n">m_onlineBSTool</span><span class="p">.</span><span class="n">getOnlineBSInfo</span><span class="p">(</span><span class="n">eventInfo</span><span class="p">,</span> <span class="n">xAH</span><span class="o">::</span><span class="n">OnlineBeamSpotTool</span><span class="o">::</span><span class="n">BSData</span><span class="o">::</span><span class="n">BSx</span><span class="p">);</span>
+    <span class="kt">float</span> <span class="n">var_bs_online_vy</span> <span class="o">=</span> <span class="n">m_onlineBSTool</span><span class="p">.</span><span class="n">getOnlineBSInfo</span><span class="p">(</span><span class="n">eventInfo</span><span class="p">,</span> <span class="n">xAH</span><span class="o">::</span><span class="n">OnlineBeamSpotTool</span><span class="o">::</span><span class="n">BSData</span><span class="o">::</span><span class="n">BSy</span><span class="p">);</span>
+    <span class="kt">float</span> <span class="n">var_bs_online_vz</span> <span class="o">=</span> <span class="n">m_onlineBSTool</span><span class="p">.</span><span class="n">getOnlineBSInfo</span><span class="p">(</span><span class="n">eventInfo</span><span class="p">,</span> <span class="n">xAH</span><span class="o">::</span><span class="n">OnlineBeamSpotTool</span><span class="o">::</span><span class="n">BSData</span><span class="o">::</span><span class="n">BSz</span><span class="p">);</span>
+
+    <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span><span class="s">&quot; bs_online_vx &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">var_bs_online_vx</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; bs_online_vy &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">var_bs_online_vy</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; bs_online_vz &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">var_bs_online_vz</span><span class="p">);</span>
+
+
+    <span class="c1">//ANA_MSG_INFO(&quot; is Valid &quot; &lt;&lt; jetCollections.size() &lt;&lt; &quot; &quot; &lt;&lt; vtxCollections.size());</span>
+    <span class="k">for</span> <span class="p">(</span> <span class="kt">unsigned</span> <span class="n">ifeat</span><span class="o">=</span><span class="mi">0</span> <span class="p">;</span> <span class="n">ifeat</span><span class="o">&lt;</span><span class="n">jetCollections</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="p">;</span> <span class="n">ifeat</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Jet</span><span class="o">*</span> <span class="n">hlt_jet</span> <span class="o">=</span> <span class="n">getTrigObject</span><span class="o">&lt;</span><span class="n">xAOD</span><span class="o">::</span><span class="n">Jet</span><span class="p">,</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">JetContainer</span><span class="o">&gt;</span><span class="p">(</span><span class="n">jetCollections</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">ifeat</span><span class="p">));</span>
+      <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">hlt_jet</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+
+      <span class="kt">bool</span> <span class="n">passOverlap</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+      <span class="k">for</span><span class="p">(</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Jet</span><span class="o">*</span> <span class="nl">previousJet</span> <span class="p">:</span> <span class="o">*</span><span class="n">hltJets</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">previousJet</span><span class="o">-&gt;</span><span class="n">p4</span><span class="p">().</span><span class="n">DeltaR</span><span class="p">(</span><span class="n">hlt_jet</span><span class="o">-&gt;</span><span class="n">p4</span><span class="p">())</span> <span class="o">&lt;</span> <span class="mf">0.1</span><span class="p">){</span>
+      <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">BTagging</span> <span class="o">*</span><span class="n">p_btag_info</span> <span class="o">=</span> <span class="n">previousJet</span><span class="o">-&gt;</span><span class="n">auxdata</span><span class="o">&lt;</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">BTagging</span><span class="o">*</span> <span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;HLTBTag&quot;</span><span class="p">);</span>
+      <span class="kt">double</span> <span class="n">p_mv2c10</span> <span class="o">=</span> <span class="o">-</span><span class="mi">99</span><span class="p">;</span>
+      <span class="n">p_btag_info</span><span class="o">-&gt;</span><span class="n">MVx_discriminant</span><span class="p">(</span><span class="s">&quot;MV2c10&quot;</span><span class="p">,</span> <span class="n">p_mv2c10</span><span class="p">);</span>
+
+      <span class="kt">double</span> <span class="n">this_mv2c10</span> <span class="o">=</span> <span class="o">-</span><span class="mi">99</span><span class="p">;</span>
+      <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">BTagging</span><span class="o">*</span> <span class="n">hlt_btag</span> <span class="o">=</span> <span class="n">getTrigObject</span><span class="o">&lt;</span><span class="n">xAOD</span><span class="o">::</span><span class="n">BTagging</span><span class="p">,</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">BTaggingContainer</span><span class="o">&gt;</span><span class="p">(</span><span class="n">bjetCollections</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">ifeat</span><span class="p">));</span>
+      <span class="k">if</span><span class="p">(</span><span class="n">hlt_btag</span><span class="p">){</span>
+        <span class="n">hlt_btag</span><span class="o">-&gt;</span><span class="n">MVx_discriminant</span><span class="p">(</span><span class="s">&quot;MV2c10&quot;</span><span class="p">,</span> <span class="n">this_mv2c10</span><span class="p">);</span>
+      <span class="p">}</span>
+
+      <span class="k">if</span><span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">p_mv2c10</span> <span class="o">-</span> <span class="n">this_mv2c10</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mf">0.01</span><span class="p">){</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;ERROR:: Previous mv2c10 &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">p_mv2c10</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; this mv2c10 &quot;</span>  <span class="o">&lt;&lt;</span> <span class="n">this_mv2c10</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Previous Jet: pt: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">previousJet</span><span class="o">-&gt;</span><span class="n">pt</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; eta: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">previousJet</span><span class="o">-&gt;</span><span class="n">eta</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; phi: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">previousJet</span><span class="o">-&gt;</span><span class="n">phi</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;;</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;This Jet: pt: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">hlt_jet</span><span class="o">-&gt;</span><span class="n">pt</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; eta: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">hlt_jet</span><span class="o">-&gt;</span><span class="n">eta</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; phi: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">hlt_jet</span><span class="o">-&gt;</span><span class="n">phi</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;;</span>
+      <span class="p">}</span>
+      <span class="n">passOverlap</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="p">}</span>
+      <span class="p">}</span>
+
+      <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">passOverlap</span><span class="p">){</span>
+    <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span><span class="s">&quot; Jet Failed overlap &quot;</span> <span class="p">);</span>
+    <span class="k">continue</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span><span class="s">&quot;New Jet: pt: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">hlt_jet</span><span class="o">-&gt;</span><span class="n">pt</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; eta: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">hlt_jet</span><span class="o">-&gt;</span><span class="n">eta</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; phi: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">hlt_jet</span><span class="o">-&gt;</span><span class="n">phi</span><span class="p">());</span>
+
+      <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">BTagging</span><span class="o">*</span> <span class="n">hlt_btag</span> <span class="o">=</span> <span class="n">getTrigObject</span><span class="o">&lt;</span><span class="n">xAOD</span><span class="o">::</span><span class="n">BTagging</span><span class="p">,</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">BTaggingContainer</span><span class="o">&gt;</span><span class="p">(</span><span class="n">bjetCollections</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">ifeat</span><span class="p">));</span>
+      <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">hlt_btag</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+
+      <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">TrackParticleContainer</span><span class="o">*</span> <span class="n">hlt_tracks</span><span class="p">(</span><span class="k">nullptr</span><span class="p">);</span>
+      <span class="k">if</span><span class="p">(</span><span class="n">m_readHLTTracks</span><span class="p">){</span>
+    <span class="n">hlt_tracks</span> <span class="o">=</span> <span class="n">trkCollections</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">ifeat</span><span class="p">).</span><span class="n">cptr</span><span class="p">();</span>
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">hlt_tracks</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="n">xAOD</span><span class="o">::</span><span class="n">Jet</span><span class="o">*</span> <span class="n">newHLTBJet</span> <span class="o">=</span> <span class="k">new</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Jet</span><span class="p">();</span>
+      <span class="n">newHLTBJet</span><span class="o">-&gt;</span><span class="n">makePrivateStore</span><span class="p">(</span> <span class="n">hlt_jet</span> <span class="p">);</span>
+
+      <span class="c1">//</span>
+      <span class="c1">// Add Link to BTagging Info</span>
+      <span class="c1">//</span>
+      <span class="n">newHLTBJet</span><span class="o">-&gt;</span><span class="n">auxdecor</span><span class="o">&lt;</span> <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">BTagging</span><span class="o">*</span> <span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;HLTBTag&quot;</span><span class="p">)</span> <span class="o">=</span> <span class="n">hlt_btag</span><span class="p">;</span>
+
+      <span class="c1">//</span>
+      <span class="c1">// Add Tracks to BJet</span>
+      <span class="c1">//</span>
+      <span class="k">if</span><span class="p">(</span><span class="n">m_readHLTTracks</span><span class="p">){</span>
+
+        <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">TrackParticle</span><span class="o">*&gt;</span> <span class="n">matchedTracks</span><span class="p">;</span>
+    <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span><span class="s">&quot;Trk Size&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">hlt_tracks</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">());</span>
+
+    <span class="k">for</span><span class="p">(</span><span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">TrackParticle</span><span class="o">*</span> <span class="nl">thisHLTTrk</span><span class="p">:</span> <span class="o">*</span><span class="n">hlt_tracks</span><span class="p">){</span>
+      <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\t</span><span class="s">Adding  track &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">thisHLTTrk</span><span class="o">-&gt;</span><span class="n">pt</span><span class="p">()</span>   <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">thisHLTTrk</span><span class="o">-&gt;</span><span class="n">eta</span><span class="p">()</span>  <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">thisHLTTrk</span><span class="o">-&gt;</span><span class="n">phi</span><span class="p">());</span>
+      <span class="n">matchedTracks</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">thisHLTTrk</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">//</span>
+    <span class="c1">// Adding online beamspot information from online track</span>
+    <span class="c1">//</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">hlt_tracks</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">()){</span>
+      <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span><span class="s">&quot;Found a hlt_tracks   &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">hlt_tracks</span><span class="o">-&gt;</span><span class="n">at</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">vx</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">hlt_tracks</span><span class="o">-&gt;</span><span class="n">at</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">vy</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">hlt_tracks</span><span class="o">-&gt;</span><span class="n">at</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">vz</span><span class="p">());</span>
+      <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span><span class="s">&quot;Compares to variable &quot;</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">var_bs_online_vx</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">var_bs_online_vy</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">var_bs_online_vz</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="n">m_bs_online_vx</span> <span class="p">(</span><span class="o">*</span><span class="n">newHLTBJet</span><span class="p">)</span> <span class="o">=</span> <span class="n">var_bs_online_vx</span><span class="p">;</span>
+    <span class="n">m_bs_online_vy</span> <span class="p">(</span><span class="o">*</span><span class="n">newHLTBJet</span><span class="p">)</span> <span class="o">=</span> <span class="n">var_bs_online_vy</span><span class="p">;</span>
+    <span class="n">m_bs_online_vz</span> <span class="p">(</span><span class="o">*</span><span class="n">newHLTBJet</span><span class="p">)</span> <span class="o">=</span> <span class="n">var_bs_online_vz</span><span class="p">;</span>
+
+    <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span><span class="s">&quot;Adding tracks to jet &quot;</span><span class="p">);</span>
+    <span class="n">m_track_decoration</span><span class="p">(</span><span class="o">*</span><span class="n">newHLTBJet</span><span class="p">)</span>         <span class="o">=</span> <span class="n">matchedTracks</span><span class="p">;</span>
+
+
+      <span class="p">}</span>
+
+      <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span><span class="s">&quot;Doing it for:        &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_trigItem</span><span class="p">);</span>
+      <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span><span class="s">&quot;Check for m_jetName: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_jetName</span><span class="p">);</span>
+      <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span><span class="s">&quot;Check for m_vtxName: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_vtxName</span><span class="p">);</span>
+
+      <span class="c1">//</span>
+      <span class="c1">// Check for dummy verticies</span>
+      <span class="c1">//</span>
+      <span class="c1">// hadDummyPV =&gt; class with three option</span>
+      <span class="c1">//               0 - IDTrig  Found Vertex</span>
+      <span class="c1">//               1 - EFHisto Found Vertex</span>
+      <span class="c1">//               2 - No Vertex found</span>
+      <span class="k">if</span><span class="p">(</span><span class="n">m_readHLTVtx</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">HelperFunctions</span><span class="o">::</span><span class="n">getPrimaryVertex</span><span class="p">(</span><span class="n">vtxCollections</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">ifeat</span><span class="p">).</span><span class="n">cptr</span><span class="p">(),</span> <span class="n">msg</span><span class="p">())){</span>
+
+      <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span><span class="s">&quot;HAVE  No Online Vtx!!! m_vtxName is  &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_vtxName</span><span class="p">);</span>
+      <span class="k">for</span><span class="p">(</span> <span class="k">auto</span> <span class="nl">vtx_itr</span> <span class="p">:</span> <span class="o">*</span><span class="p">(</span><span class="n">vtxCollections</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">ifeat</span><span class="p">).</span><span class="n">cptr</span><span class="p">())</span> <span class="p">)</span> <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span><span class="n">vtx_itr</span><span class="o">-&gt;</span><span class="n">vertexType</span><span class="p">());</span>
+
+      <span class="c1">//</span>
+      <span class="c1">//  Try the HistoPrmVtx</span>
+      <span class="c1">//</span>
+      <span class="k">if</span><span class="p">(</span><span class="n">backupVtxCollections</span><span class="p">.</span><span class="n">size</span><span class="p">()){</span>
+        <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span><span class="s">&quot;Have EFHistoPrmVtx.  &quot;</span><span class="p">);</span>
+        <span class="n">m_vtx_hadDummyPV</span>  <span class="p">(</span><span class="o">*</span><span class="n">newHLTBJet</span><span class="p">)</span>         <span class="o">=</span> <span class="sc">&#39;1&#39;</span><span class="p">;</span>
+        <span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Vertex</span> <span class="o">*</span><span class="n">backup_pvx</span> <span class="o">=</span> <span class="n">HelperFunctions</span><span class="o">::</span><span class="n">getPrimaryVertex</span><span class="p">(</span><span class="n">backupVtxCollections</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">ifeat</span><span class="p">).</span><span class="n">cptr</span><span class="p">(),</span> <span class="n">msg</span><span class="p">());</span>
+        <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span><span class="s">&quot;backup_pvx.  &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">backup_pvx</span><span class="p">);</span>
+        <span class="n">m_vtx_decoration</span>  <span class="p">(</span><span class="o">*</span><span class="n">newHLTBJet</span><span class="p">)</span>         <span class="o">=</span> <span class="n">backup_pvx</span><span class="p">;</span>
+        <span class="n">m_vtx_decoration_bkg</span><span class="p">(</span><span class="o">*</span><span class="n">newHLTBJet</span><span class="p">)</span>       <span class="o">=</span> <span class="n">backup_pvx</span><span class="p">;</span>
+      <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+        <span class="n">ANA_MSG_INFO</span><span class="p">(</span><span class="s">&quot;No EFHistoPrmVtx....  &quot;</span><span class="p">);</span>
+        <span class="n">m_vtx_hadDummyPV</span>  <span class="p">(</span><span class="o">*</span><span class="n">newHLTBJet</span><span class="p">)</span>         <span class="o">=</span> <span class="sc">&#39;2&#39;</span><span class="p">;</span>
+        <span class="n">m_vtx_decoration</span>  <span class="p">(</span><span class="o">*</span><span class="n">newHLTBJet</span><span class="p">)</span>         <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">m_vtx_decoration_bkg</span><span class="p">(</span><span class="o">*</span><span class="n">newHLTBJet</span><span class="p">)</span>       <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="c1">//ANA_MSG_INFO(&quot;hadDummy and vtxType &quot; &lt;&lt; m_vtx_hadDummyPV (*newHLTBJet) &lt;&lt; &quot; &quot; &lt;&lt; m_vtxName);</span>
+
+    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+
+      <span class="n">m_vtx_decoration</span>  <span class="p">(</span><span class="o">*</span><span class="n">newHLTBJet</span><span class="p">)</span>         <span class="o">=</span> <span class="n">HelperFunctions</span><span class="o">::</span><span class="n">getPrimaryVertex</span><span class="p">(</span><span class="n">vtxCollections</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">ifeat</span><span class="p">).</span><span class="n">cptr</span><span class="p">(),</span> <span class="n">msg</span><span class="p">());</span>
+      <span class="n">m_vtx_hadDummyPV</span>  <span class="p">(</span><span class="o">*</span><span class="n">newHLTBJet</span><span class="p">)</span>         <span class="o">=</span> <span class="sc">&#39;0&#39;</span><span class="p">;</span>
+
+      <span class="k">if</span><span class="p">(</span><span class="n">backupVtxCollections</span><span class="p">.</span><span class="n">size</span><span class="p">()){</span>
+        <span class="n">m_vtx_decoration_bkg</span><span class="p">(</span><span class="o">*</span><span class="n">newHLTBJet</span><span class="p">)</span>     <span class="o">=</span> <span class="n">HelperFunctions</span><span class="o">::</span><span class="n">getPrimaryVertex</span><span class="p">(</span><span class="n">backupVtxCollections</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">ifeat</span><span class="p">).</span><span class="n">cptr</span><span class="p">(),</span> <span class="n">msg</span><span class="p">());</span>
+      <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+        <span class="n">m_vtx_decoration_bkg</span><span class="p">(</span><span class="o">*</span><span class="n">newHLTBJet</span><span class="p">)</span>     <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+      <span class="p">}</span>
+
+    <span class="p">}</span>
+
+    <span class="n">m_offline_vtx_decoration</span> <span class="p">(</span><span class="o">*</span><span class="n">newHLTBJet</span><span class="p">)</span>  <span class="o">=</span> <span class="n">offline_pvx</span><span class="p">;</span>
+
+    <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span><span class="s">&quot;hadDummy and vtxType&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_vtx_hadDummyPV</span> <span class="p">(</span><span class="o">*</span><span class="n">newHLTBJet</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_vtxName</span><span class="p">);</span>
+    <span class="c1">//if(m_vtx_hadDummyPV (*newHLTBJet) != &#39;0&#39; ){</span>
+    <span class="c1">//   ANA_MSG_INFO(&quot;hadDummy and vtxType and m_outContainerName  &quot; &lt;&lt; m_vtx_hadDummyPV (*newHLTBJet) &lt;&lt; &quot; &quot;</span>
+    <span class="c1">//  &lt;&lt; m_vtxName &lt;&lt; &#39; &#39;&lt;&lt; m_outContainerName);</span>
+    <span class="c1">//}</span>
+      <span class="p">}</span> <span class="k">else</span><span class="p">{</span> <span class="c1">//m_readHLTVtx</span>
+
+    <span class="n">m_vtx_decoration</span>  <span class="p">(</span><span class="o">*</span><span class="n">newHLTBJet</span><span class="p">)</span>         <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">m_vtx_hadDummyPV</span>  <span class="p">(</span><span class="o">*</span><span class="n">newHLTBJet</span><span class="p">)</span>         <span class="o">=</span> <span class="sc">&#39;0&#39;</span><span class="p">;</span>
+    <span class="n">m_vtx_decoration_bkg</span><span class="p">(</span><span class="o">*</span><span class="n">newHLTBJet</span><span class="p">)</span>       <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">m_offline_vtx_decoration</span> <span class="p">(</span><span class="o">*</span><span class="n">newHLTBJet</span><span class="p">)</span>  <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="n">hltJets</span><span class="o">-&gt;</span><span class="n">push_back</span><span class="p">(</span> <span class="n">newHLTBJet</span> <span class="p">);</span>
+      <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span><span class="s">&quot;pushed back &quot;</span><span class="p">);</span>
+
+    <span class="p">}</span><span class="c1">//feature</span>
+
+
+
+  <span class="p">}</span><span class="c1">// Combinations</span>
+
+  <span class="n">ANA_CHECK</span><span class="p">(</span> <span class="n">m_store</span><span class="o">-&gt;</span><span class="n">record</span><span class="p">(</span> <span class="n">hltJets</span><span class="p">,</span>    <span class="n">m_outContainerName</span><span class="p">));</span>
+  <span class="n">ANA_CHECK</span><span class="p">(</span> <span class="n">m_store</span><span class="o">-&gt;</span><span class="n">record</span><span class="p">(</span> <span class="n">hltJetsAux</span><span class="p">,</span> <span class="n">m_outContainerName</span><span class="o">+</span><span class="s">&quot;Aux.&quot;</span><span class="p">));</span>
+
+  <span class="k">return</span> <span class="n">EL</span><span class="o">::</span><span class="n">StatusCode</span><span class="o">::</span><span class="n">SUCCESS</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+
+<span class="n">EL</span><span class="o">::</span><span class="n">StatusCode</span> <span class="n">HLTJetRoIBuilder</span> <span class="o">::</span> <span class="n">buildHLTJets</span> <span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span><span class="s">&quot;In buildHLTJets  &quot;</span><span class="p">);</span>
+  <span class="c1">//</span>
+  <span class="c1">// Create the new container and its auxiliary store.</span>
+  <span class="c1">//</span>
+  <span class="n">xAOD</span><span class="o">::</span><span class="n">JetContainer</span><span class="o">*</span>     <span class="n">hltJets</span>    <span class="o">=</span> <span class="k">new</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">JetContainer</span><span class="p">();</span>
+  <span class="n">xAOD</span><span class="o">::</span><span class="n">JetAuxContainer</span><span class="o">*</span>  <span class="n">hltJetsAux</span> <span class="o">=</span> <span class="k">new</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">JetAuxContainer</span><span class="p">();</span>
+  <span class="n">hltJets</span><span class="o">-&gt;</span><span class="n">setStore</span><span class="p">(</span> <span class="n">hltJetsAux</span> <span class="p">);</span> <span class="c1">//&lt; Connect the two</span>
+
+  <span class="n">Trig</span><span class="o">::</span><span class="n">FeatureContainer</span> <span class="n">fc</span> <span class="o">=</span> <span class="n">m_trigDecTool_handle</span><span class="o">-&gt;</span><span class="n">features</span><span class="p">(</span><span class="n">m_trigItem</span><span class="p">);</span>
+  <span class="k">auto</span> <span class="n">jetFeatureContainers</span> <span class="o">=</span> <span class="n">fc</span><span class="p">.</span><span class="n">containerFeature</span><span class="o">&lt;</span><span class="n">xAOD</span><span class="o">::</span><span class="n">JetContainer</span><span class="o">&gt;</span><span class="p">();</span>
+
+  <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span><span class="s">&quot;ncontainers  &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">jetFeatureContainers</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+
+  <span class="c1">//DataModel_detail::const_iterator&lt;JetContainer &gt;::reference {aka const xAOD::Jet_v1*}</span>
+
+  <span class="k">for</span><span class="p">(</span><span class="k">auto</span>  <span class="nl">jcont</span> <span class="p">:</span> <span class="n">jetFeatureContainers</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Jet</span><span class="o">*</span>  <span class="nl">hlt_jet</span> <span class="p">:</span> <span class="o">*</span><span class="n">jcont</span><span class="p">.</span><span class="n">cptr</span><span class="p">())</span> <span class="p">{</span>
+
+      <span class="n">xAOD</span><span class="o">::</span><span class="n">Jet</span><span class="o">*</span> <span class="n">newHLTJet</span> <span class="o">=</span> <span class="k">new</span> <span class="n">xAOD</span><span class="o">::</span><span class="n">Jet</span><span class="p">();</span>
+      <span class="n">newHLTJet</span><span class="o">-&gt;</span><span class="n">makePrivateStore</span><span class="p">(</span> <span class="n">hlt_jet</span> <span class="p">);</span>
+
+      <span class="n">hltJets</span><span class="o">-&gt;</span><span class="n">push_back</span><span class="p">(</span> <span class="n">newHLTJet</span> <span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="n">ANA_CHECK</span><span class="p">(</span> <span class="n">m_store</span><span class="o">-&gt;</span><span class="n">record</span><span class="p">(</span> <span class="n">hltJets</span><span class="p">,</span>    <span class="n">m_outContainerName</span><span class="p">));</span>
+  <span class="n">ANA_CHECK</span><span class="p">(</span> <span class="n">m_store</span><span class="o">-&gt;</span><span class="n">record</span><span class="p">(</span> <span class="n">hltJetsAux</span><span class="p">,</span> <span class="n">m_outContainerName</span><span class="o">+</span><span class="s">&quot;Aux.&quot;</span><span class="p">));</span>
+  <span class="n">ANA_MSG_VERBOSE</span><span class="p">(</span><span class="s">&quot;Left buildHLTJets  &quot;</span><span class="p">);</span>
+  <span class="k">return</span> <span class="n">EL</span><span class="o">::</span><span class="n">StatusCode</span><span class="o">::</span><span class="n">SUCCESS</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+
+<span class="n">EL</span><span class="o">::</span><span class="n">StatusCode</span> <span class="n">HLTJetRoIBuilder</span> <span class="o">::</span> <span class="n">postExecute</span> <span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">ANA_MSG_DEBUG</span><span class="p">(</span> <span class="s">&quot;Calling postExecute&quot;</span><span class="p">);</span>
+  <span class="k">return</span> <span class="n">EL</span><span class="o">::</span><span class="n">StatusCode</span><span class="o">::</span><span class="n">SUCCESS</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+
+<span class="n">EL</span><span class="o">::</span><span class="n">StatusCode</span> <span class="n">HLTJetRoIBuilder</span> <span class="o">::</span> <span class="n">finalize</span> <span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">ANA_MSG_DEBUG</span><span class="p">(</span> <span class="s">&quot;Deleting tool instances...&quot;</span><span class="p">);</span>
+  <span class="k">return</span> <span class="n">EL</span><span class="o">::</span><span class="n">StatusCode</span><span class="o">::</span><span class="n">SUCCESS</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+
+<span class="n">EL</span><span class="o">::</span><span class="n">StatusCode</span> <span class="n">HLTJetRoIBuilder</span> <span class="o">::</span> <span class="n">histFinalize</span> <span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">ANA_MSG_DEBUG</span><span class="p">(</span> <span class="s">&quot;Calling histFinalize&quot;</span><span class="p">);</span>
+  <span class="n">ANA_CHECK</span><span class="p">(</span> <span class="n">xAH</span><span class="o">::</span><span class="n">Algorithm</span><span class="o">::</span><span class="n">algFinalize</span><span class="p">());</span>
+  <span class="k">return</span> <span class="n">EL</span><span class="o">::</span><span class="n">StatusCode</span><span class="o">::</span><span class="n">SUCCESS</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2017, ATLAS Collaboration
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

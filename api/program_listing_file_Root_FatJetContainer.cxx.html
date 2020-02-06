@@ -1,0 +1,1026 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Program Listing for File FatJetContainer.cxx &mdash; xAODAnaHelpers e83c6ca documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> xAODAnaHelpers
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                e83c6ca
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../Intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Installing.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../UsingUs.html">xAH_run.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Algorithms.html">Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Community.html">Community</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQs.html">xAH FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../API.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Doxygen API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">xAODAnaHelpers</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Program Listing for File FatJetContainer.cxx</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/program_listing_file_Root_FatJetContainer.cxx.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="program-listing-for-file-fatjetcontainer-cxx">
+<span id="program-listing-file-root-fatjetcontainer-cxx"></span><h1>Program Listing for File FatJetContainer.cxx<a class="headerlink" href="#program-listing-for-file-fatjetcontainer-cxx" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_Root_FatJetContainer.cxx.html#file-root-fatjetcontainer-cxx"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">Root/FatJetContainer.cxx</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span>#include &quot;xAODAnaHelpers/FatJetContainer.h&quot;
+#include &lt;xAODAnaHelpers/HelperFunctions.h&gt;
+#include &lt;iostream&gt;
+#include &quot;xAODTruth/TruthEventContainer.h&quot;
+
+using namespace xAH;
+
+FatJetContainer::FatJetContainer(const std::string&amp; name, const std::string&amp; detailStr, const std::string&amp; subjetDetailStr, const std::string&amp; suffix,
+                 float units, bool mc)
+  : ParticleContainer(name,detailStr,units,mc, true, true, suffix)
+{
+  if (m_infoSwitch.m_scales) {
+      m_JetConstitScaleMomentum_eta       = new std::vector&lt;float&gt;();
+      m_JetConstitScaleMomentum_phi       = new std::vector&lt;float&gt;();
+      m_JetConstitScaleMomentum_m       = new std::vector&lt;float&gt;();
+      m_JetConstitScaleMomentum_pt        = new std::vector&lt;float&gt;();
+
+      m_JetEMScaleMomentum_eta        = new std::vector&lt;float&gt;();
+      m_JetEMScaleMomentum_phi        = new std::vector&lt;float&gt;();
+      m_JetEMScaleMomentum_m        = new std::vector&lt;float&gt;();
+      m_JetEMScaleMomentum_pt       = new std::vector&lt;float&gt;();
+  }
+
+  if (m_infoSwitch.m_area) {
+    m_GhostArea = new std::vector&lt;float&gt;();
+    m_ActiveArea = new std::vector&lt;float&gt;();
+    m_VoronoiArea = new std::vector&lt;float&gt;();
+
+    m_ActiveArea4vec_pt = new std::vector&lt;float&gt;();
+    m_ActiveArea4vec_eta = new std::vector&lt;float&gt;();
+    m_ActiveArea4vec_phi = new std::vector&lt;float&gt;();
+    m_ActiveArea4vec_m = new std::vector&lt;float&gt;();
+  }
+
+  if ( m_infoSwitch.m_substructure ) {
+    m_Split12           = new std::vector&lt;float&gt;();
+    m_Split23           = new std::vector&lt;float&gt;();
+    m_Split34           = new std::vector&lt;float&gt;();
+    m_tau1_wta          = new std::vector&lt;float&gt;();
+    m_tau2_wta          = new std::vector&lt;float&gt;();
+    m_tau3_wta          = new std::vector&lt;float&gt;();
+    m_tau21_wta         = new std::vector&lt;float&gt;();
+    m_tau32_wta         = new std::vector&lt;float&gt;();
+    m_ECF1              = new std::vector&lt;float&gt;();
+    m_ECF2              = new std::vector&lt;float&gt;();
+    m_ECF3              = new std::vector&lt;float&gt;();
+    m_C2                = new std::vector&lt;float&gt;();
+    m_D2                = new std::vector&lt;float&gt;();
+    m_NTrimSubjets      = new std::vector&lt;float&gt;();
+    m_NClusters         = new std::vector&lt;int&gt;  ();
+    m_nTracks           = new std::vector&lt;int&gt;  ();
+
+  }
+
+  if ( m_infoSwitch.m_constituent) {
+    m_numConstituents    = new std::vector&lt; int &gt;();
+  }
+
+  if ( m_infoSwitch.m_constituentAll) {
+    m_constituentWeights  = new std::vector&lt; std::vector&lt;float&gt; &gt;();
+    m_constituent_pt      = new std::vector&lt; std::vector&lt;float&gt; &gt;();
+    m_constituent_eta     = new std::vector&lt; std::vector&lt;float&gt; &gt;();
+    m_constituent_phi     = new std::vector&lt; std::vector&lt;float&gt; &gt;();
+    m_constituent_e       = new std::vector&lt; std::vector&lt;float&gt; &gt;();
+  }
+
+
+  if ( m_infoSwitch.m_truth &amp;&amp; m_mc ) {
+    m_truth_m  =new std::vector&lt;float&gt;;
+    m_truth_pt =new std::vector&lt;float&gt;;
+    m_truth_phi=new std::vector&lt;float&gt;;
+    m_truth_eta=new std::vector&lt;float&gt;;
+  }
+
+  if ( m_infoSwitch.m_bosonCount &amp;&amp; m_mc) {
+    m_nTQuarks  = new std::vector&lt; int &gt; ();
+    m_nHBosons  = new std::vector&lt; int &gt; ();
+    m_nWBosons  = new std::vector&lt; int &gt; ();
+    m_nZBosons  = new std::vector&lt; int &gt; ();
+  }
+
+  if (m_infoSwitch.m_muonCorrection) {
+    m_muonCorrected_pt  = new std::vector&lt;float&gt;();
+    m_muonCorrected_eta = new std::vector&lt;float&gt;();
+    m_muonCorrected_phi = new std::vector&lt;float&gt;();
+    m_muonCorrected_m   = new std::vector&lt;float&gt;();
+  }
+
+  for(const auto&amp; trackJetName : m_infoSwitch.m_trackJetNames)
+    {
+      std::string trkJetName = name;
+      if( !suffix.empty() ){ trkJetName += &quot;_&quot;+suffix; }
+      trkJetName += &quot;_&quot;+trackJetName;
+      m_trkJets[trackJetName] = new xAH::JetContainer(trkJetName, subjetDetailStr, m_units, m_mc);
+
+      m_trkJetsIdx[trackJetName] = new std::vector&lt;std::vector&lt;unsigned int&gt; &gt; ();
+    }
+
+}
+
+FatJetContainer::~FatJetContainer()
+{
+  if(m_debug) std::cout &lt;&lt; &quot; Deleting FatJetContainer &quot;  &lt;&lt; std::endl;
+
+  if ( m_infoSwitch.m_scales ) {
+      delete m_JetConstitScaleMomentum_eta ;
+      delete m_JetConstitScaleMomentum_phi ;
+      delete m_JetConstitScaleMomentum_m   ;
+      delete m_JetConstitScaleMomentum_pt  ;
+
+      delete m_JetEMScaleMomentum_eta      ;
+      delete m_JetEMScaleMomentum_phi      ;
+      delete m_JetEMScaleMomentum_m        ;
+      delete m_JetEMScaleMomentum_pt       ;
+  }
+
+  if ( m_infoSwitch.m_area ) {
+    delete m_GhostArea;
+    delete m_ActiveArea;
+    delete m_VoronoiArea;
+
+    delete m_ActiveArea4vec_pt;
+    delete m_ActiveArea4vec_eta;
+    delete m_ActiveArea4vec_phi;
+    delete m_ActiveArea4vec_m;
+  }
+
+  if ( m_infoSwitch.m_substructure ) {
+    delete m_Split12     ;
+    delete m_Split23     ;
+    delete m_Split34     ;
+    delete m_tau1_wta    ;
+    delete m_tau2_wta    ;
+    delete m_tau3_wta    ;
+    delete m_tau21_wta   ;
+    delete m_tau32_wta   ;
+    delete m_ECF1        ;
+    delete m_ECF2        ;
+    delete m_ECF3        ;
+    delete m_C2          ;
+    delete m_D2          ;
+    delete m_NTrimSubjets;
+    delete m_NClusters   ;
+    delete m_nTracks   ;
+  }
+
+  if ( m_infoSwitch.m_constituent) {
+    delete m_numConstituents;
+  }
+
+  if ( m_infoSwitch.m_constituentAll) {
+    delete m_constituentWeights;
+    delete m_constituent_pt    ;
+    delete m_constituent_eta   ;
+    delete m_constituent_phi   ;
+    delete m_constituent_e     ;
+  }
+
+  if ( m_infoSwitch.m_truth &amp;&amp; m_mc ) {
+    delete m_truth_m;
+    delete m_truth_pt;
+    delete m_truth_phi;
+    delete m_truth_eta;
+  }
+
+  if ( m_infoSwitch.m_bosonCount &amp;&amp; m_mc) {
+    delete m_nTQuarks;
+    delete m_nHBosons;
+    delete m_nWBosons;
+    delete m_nZBosons;
+  }
+
+  if ( m_infoSwitch.m_muonCorrection) {
+    delete m_muonCorrected_pt;
+    delete m_muonCorrected_eta;
+    delete m_muonCorrected_phi;
+    delete m_muonCorrected_m;
+  }
+
+  if( !m_infoSwitch.m_trackJetNames.empty() ){
+    for(const auto&amp; kv : m_trkJets)
+      {
+    delete m_trkJets   [kv.first];
+    delete m_trkJetsIdx[kv.first];
+      }
+    m_trkJets   .clear();
+    m_trkJetsIdx.clear();
+  }
+
+}
+
+void FatJetContainer::setTree(TTree *tree)
+{
+  //
+  // Connect branches
+  ParticleContainer::setTree(tree);
+
+  if( m_infoSwitch.m_scales ) {
+    connectBranch&lt;float&gt;(tree, &quot;JetConstitScaleMomentum_eta&quot;, &amp;m_JetConstitScaleMomentum_eta);
+    connectBranch&lt;float&gt;(tree, &quot;JetConstitScaleMomentum_phi&quot;, &amp;m_JetConstitScaleMomentum_phi);
+    connectBranch&lt;float&gt;(tree, &quot;JetConstitScaleMomentum_m&quot;, &amp;m_JetConstitScaleMomentum_m);
+    connectBranch&lt;float&gt;(tree, &quot;JetConstitScaleMomentum_pt&quot;, &amp;m_JetConstitScaleMomentum_pt);
+
+    connectBranch&lt;float&gt;(tree, &quot;JetEMScaleMomentum_eta&quot;, &amp;m_JetEMScaleMomentum_eta);
+    connectBranch&lt;float&gt;(tree, &quot;JetEMScaleMomentum_phi&quot;, &amp;m_JetEMScaleMomentum_phi);
+    connectBranch&lt;float&gt;(tree, &quot;JetEMScaleMomentum_m&quot;, &amp;m_JetEMScaleMomentum_m);
+    connectBranch&lt;float&gt;(tree, &quot;JetEMScaleMomentum_pt&quot;, &amp;m_JetEMScaleMomentum_pt);
+  }
+
+  if ( m_infoSwitch.m_area ) {
+    connectBranch&lt;float&gt;(tree, &quot;m_GhostArea&quot;, &amp;m_GhostArea);
+    connectBranch&lt;float&gt;(tree, &quot;m_ActiveArea&quot;, &amp;m_ActiveArea);
+    connectBranch&lt;float&gt;(tree, &quot;m_VoronoiArea&quot;, &amp;m_VoronoiArea);
+
+    connectBranch&lt;float&gt;(tree, &quot;m_ActiveArea4vec_pt&quot;, &amp;m_ActiveArea4vec_pt);
+    connectBranch&lt;float&gt;(tree, &quot;m_ActiveArea4vec_eta&quot;, &amp;m_ActiveArea4vec_eta);
+    connectBranch&lt;float&gt;(tree, &quot;m_ActiveArea4vec_phi&quot;, &amp;m_ActiveArea4vec_phi);
+    connectBranch&lt;float&gt;(tree, &quot;m_ActiveArea4vec_m&quot;, &amp;m_ActiveArea4vec_m);
+  }
+
+  if ( m_infoSwitch.m_substructure ) {
+    connectBranch&lt;float&gt;(tree, &quot;Split12&quot;,      &amp;m_Split12);
+    connectBranch&lt;float&gt;(tree, &quot;Split23&quot;,      &amp;m_Split23);
+    connectBranch&lt;float&gt;(tree, &quot;Split34&quot;,      &amp;m_Split34);
+    connectBranch&lt;float&gt;(tree, &quot;tau1_wta&quot;,     &amp;m_tau1_wta);
+    connectBranch&lt;float&gt;(tree, &quot;tau2_wta&quot;,     &amp;m_tau2_wta);
+    connectBranch&lt;float&gt;(tree, &quot;tau3_wta&quot;,     &amp;m_tau3_wta);
+    connectBranch&lt;float&gt;(tree, &quot;tau21_wta&quot;,    &amp;m_tau21_wta);
+    connectBranch&lt;float&gt;(tree, &quot;tau32_wta&quot;,    &amp;m_tau32_wta);
+    connectBranch&lt;float&gt;(tree, &quot;ECF1&quot;,         &amp;m_ECF1);
+    connectBranch&lt;float&gt;(tree, &quot;ECF2&quot;,         &amp;m_ECF2);
+    connectBranch&lt;float&gt;(tree, &quot;ECF3&quot;,         &amp;m_ECF3);
+    connectBranch&lt;float&gt;(tree, &quot;C2&quot;,           &amp;m_C2);
+    connectBranch&lt;float&gt;(tree, &quot;D2&quot;,           &amp;m_D2);
+    connectBranch&lt;float&gt;(tree, &quot;NTrimSubjets&quot;, &amp;m_NTrimSubjets);
+    connectBranch&lt;int&gt;  (tree, &quot;Nclusters&quot;,    &amp;m_NClusters);
+    connectBranch&lt;int&gt;  (tree, &quot;nTracks&quot;,      &amp;m_nTracks);
+  }
+
+  if ( m_infoSwitch.m_constituent) {
+    connectBranch&lt;int&gt;  (tree, &quot;numConstituents&quot;,    &amp;m_numConstituents);
+  }
+
+  if ( m_infoSwitch.m_constituentAll) {
+    connectBranch&lt; std::vector&lt;float&gt; &gt;(tree, &quot;constituentWeights&quot;,  &amp;m_constituentWeights);
+    connectBranch&lt; std::vector&lt;float&gt; &gt;(tree, &quot;constituent_pt&quot;,      &amp;m_constituent_pt);
+    connectBranch&lt; std::vector&lt;float&gt; &gt;(tree, &quot;constituent_eta&quot;,     &amp;m_constituent_eta);
+    connectBranch&lt; std::vector&lt;float&gt; &gt;(tree, &quot;constituent_phi&quot;,     &amp;m_constituent_phi);
+    connectBranch&lt; std::vector&lt;float&gt; &gt;(tree, &quot;constituent_e&quot;,       &amp;m_constituent_e);
+  }
+
+  if(m_infoSwitch.m_truth)
+    {
+      connectBranch&lt;float&gt;(tree,&quot;truth_m&quot;,   &amp;m_truth_m);
+      connectBranch&lt;float&gt;(tree,&quot;truth_pt&quot;,  &amp;m_truth_pt);
+      connectBranch&lt;float&gt;(tree,&quot;truth_phi&quot;, &amp;m_truth_phi);
+      connectBranch&lt;float&gt;(tree,&quot;truth_eta&quot;, &amp;m_truth_eta);
+    }
+
+  if ( m_infoSwitch.m_bosonCount) {
+    connectBranch&lt; int &gt;(tree, &quot;nTQuarks&quot;,  &amp;m_nTQuarks);
+    connectBranch&lt; int &gt;(tree, &quot;nHBosons&quot;,  &amp;m_nHBosons);
+    connectBranch&lt; int &gt;(tree, &quot;nWBosons&quot;,  &amp;m_nWBosons);
+    connectBranch&lt; int &gt;(tree, &quot;nZBosons&quot;,  &amp;m_nZBosons);
+  }
+
+  if (m_infoSwitch.m_muonCorrection) {
+    connectBranch&lt; float &gt;(tree, &quot;muonCorrected_pt&quot; , &amp;m_muonCorrected_pt );
+    connectBranch&lt; float &gt;(tree, &quot;muonCorrected_eta&quot;, &amp;m_muonCorrected_eta);
+    connectBranch&lt; float &gt;(tree, &quot;muonCorrected_phi&quot;, &amp;m_muonCorrected_phi);
+    connectBranch&lt; float &gt;(tree, &quot;muonCorrected_m&quot;  , &amp;m_muonCorrected_m  );
+
+  }
+
+  for(const std::pair&lt; std::string, std::vector&lt;std::vector&lt;unsigned int&gt;&gt;* &gt;&amp; kv : m_trkJetsIdx)
+    {
+      m_trkJets[kv.first]-&gt;JetContainer::setTree(tree);
+      if(tree-&gt;GetBranch(branchName(&quot;trkJetsIdx&quot;).c_str()))
+    connectBranch&lt; std::vector&lt;unsigned int&gt; &gt;(tree, &quot;trkJetsIdx&quot;, &amp;m_trkJetsIdx[kv.first]);
+      else
+    connectBranch&lt; std::vector&lt;unsigned int&gt; &gt;(tree, &quot;trkJetsIdx_&quot;+kv.first, &amp;m_trkJetsIdx[kv.first]);
+    }
+}
+
+void FatJetContainer::updateParticle(uint idx, FatJet&amp; fatjet)
+{
+  if(m_debug) std::cout &lt;&lt; &quot;in FatJetContainer::updateParticle &quot; &lt;&lt; std::endl;
+  ParticleContainer::updateParticle(idx,fatjet);
+
+  if ( m_infoSwitch.m_scales ) {
+      fatjet.JetConstitScaleMomentum_eta = m_JetConstitScaleMomentum_eta -&gt;at(idx);
+      fatjet.JetConstitScaleMomentum_phi = m_JetConstitScaleMomentum_phi -&gt;at(idx);
+      fatjet.JetConstitScaleMomentum_m = m_JetConstitScaleMomentum_m -&gt;at(idx);
+      fatjet.JetConstitScaleMomentum_pt = m_JetConstitScaleMomentum_pt -&gt;at(idx);
+
+      fatjet.JetEMScaleMomentum_eta = m_JetEMScaleMomentum_eta -&gt;at(idx);
+      fatjet.JetEMScaleMomentum_phi = m_JetEMScaleMomentum_phi -&gt;at(idx);
+      fatjet.JetEMScaleMomentum_m = m_JetEMScaleMomentum_m -&gt;at(idx);
+      fatjet.JetEMScaleMomentum_pt = m_JetEMScaleMomentum_pt -&gt;at(idx);
+  }
+
+  if ( m_infoSwitch.m_area ) {
+    fatjet.GhostArea = m_GhostArea-&gt;at(idx);
+    fatjet.ActiveArea = m_ActiveArea-&gt;at(idx);
+    fatjet.VoronoiArea = m_VoronoiArea-&gt;at(idx);
+    fatjet.ActiveArea4vec_pt = m_ActiveArea4vec_pt-&gt;at(idx);
+    fatjet.ActiveArea4vec_eta = m_ActiveArea4vec_eta-&gt;at(idx);
+    fatjet.ActiveArea4vec_phi = m_ActiveArea4vec_phi-&gt;at(idx);
+    fatjet.ActiveArea4vec_m = m_ActiveArea4vec_m-&gt;at(idx);
+  }
+
+  if ( m_infoSwitch.m_substructure ) {
+    fatjet.Split12      = m_Split12     -&gt;at(idx);
+    fatjet.Split23      = m_Split23     -&gt;at(idx);
+    fatjet.Split34      = m_Split34     -&gt;at(idx);
+    fatjet.tau1_wta     = m_tau1_wta    -&gt;at(idx);
+    fatjet.tau2_wta     = m_tau2_wta    -&gt;at(idx);
+    fatjet.tau3_wta     = m_tau3_wta    -&gt;at(idx);
+    fatjet.tau21_wta    = m_tau21_wta   -&gt;at(idx);
+    fatjet.tau32_wta    = m_tau32_wta   -&gt;at(idx);
+    fatjet.ECF1         = m_ECF1        -&gt;at(idx);
+    fatjet.ECF2         = m_ECF2        -&gt;at(idx);
+    fatjet.ECF3         = m_ECF3        -&gt;at(idx);
+    fatjet.C2           = m_C2          -&gt;at(idx);
+    fatjet.D2           = m_D2          -&gt;at(idx);
+    fatjet.NTrimSubjets = m_NTrimSubjets-&gt;at(idx);
+    fatjet.NClusters    = m_NClusters   -&gt;at(idx);
+    fatjet.nTracks      = m_nTracks     -&gt;at(idx);
+  }
+
+  if ( m_infoSwitch.m_constituent) {
+    fatjet.numConstituents    = m_numConstituents   -&gt;at(idx);
+  }
+
+  if ( m_infoSwitch.m_constituentAll) {
+    fatjet.constituentWeights = m_constituentWeights  -&gt;at(idx);
+    fatjet.constituent_pt     = m_constituent_pt      -&gt;at(idx);
+    fatjet.constituent_eta    = m_constituent_eta     -&gt;at(idx);
+    fatjet.constituent_phi    = m_constituent_phi     -&gt;at(idx);
+    fatjet.constituent_e      = m_constituent_e       -&gt;at(idx);
+  }
+
+  if(m_infoSwitch.m_truth)
+    {
+      fatjet.truth_p4.SetPtEtaPhiE(m_truth_pt -&gt;at(idx),
+                   m_truth_eta-&gt;at(idx),
+                   m_truth_phi-&gt;at(idx),
+                   m_truth_m  -&gt;at(idx));
+    }
+
+  if (m_infoSwitch.m_bosonCount) {
+    fatjet.nTQuarks = m_nTQuarks-&gt;at(idx);
+    fatjet.nHBosons = m_nHBosons-&gt;at(idx);
+    fatjet.nWBosons = m_nWBosons-&gt;at(idx);
+    fatjet.nZBosons = m_nZBosons-&gt;at(idx);
+  }
+
+  if (m_infoSwitch.m_muonCorrection) {
+    fatjet.muonCorrected_pt  = m_muonCorrected_pt -&gt;at(idx);
+    fatjet.muonCorrected_eta = m_muonCorrected_eta-&gt;at(idx);
+    fatjet.muonCorrected_phi = m_muonCorrected_phi-&gt;at(idx);
+    fatjet.muonCorrected_m   = m_muonCorrected_m  -&gt;at(idx);
+  }
+
+  for(const auto&amp; kv : m_trkJets)
+    {
+      fatjet.trkJets[kv.first].clear();
+      std::vector&lt;std::vector&lt;unsigned int&gt;&gt; *trkJetsIdx=m_trkJetsIdx[kv.first];
+      for(unsigned int iTrkJet : trkJetsIdx-&gt;at(idx))
+    {
+      Jet thisTrkJet;
+      kv.second-&gt;updateParticle(iTrkJet, thisTrkJet);
+      fatjet.trkJets[kv.first].push_back(thisTrkJet);
+    }
+    }
+
+  if(m_debug) std::cout &lt;&lt; &quot;leave FatJetContainer::updateParticle &quot; &lt;&lt; std::endl;
+  return;
+}
+
+
+
+void FatJetContainer::setBranches(TTree *tree)
+{
+  ParticleContainer::setBranches(tree);
+
+  if ( m_infoSwitch.m_scales ) {
+      setBranch&lt;float&gt;(tree, &quot;JetConstitScaleMomentum_eta&quot;, m_JetConstitScaleMomentum_eta);
+      setBranch&lt;float&gt;(tree, &quot;JetConstitScaleMomentum_phi&quot;, m_JetConstitScaleMomentum_phi);
+      setBranch&lt;float&gt;(tree, &quot;JetConstitScaleMomentum_m&quot;, m_JetConstitScaleMomentum_m);
+      setBranch&lt;float&gt;(tree, &quot;JetConstitScaleMomentum_pt&quot;, m_JetConstitScaleMomentum_pt);
+
+      setBranch&lt;float&gt;(tree, &quot;JetEMScaleMomentum_eta&quot;, m_JetEMScaleMomentum_eta);
+      setBranch&lt;float&gt;(tree, &quot;JetEMScaleMomentum_phi&quot;, m_JetEMScaleMomentum_phi);
+      setBranch&lt;float&gt;(tree, &quot;JetEMScaleMomentum_m&quot;, m_JetEMScaleMomentum_m);
+      setBranch&lt;float&gt;(tree, &quot;JetEMScaleMomentum_pt&quot;, m_JetEMScaleMomentum_pt);
+  }
+
+  if ( m_infoSwitch.m_area ) {
+    setBranch&lt;float&gt;(tree, &quot;GhostArea&quot;, m_GhostArea);
+    setBranch&lt;float&gt;(tree, &quot;ActiveArea&quot;, m_ActiveArea);
+    setBranch&lt;float&gt;(tree, &quot;VoronoiArea&quot;, m_VoronoiArea);
+    setBranch&lt;float&gt;(tree, &quot;ActiveArea4vec_pt&quot;, m_ActiveArea4vec_pt);
+    setBranch&lt;float&gt;(tree, &quot;ActiveArea4vec_eta&quot;, m_ActiveArea4vec_eta);
+    setBranch&lt;float&gt;(tree, &quot;ActiveArea4vec_phi&quot;, m_ActiveArea4vec_phi);
+    setBranch&lt;float&gt;(tree, &quot;ActiveArea4vec_m&quot;, m_ActiveArea4vec_m);
+
+  }
+
+  if ( m_infoSwitch.m_substructure ) {
+    setBranch&lt;float&gt;(tree, &quot;Split12&quot;,      m_Split12);
+    setBranch&lt;float&gt;(tree, &quot;Split23&quot;,      m_Split23);
+    setBranch&lt;float&gt;(tree, &quot;Split34&quot;,      m_Split34);
+    setBranch&lt;float&gt;(tree, &quot;tau1_wta&quot;,     m_tau1_wta);
+    setBranch&lt;float&gt;(tree, &quot;tau2_wta&quot;,     m_tau2_wta);
+    setBranch&lt;float&gt;(tree, &quot;tau3_wta&quot;,     m_tau3_wta);
+    setBranch&lt;float&gt;(tree, &quot;tau21_wta&quot;,    m_tau21_wta);
+    setBranch&lt;float&gt;(tree, &quot;tau32_wta&quot;,    m_tau32_wta);
+    setBranch&lt;float&gt;(tree, &quot;ECF1&quot;,         m_ECF1);
+    setBranch&lt;float&gt;(tree, &quot;ECF2&quot;,         m_ECF2);
+    setBranch&lt;float&gt;(tree, &quot;ECF3&quot;,         m_ECF3);
+    setBranch&lt;float&gt;(tree, &quot;C2&quot;,           m_C2);
+    setBranch&lt;float&gt;(tree, &quot;D2&quot;,           m_D2);
+    setBranch&lt;float&gt;(tree, &quot;NTrimSubjets&quot;, m_NTrimSubjets);
+    setBranch&lt;int&gt;  (tree, &quot;Nclusters&quot;,    m_NClusters);
+    setBranch&lt;int&gt;  (tree, &quot;nTracks&quot;,      m_nTracks);
+  }
+
+  if ( m_infoSwitch.m_constituent) {
+    setBranch&lt;int&gt;  (tree, &quot;numConstituents&quot;,    m_numConstituents);
+  }
+
+  if ( m_infoSwitch.m_constituentAll) {
+    setBranch&lt; std::vector&lt;float&gt; &gt;(tree, &quot;constituentWeights&quot;,  m_constituentWeights);
+    setBranch&lt; std::vector&lt;float&gt; &gt;(tree, &quot;constituent_pt&quot;,      m_constituent_pt);
+    setBranch&lt; std::vector&lt;float&gt; &gt;(tree, &quot;constituent_eta&quot;,     m_constituent_eta);
+    setBranch&lt; std::vector&lt;float&gt; &gt;(tree, &quot;constituent_phi&quot;,     m_constituent_phi);
+    setBranch&lt; std::vector&lt;float&gt; &gt;(tree, &quot;constituent_e&quot;,       m_constituent_e);
+  }
+
+  if ( m_infoSwitch.m_truth &amp;&amp; m_mc ) {
+    setBranch&lt;float&gt;(tree, &quot;truth_m&quot;  , m_truth_m  );
+    setBranch&lt;float&gt;(tree, &quot;truth_pt&quot; , m_truth_pt );
+    setBranch&lt;float&gt;(tree, &quot;truth_phi&quot;, m_truth_phi);
+    setBranch&lt;float&gt;(tree, &quot;truth_eta&quot;, m_truth_eta);
+  }
+
+  if ( m_infoSwitch.m_bosonCount &amp;&amp; m_mc ) {
+    setBranch&lt; int &gt;(tree, &quot;nTQuarks&quot;,       m_nTQuarks);
+    setBranch&lt; int &gt;(tree, &quot;nHBosons&quot;,       m_nHBosons);
+    setBranch&lt; int &gt;(tree, &quot;nWBosons&quot;,       m_nWBosons);
+    setBranch&lt; int &gt;(tree, &quot;nZBosons&quot;,       m_nZBosons);
+  }
+  if (m_infoSwitch.m_muonCorrection) {
+    setBranch&lt;float&gt; (tree, &quot;muonCorrected_pt&quot; , m_muonCorrected_pt );
+    setBranch&lt;float&gt; (tree, &quot;muonCorrected_eta&quot;, m_muonCorrected_eta);
+    setBranch&lt;float&gt; (tree, &quot;muonCorrected_phi&quot;, m_muonCorrected_phi);
+    setBranch&lt;float&gt; (tree, &quot;muonCorrected_m&quot;  , m_muonCorrected_m  );
+  }
+
+  for(const auto&amp; kv : m_trkJets)
+    {
+      kv.second-&gt;setBranches(tree);
+      setBranch&lt; std::vector&lt;unsigned int&gt; &gt;(tree, &quot;trkJetsIdx_&quot;+kv.first, m_trkJetsIdx[kv.first]);
+    }
+
+  return;
+}
+
+
+void FatJetContainer::clear()
+{
+
+  ParticleContainer::clear();
+
+  if ( m_infoSwitch.m_scales ) {
+    m_JetConstitScaleMomentum_eta   -&gt;clear();
+    m_JetConstitScaleMomentum_phi   -&gt;clear();
+    m_JetConstitScaleMomentum_m     -&gt;clear();
+    m_JetConstitScaleMomentum_pt    -&gt;clear();
+
+    m_JetEMScaleMomentum_eta        -&gt;clear();
+    m_JetEMScaleMomentum_phi        -&gt;clear();
+    m_JetEMScaleMomentum_m          -&gt;clear();
+    m_JetEMScaleMomentum_pt         -&gt;clear();
+  }
+
+  if ( m_infoSwitch.m_area ) {
+    m_GhostArea-&gt;clear();
+    m_ActiveArea-&gt;clear();
+    m_VoronoiArea-&gt;clear();
+    m_ActiveArea4vec_pt-&gt;clear();
+    m_ActiveArea4vec_eta-&gt;clear();
+    m_ActiveArea4vec_phi-&gt;clear();
+    m_ActiveArea4vec_m-&gt;clear();
+  }
+
+  if ( m_infoSwitch.m_substructure ) {
+    m_Split12     -&gt;clear();
+    m_Split23     -&gt;clear();
+    m_Split34     -&gt;clear();
+    m_tau1_wta    -&gt;clear();
+    m_tau2_wta    -&gt;clear();
+    m_tau3_wta    -&gt;clear();
+    m_tau21_wta   -&gt;clear();
+    m_tau32_wta   -&gt;clear();
+    m_ECF1        -&gt;clear();
+    m_ECF2        -&gt;clear();
+    m_ECF3        -&gt;clear();
+    m_C2          -&gt;clear();
+    m_D2          -&gt;clear();
+    m_NTrimSubjets-&gt;clear();
+    m_NClusters   -&gt;clear();
+    m_nTracks     -&gt;clear();
+  }
+
+  if ( m_infoSwitch.m_constituent) {
+    m_numConstituents-&gt;clear();
+  }
+
+  if ( m_infoSwitch.m_constituentAll) {
+    m_constituentWeights-&gt;clear();
+    m_constituent_pt    -&gt;clear();
+    m_constituent_eta   -&gt;clear();
+    m_constituent_phi   -&gt;clear();
+    m_constituent_e     -&gt;clear();
+  }
+
+  if ( m_infoSwitch.m_truth &amp;&amp; m_mc ) {
+    m_truth_m  -&gt;clear();
+    m_truth_pt -&gt;clear();
+    m_truth_phi-&gt;clear();
+    m_truth_eta-&gt;clear();
+  }
+
+  if ( m_infoSwitch.m_bosonCount &amp;&amp; m_mc) {
+    m_nTQuarks-&gt;clear();
+    m_nHBosons-&gt;clear();
+    m_nWBosons-&gt;clear();
+    m_nZBosons-&gt;clear();
+  }
+
+  if ( m_infoSwitch.m_muonCorrection) {
+    m_muonCorrected_pt -&gt;clear();
+    m_muonCorrected_eta-&gt;clear();
+    m_muonCorrected_phi-&gt;clear();
+    m_muonCorrected_m  -&gt;clear();
+  }
+
+  for(const std::pair&lt; std::string, std::vector&lt;std::vector&lt;unsigned int&gt;&gt;* &gt;&amp; kv : m_trkJetsIdx)
+    {
+      m_trkJets   [kv.first]-&gt;clear();
+      m_trkJetsIdx[kv.first]-&gt;clear();
+    }
+
+  return;
+}
+
+void FatJetContainer::FillFatJet( const xAOD::Jet* jet ){
+  return FillFatJet(static_cast&lt;const xAOD::IParticle*&gt;(jet));
+}
+
+void FatJetContainer::FillFatJet( const xAOD::IParticle* particle ){
+
+  ParticleContainer::FillParticle(particle);
+
+  const xAOD::Jet* fatjet=dynamic_cast&lt;const xAOD::Jet*&gt;(particle);
+
+  if( m_infoSwitch.m_scales ){
+    static SG::AuxElement::ConstAccessor&lt;float&gt; acc_JetConstitScaleMomentum_eta(&quot;JetConstitScaleMomentum_eta&quot;);
+    safeFill&lt;float, float, xAOD::Jet&gt;(fatjet, acc_JetConstitScaleMomentum_eta, m_JetConstitScaleMomentum_eta, -999);
+    static SG::AuxElement::ConstAccessor&lt;float&gt; acc_JetConstitScaleMomentum_phi(&quot;JetConstitScaleMomentum_phi&quot;);
+    safeFill&lt;float, float, xAOD::Jet&gt;(fatjet, acc_JetConstitScaleMomentum_phi, m_JetConstitScaleMomentum_phi, -999);
+    static SG::AuxElement::ConstAccessor&lt;float&gt; acc_JetConstitScaleMomentum_m(&quot;JetConstitScaleMomentum_m&quot;);
+    safeFill&lt;float, float, xAOD::Jet&gt;(fatjet, acc_JetConstitScaleMomentum_m, m_JetConstitScaleMomentum_m, -999, m_units);
+    static SG::AuxElement::ConstAccessor&lt;float&gt; acc_JetConstitScaleMomentum_pt(&quot;JetConstitScaleMomentum_pt&quot;);
+    safeFill&lt;float, float, xAOD::Jet&gt;(fatjet, acc_JetConstitScaleMomentum_pt, m_JetConstitScaleMomentum_pt, -999, m_units);
+
+    static SG::AuxElement::ConstAccessor&lt;float&gt; acc_JetEMScaleMomentum_eta(&quot;JetEMScaleMomentum_eta&quot;);
+    safeFill&lt;float, float, xAOD::Jet&gt;(fatjet, acc_JetEMScaleMomentum_eta, m_JetEMScaleMomentum_eta, -999);
+    static SG::AuxElement::ConstAccessor&lt;float&gt; acc_JetEMScaleMomentum_phi(&quot;JetEMScaleMomentum_phi&quot;);
+    safeFill&lt;float, float, xAOD::Jet&gt;(fatjet, acc_JetEMScaleMomentum_phi, m_JetEMScaleMomentum_phi, -999);
+    static SG::AuxElement::ConstAccessor&lt;float&gt; acc_JetEMScaleMomentum_m(&quot;JetEMScaleMomentum_m&quot;);
+    safeFill&lt;float, float, xAOD::Jet&gt;(fatjet, acc_JetEMScaleMomentum_m, m_JetEMScaleMomentum_m, -999, m_units);
+    static SG::AuxElement::ConstAccessor&lt;float&gt; acc_JetEMScaleMomentum_pt(&quot;JetEMScaleMomentum_pt&quot;);
+    safeFill&lt;float, float, xAOD::Jet&gt;(fatjet, acc_JetEMScaleMomentum_pt, m_JetEMScaleMomentum_pt, -999, m_units);
+  }
+
+  if ( m_infoSwitch.m_area ) {
+    static SG::AuxElement::ConstAccessor&lt;float&gt; acc_GhostArea(&quot;GhostArea&quot;);
+    safeFill&lt;float, float, xAOD::Jet&gt;(fatjet, acc_GhostArea, m_GhostArea, -999);
+    static SG::AuxElement::ConstAccessor&lt;float&gt; acc_ActiveArea(&quot;ActiveArea&quot;);
+    safeFill&lt;float, float, xAOD::Jet&gt;(fatjet, acc_ActiveArea, m_ActiveArea, -999);
+    static SG::AuxElement::ConstAccessor&lt;float&gt; acc_VoronoiArea(&quot;VoronoiArea&quot;);
+    safeFill&lt;float, float, xAOD::Jet&gt;(fatjet, acc_VoronoiArea, m_VoronoiArea, -999);
+    static SG::AuxElement::ConstAccessor&lt;float&gt; acc_ActiveArea4vec_pt(&quot;ActiveArea4vec_pt&quot;);
+    safeFill&lt;float, float, xAOD::Jet&gt;(fatjet, acc_ActiveArea4vec_pt, m_ActiveArea4vec_pt, -999, m_units);
+    static SG::AuxElement::ConstAccessor&lt;float&gt; acc_ActiveArea4vec_eta(&quot;ActiveArea4vec_eta&quot;);
+    safeFill&lt;float, float, xAOD::Jet&gt;(fatjet, acc_ActiveArea4vec_eta, m_ActiveArea4vec_eta, -999);
+    static SG::AuxElement::ConstAccessor&lt;float&gt; acc_ActiveArea4vec_phi(&quot;ActiveArea4vec_phi&quot;);
+    safeFill&lt;float, float, xAOD::Jet&gt;(fatjet, acc_ActiveArea4vec_phi, m_ActiveArea4vec_phi, -999);
+    static SG::AuxElement::ConstAccessor&lt;float&gt; acc_ActiveArea4vec_m(&quot;ActiveArea4vec_m&quot;);
+    safeFill&lt;float, float, xAOD::Jet&gt;(fatjet, acc_ActiveArea4vec_m, m_ActiveArea4vec_m, -999, m_units);
+  }
+
+  if( m_infoSwitch.m_substructure ){
+    static SG::AuxElement::ConstAccessor&lt;float&gt; acc_Split12(&quot;Split12&quot;);
+    safeFill&lt;float, float, xAOD::Jet&gt;(fatjet, acc_Split12, m_Split12, -999, m_units);
+
+    static SG::AuxElement::ConstAccessor&lt;float&gt; acc_Split23(&quot;Split23&quot;);
+    safeFill&lt;float, float, xAOD::Jet&gt;(fatjet, acc_Split23, m_Split23, -999, m_units);
+
+    static SG::AuxElement::ConstAccessor&lt;float&gt; acc_Split34(&quot;Split34&quot;);
+    safeFill&lt;float, float, xAOD::Jet&gt;(fatjet, acc_Split34, m_Split34, -999, m_units);
+
+    static SG::AuxElement::ConstAccessor&lt;float&gt; acc_tau1_wta (&quot;Tau1_wta&quot;);
+    safeFill&lt;float, float, xAOD::Jet&gt;(fatjet, acc_tau1_wta, m_tau1_wta, -999);
+
+    static SG::AuxElement::ConstAccessor&lt;float&gt; acc_tau2_wta (&quot;Tau2_wta&quot;);
+    safeFill&lt;float, float, xAOD::Jet&gt;(fatjet, acc_tau2_wta, m_tau2_wta, -999);
+
+    static SG::AuxElement::ConstAccessor&lt;float&gt; acc_tau3_wta (&quot;Tau3_wta&quot;);
+    safeFill&lt;float, float, xAOD::Jet&gt;(fatjet, acc_tau3_wta, m_tau3_wta, -999);
+
+    static SG::AuxElement::ConstAccessor&lt;float&gt; acc_tau21_wta (&quot;Tau21_wta&quot;);
+    if(acc_tau21_wta.isAvailable( *fatjet )){
+      m_tau21_wta-&gt;push_back( acc_tau21_wta( *fatjet ) );
+    } else if ( acc_tau1_wta.isAvailable( *fatjet ) &amp;&amp; acc_tau2_wta.isAvailable( *fatjet ) ) {
+      m_tau21_wta-&gt;push_back( acc_tau2_wta( *fatjet ) / acc_tau1_wta( *fatjet ) );
+    } else { m_tau21_wta-&gt;push_back( -999 ); }
+
+    static SG::AuxElement::ConstAccessor&lt;float&gt; acc_tau32_wta (&quot;Tau32_wta&quot;);
+    if(acc_tau32_wta.isAvailable( *fatjet )){
+      m_tau32_wta-&gt;push_back( acc_tau32_wta( *fatjet ) );
+    } else if ( acc_tau2_wta.isAvailable( *fatjet ) &amp;&amp; acc_tau3_wta.isAvailable( *fatjet ) ) {
+      m_tau32_wta-&gt;push_back( acc_tau3_wta( *fatjet ) / acc_tau2_wta( *fatjet ) );
+    } else { m_tau32_wta-&gt;push_back( -999 ); }
+
+    static SG::AuxElement::ConstAccessor&lt;int&gt; acc_NClusters (&quot;MyNClusters&quot;);
+    safeFill&lt;int, int, xAOD::Jet&gt;(fatjet, acc_NClusters, m_NClusters, -999);
+
+    static SG::AuxElement::ConstAccessor&lt;float&gt; acc_ECF1 (&quot;ECF1&quot;);
+    safeFill&lt;float, float, xAOD::Jet&gt;(fatjet, acc_ECF1, m_ECF1, -999, m_units);
+
+    static SG::AuxElement::ConstAccessor&lt;float&gt; acc_ECF2(&quot;ECF2&quot;);
+    safeFill&lt;float, float, xAOD::Jet&gt;(fatjet, acc_ECF2, m_ECF2, -999, m_units);
+
+    static SG::AuxElement::ConstAccessor&lt;float&gt; acc_ECF3 (&quot;ECF3&quot;);
+    safeFill&lt;float, float, xAOD::Jet&gt;(fatjet, acc_ECF3, m_ECF3, -999, m_units);
+
+    static SG::AuxElement::ConstAccessor&lt;int&gt; NTrimSubjets(&quot;NTrimSubjets&quot;);
+    safeFill&lt;int, float, xAOD::Jet&gt;(fatjet, NTrimSubjets, m_NTrimSubjets, -999);
+
+    static SG::AuxElement::ConstAccessor&lt;float&gt; acc_D2 (&quot;D2&quot;);
+    if( acc_D2.isAvailable( *fatjet ) ) {
+      m_D2-&gt;push_back( acc_D2( *fatjet ));
+    } else if (acc_ECF1.isAvailable( *fatjet ) &amp;&amp; acc_ECF2.isAvailable( *fatjet ) &amp;&amp; acc_ECF3.isAvailable( *fatjet )){
+      float e2=(acc_ECF2( *fatjet )/(acc_ECF1( *fatjet )*acc_ECF1( *fatjet )));
+      float e3=(acc_ECF3( *fatjet )/(acc_ECF1( *fatjet )*acc_ECF1( *fatjet )*acc_ECF1( *fatjet )));
+      m_D2-&gt;push_back( e3/(e2*e2*e2) );
+    } else{ m_D2-&gt;push_back(-999); }
+
+    static SG::AuxElement::ConstAccessor&lt;float&gt; acc_C2(&quot;C2&quot;);
+    if(acc_C2.isAvailable(*fatjet)){
+      m_C2-&gt;push_back(acc_C2(*fatjet));
+    } else if( acc_ECF1.isAvailable(*fatjet) &amp;&amp; acc_ECF2.isAvailable(*fatjet) &amp;&amp; acc_ECF3.isAvailable(*fatjet)){
+      m_C2-&gt;push_back( acc_ECF3(*fatjet)*acc_ECF1(*fatjet)/pow(acc_ECF2(*fatjet),2.0));
+    } else{ m_C2-&gt;push_back(-999); }
+
+    static SG::AuxElement::ConstAccessor&lt;int&gt; acc_GhostTrackCount(&quot;GhostTrackCount&quot;);
+    if( acc_GhostTrackCount.isAvailable( *fatjet ) ) {
+      m_nTracks-&gt;push_back( acc_GhostTrackCount( *fatjet ));
+    } else { m_nTracks-&gt;push_back(-999); }
+
+  }
+
+  if( m_infoSwitch.m_constituent ){
+    m_numConstituents-&gt;push_back( fatjet-&gt;numConstituents() );
+  }
+
+
+  if( m_infoSwitch.m_constituentAll ){
+    m_constituentWeights-&gt;push_back( fatjet-&gt;getAttribute&lt; std::vector&lt;float&gt; &gt;( &quot;constituentWeights&quot; ) );
+    std::vector&lt;float&gt; pt;
+    std::vector&lt;float&gt; eta;
+    std::vector&lt;float&gt; phi;
+    std::vector&lt;float&gt; e;
+    xAOD::JetConstituentVector consVec = fatjet-&gt;getConstituents();
+
+    if( consVec.isValid() ) {
+
+      // use the example provided in
+      // http://acode-browser.usatlas.bnl.gov/lxr/source/atlas/Event/xAOD/xAODJet/xAODJet/JetConstituentVector.h
+      xAOD::JetConstituentVector::iterator constit = consVec.begin();
+      xAOD::JetConstituentVector::iterator constitE = consVec.end();
+      for( ; constit != constitE; constit++){
+    pt. push_back( constit-&gt;pt() / m_units );
+    eta.push_back( constit-&gt;eta() );
+    phi.push_back( constit-&gt;phi() );
+    e.  push_back( constit-&gt;e() / m_units  );
+      }
+    }
+    m_constituent_pt -&gt;push_back( pt  );
+    m_constituent_eta-&gt;push_back( eta );
+    m_constituent_phi-&gt;push_back( phi );
+    m_constituent_e  -&gt;push_back( e   );
+  }
+
+  if ( m_infoSwitch.m_truth &amp;&amp; m_mc ) {
+    const xAOD::Jet* truthJet = HelperFunctions::getLink&lt;xAOD::Jet&gt;( fatjet, &quot;GhostTruthAssociationLink&quot; );
+    if(truthJet) {
+      m_truth_pt-&gt;push_back ( truthJet-&gt;pt() / m_units );
+      m_truth_eta-&gt;push_back( truthJet-&gt;eta() );
+      m_truth_phi-&gt;push_back( truthJet-&gt;phi() );
+      m_truth_m-&gt;push_back  ( truthJet-&gt;m() / m_units );
+    } else {
+      m_truth_pt-&gt;push_back ( -999 );
+      m_truth_eta-&gt;push_back( -999 );
+      m_truth_phi-&gt;push_back( -999 );
+      m_truth_m-&gt;push_back  ( -999 );
+    }
+
+  }
+
+  if(m_infoSwitch.m_bosonCount &amp;&amp; m_mc){
+
+    const xAOD::Jet* fatjet_parent = fatjet; // Trimmed jet area will be used for leading calo-jet if parent link fails
+
+    try
+      {
+    auto el = fatjet-&gt;auxdata&lt;ElementLink&lt;xAOD::JetContainer&gt; &gt;(&quot;Parent&quot;);
+    if(el.isValid())
+      fatjet_parent = (*el);
+    else
+      Warning(&quot;execute()&quot;, &quot;Invalid link to \&quot;Parent\&quot; from leading calo-jet&quot;);
+      }
+    catch(...)
+      {
+    Warning(&quot;execute()&quot;, &quot;Unable to fetch \&quot;Parent\&quot; link from leading calo-jet&quot;);
+      }
+
+    static SG::AuxElement::ConstAccessor&lt; int &gt; truthfatjet_TQuarks(&quot;GhostTQuarksFinalCount&quot;);
+    safeFill&lt;int, int, xAOD::Jet&gt;(fatjet_parent, truthfatjet_TQuarks, m_nTQuarks, -999);
+
+    static SG::AuxElement::ConstAccessor&lt; int &gt; truthfatjet_WBosons(&quot;GhostWBosonsCount&quot;);
+    safeFill&lt;int, int, xAOD::Jet&gt;(fatjet_parent, truthfatjet_WBosons, m_nWBosons, -999);
+
+    static SG::AuxElement::ConstAccessor&lt; int &gt; truthfatjet_ZBosons(&quot;GhostZBosonsCount&quot;);
+    safeFill&lt;int, int, xAOD::Jet&gt;(fatjet_parent, truthfatjet_ZBosons, m_nZBosons, -999);
+
+    static SG::AuxElement::ConstAccessor&lt; int &gt; truthfatjet_HBosons(&quot;GhostHBosonsCount&quot;);
+    safeFill&lt;int, int, xAOD::Jet&gt;(fatjet_parent, truthfatjet_HBosons, m_nHBosons, -999);
+  }
+
+  if (m_infoSwitch.m_muonCorrection) {
+    static const SG::AuxElement::ConstAccessor&lt;TLorentzVector&gt; acc_correctedFatJets_tlv(&quot;correctedFatJets_tlv&quot;);
+      m_muonCorrected_pt -&gt;push_back(acc_correctedFatJets_tlv(*fatjet).Pt() / m_units);
+      m_muonCorrected_eta-&gt;push_back(acc_correctedFatJets_tlv(*fatjet).Eta());
+      m_muonCorrected_phi-&gt;push_back(acc_correctedFatJets_tlv(*fatjet).Phi());
+      m_muonCorrected_m  -&gt;push_back(acc_correctedFatJets_tlv(*fatjet).M()  / m_units);
+  }
+
+
+  //
+  // Associated track jets
+  //
+  if( !m_infoSwitch.m_trackJetNames.empty() ){
+
+    // Find the fat jet parent
+    const xAOD::Jet* fatjet_parent = fatjet; // Trimmed jet area will be used for leading calo-jet if parent link fails
+
+    try{
+      auto el = fatjet-&gt;auxdata&lt;ElementLink&lt;xAOD::JetContainer&gt; &gt;(&quot;Parent&quot;);
+      if(el.isValid())
+    fatjet_parent = (*el);
+      else
+    Warning(&quot;execute()&quot;, &quot;Invalid link to \&quot;Parent\&quot; from leading calo-jet&quot;);
+    }
+    catch (...){
+      Warning(&quot;execute()&quot;, &quot;Unable to fetch \&quot;Parent\&quot; link from leading calo-jet&quot;);
+    }
+
+    // Associate the different track jet collections
+    std::vector&lt;const xAOD::Jet*&gt; assotrkjets;
+    for(const auto&amp; trackJetName : m_infoSwitch.m_trackJetNames)
+      {
+    try{
+      assotrkjets = fatjet_parent-&gt;getAssociatedObjects&lt;xAOD::Jet&gt;(trackJetName);
+      std::sort( assotrkjets.begin(), assotrkjets.end(), HelperFunctions::sort_pt );
+    }
+    catch (...){
+      Warning(&quot;execute()&quot;, &quot;Unable to fetch \&quot;%s\&quot; link from leading calo-jet&quot;, trackJetName.data());
+    }
+
+    std::vector&lt;unsigned int&gt; trkJetsIdx;
+    for(auto TrackJet : assotrkjets){
+      if(!SelectTrackJet(TrackJet)) continue;
+      trkJetsIdx.push_back(m_trkJets[trackJetName]-&gt;m_n);
+      m_trkJets[trackJetName]-&gt;FillJet(TrackJet, 0 , 0);
+    }
+    m_trkJetsIdx[trackJetName]-&gt;push_back(trkJetsIdx);
+      }
+  }
+
+  return;
+}
+
+
+bool FatJetContainer::SelectTrackJet(const xAOD::Jet* TrackJet)
+{
+  if( TrackJet-&gt;pt() &lt; m_trackJetPtCut )            return false;
+  if( fabs(TrackJet-&gt;eta()) &gt; m_trackJetEtaCut )    return false;
+  if( TrackJet-&gt;numConstituents() &lt; 2 )             return false;
+
+  return true;
+}
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2017, ATLAS Collaboration
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

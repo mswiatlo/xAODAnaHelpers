@@ -1,0 +1,520 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>MET Constructor &mdash; xAODAnaHelpers e83c6ca documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Particle PID Manager" href="ParticlePIDManager.html" />
+    <link rel="prev" title="Helper Functions" href="HelperFunctions.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> xAODAnaHelpers
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                e83c6ca
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installing.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UsingUs.html">xAH_run.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Algorithms.html">Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Community.html">Community</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FAQs.html">xAH FAQ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="API.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Getters.html">Getting Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Calibrators.html">Calibrating Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Correctors.html">Efficiency Correcting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Selectors.html">Selecting Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Histograms.html">Histograms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ToolsUsed.html">Tools Used</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Outputs.html">Producing Outputs</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="Utilities.html">Utilities</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="DebugTool.html">Debug Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="HelperClasses.html">Helper Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="HelperFunctions.html">Helper Functions</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">MET Constructor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ParticlePIDManager.html">Particle PID Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="xAHAlgorithm.html">xAH::Algorithm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MessagePrinterAlgo.html">MessagePrinterAlgo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/library_root.html">Doxygen API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">xAODAnaHelpers</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="API.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="Utilities.html">Utilities</a> &raquo;</li>
+        
+      <li>MET Constructor</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/METConstructor.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="met-constructor">
+<h1>MET Constructor<a class="headerlink" href="#met-constructor" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="_CPPv414METConstructor">
+<span id="_CPPv314METConstructor"></span><span id="_CPPv214METConstructor"></span><span id="METConstructor"></span><span class="target" id="classMETConstructor"></span><em class="property">class </em><code class="sig-name descname">METConstructor</code> : <em class="property">public</em> xAH::<a class="reference internal" href="api/classxAH_1_1Algorithm.html#_CPPv4N3xAH9AlgorithmE" title="xAH::Algorithm">Algorithm</a><a class="headerlink" href="#_CPPv414METConstructor" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N14METConstructor14METConstructorEv">
+<span id="_CPPv3N14METConstructor14METConstructorEv"></span><span id="_CPPv2N14METConstructor14METConstructorEv"></span><span id="METConstructor::METConstructor"></span><span class="target" id="classMETConstructor_1aa1b910e8b016c5b38d88cc5f3e9b2763"></span><code class="sig-name descname">METConstructor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14METConstructor14METConstructorEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N14METConstructor8setupJobERN2EL3JobE">
+<span id="_CPPv3N14METConstructor8setupJobERN2EL3JobE"></span><span id="_CPPv2N14METConstructor8setupJobERN2EL3JobE"></span><span id="METConstructor::setupJob__EL::JobR"></span><span class="target" id="classMETConstructor_1ab76282b8a61b5e682aa79070501ae5ec"></span>EL::StatusCode <code class="sig-name descname">setupJob</code><span class="sig-paren">(</span>EL::Job &amp;<em>job</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14METConstructor8setupJobERN2EL3JobE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N14METConstructor11fileExecuteEv">
+<span id="_CPPv3N14METConstructor11fileExecuteEv"></span><span id="_CPPv2N14METConstructor11fileExecuteEv"></span><span id="METConstructor::fileExecute"></span><span class="target" id="classMETConstructor_1a2a919177cfad28cfb462bd4857d9e2f5"></span>EL::StatusCode <code class="sig-name descname">fileExecute</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14METConstructor11fileExecuteEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N14METConstructor14histInitializeEv">
+<span id="_CPPv3N14METConstructor14histInitializeEv"></span><span id="_CPPv2N14METConstructor14histInitializeEv"></span><span id="METConstructor::histInitialize"></span><span class="target" id="classMETConstructor_1a1f1cd8893e64591c39144b4d4883aee9"></span>EL::StatusCode <code class="sig-name descname">histInitialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14METConstructor14histInitializeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N14METConstructor11changeInputEb">
+<span id="_CPPv3N14METConstructor11changeInputEb"></span><span id="_CPPv2N14METConstructor11changeInputEb"></span><span id="METConstructor::changeInput__b"></span><span class="target" id="classMETConstructor_1aa7d600a430f21d9aef676be14c75db4b"></span>EL::StatusCode <code class="sig-name descname">changeInput</code><span class="sig-paren">(</span>bool <em>firstFile</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14METConstructor11changeInputEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N14METConstructor10initializeEv">
+<span id="_CPPv3N14METConstructor10initializeEv"></span><span id="_CPPv2N14METConstructor10initializeEv"></span><span id="METConstructor::initialize"></span><span class="target" id="classMETConstructor_1a0384b76708f25a42a06b038a6e52cbfa"></span>EL::StatusCode <code class="sig-name descname">initialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14METConstructor10initializeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N14METConstructor7executeEv">
+<span id="_CPPv3N14METConstructor7executeEv"></span><span id="_CPPv2N14METConstructor7executeEv"></span><span id="METConstructor::execute"></span><span class="target" id="classMETConstructor_1a51dcc13dc888b4366bfb0b7c087309e3"></span>EL::StatusCode <code class="sig-name descname">execute</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14METConstructor7executeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N14METConstructor11postExecuteEv">
+<span id="_CPPv3N14METConstructor11postExecuteEv"></span><span id="_CPPv2N14METConstructor11postExecuteEv"></span><span id="METConstructor::postExecute"></span><span class="target" id="classMETConstructor_1ac850820b71536088a57b7b100f307d25"></span>EL::StatusCode <code class="sig-name descname">postExecute</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14METConstructor11postExecuteEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N14METConstructor8finalizeEv">
+<span id="_CPPv3N14METConstructor8finalizeEv"></span><span id="_CPPv2N14METConstructor8finalizeEv"></span><span id="METConstructor::finalize"></span><span class="target" id="classMETConstructor_1ae319306e5a0778c09fbc7ba947531468"></span>EL::StatusCode <code class="sig-name descname">finalize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14METConstructor8finalizeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N14METConstructor12histFinalizeEv">
+<span id="_CPPv3N14METConstructor12histFinalizeEv"></span><span id="_CPPv2N14METConstructor12histFinalizeEv"></span><span id="METConstructor::histFinalize"></span><span class="target" id="classMETConstructor_1a576def115d5ce6a249408175bebe3a64"></span>EL::StatusCode <code class="sig-name descname">histFinalize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14METConstructor12histFinalizeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv4N14METConstructor23m_referenceMETContainerE">
+<span id="_CPPv3N14METConstructor23m_referenceMETContainerE"></span><span id="_CPPv2N14METConstructor23m_referenceMETContainerE"></span><span id="METConstructor::m_referenceMETContainer__ss"></span><span class="target" id="classMETConstructor_1a5265572f5ccf5046457402391b32d0b8"></span>std::string <code class="sig-name descname">m_referenceMETContainer</code> = &quot;MET_Reference_AntiKt4LCTopo&quot;<a class="headerlink" href="#_CPPv4N14METConstructor23m_referenceMETContainerE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor9m_mapNameE">
+<span id="_CPPv3N14METConstructor9m_mapNameE"></span><span id="_CPPv2N14METConstructor9m_mapNameE"></span><span id="METConstructor::m_mapName__ss"></span><span class="target" id="classMETConstructor_1a880ecd2ac14fc86181fabd8317fcea05"></span>std::string <code class="sig-name descname">m_mapName</code> = &quot;METAssoc_AntiKt4LCTopo&quot;<a class="headerlink" href="#_CPPv4N14METConstructor9m_mapNameE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor10m_coreNameE">
+<span id="_CPPv3N14METConstructor10m_coreNameE"></span><span id="_CPPv2N14METConstructor10m_coreNameE"></span><span id="METConstructor::m_coreName__ss"></span><span class="target" id="classMETConstructor_1a4ebacd9e22a7af77bc0a9ec1afa03554"></span>std::string <code class="sig-name descname">m_coreName</code> = &quot;MET_Core_AntiKt4LCTopo&quot;<a class="headerlink" href="#_CPPv4N14METConstructor10m_coreNameE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor17m_outputContainerE">
+<span id="_CPPv3N14METConstructor17m_outputContainerE"></span><span id="_CPPv2N14METConstructor17m_outputContainerE"></span><span id="METConstructor::m_outputContainer__ss"></span><span class="target" id="classMETConstructor_1a817fca7fc2262ee65a74ca31b8d89017"></span>std::string <code class="sig-name descname">m_outputContainer</code> = &quot;NewRefFinal&quot;<a class="headerlink" href="#_CPPv4N14METConstructor17m_outputContainerE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor11m_inputJetsE">
+<span id="_CPPv3N14METConstructor11m_inputJetsE"></span><span id="_CPPv2N14METConstructor11m_inputJetsE"></span><span id="METConstructor::m_inputJets__ss"></span><span class="target" id="classMETConstructor_1a9a1eb1b4c7801a0b5ca7d573f094a7f4"></span>std::string <code class="sig-name descname">m_inputJets</code> = &quot;&quot;<a class="headerlink" href="#_CPPv4N14METConstructor11m_inputJetsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor16m_inputElectronsE">
+<span id="_CPPv3N14METConstructor16m_inputElectronsE"></span><span id="_CPPv2N14METConstructor16m_inputElectronsE"></span><span id="METConstructor::m_inputElectrons__ss"></span><span class="target" id="classMETConstructor_1a5387f0696787a703fd89a5908f5062b8"></span>std::string <code class="sig-name descname">m_inputElectrons</code> = &quot;&quot;<a class="headerlink" href="#_CPPv4N14METConstructor16m_inputElectronsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor14m_inputPhotonsE">
+<span id="_CPPv3N14METConstructor14m_inputPhotonsE"></span><span id="_CPPv2N14METConstructor14m_inputPhotonsE"></span><span id="METConstructor::m_inputPhotons__ss"></span><span class="target" id="classMETConstructor_1a3ab62ed7e2fc0d80947944d332ba94a1"></span>std::string <code class="sig-name descname">m_inputPhotons</code> = &quot;&quot;<a class="headerlink" href="#_CPPv4N14METConstructor14m_inputPhotonsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor11m_inputTausE">
+<span id="_CPPv3N14METConstructor11m_inputTausE"></span><span id="_CPPv2N14METConstructor11m_inputTausE"></span><span id="METConstructor::m_inputTaus__ss"></span><span class="target" id="classMETConstructor_1a1bc81c8c3a54d7a6d908e52ef609cac8"></span>std::string <code class="sig-name descname">m_inputTaus</code> = &quot;&quot;<a class="headerlink" href="#_CPPv4N14METConstructor11m_inputTausE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor12m_inputMuonsE">
+<span id="_CPPv3N14METConstructor12m_inputMuonsE"></span><span id="_CPPv2N14METConstructor12m_inputMuonsE"></span><span id="METConstructor::m_inputMuons__ss"></span><span class="target" id="classMETConstructor_1ac7d74123eadad39e391167d40f4cf95a"></span>std::string <code class="sig-name descname">m_inputMuons</code> = &quot;&quot;<a class="headerlink" href="#_CPPv4N14METConstructor12m_inputMuonsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor16m_doElectronCutsE">
+<span id="_CPPv3N14METConstructor16m_doElectronCutsE"></span><span id="_CPPv2N14METConstructor16m_doElectronCutsE"></span><span id="METConstructor::m_doElectronCuts__b"></span><span class="target" id="classMETConstructor_1a40ae3d5174c6abe79100fcc993dd93d2"></span>bool <code class="sig-name descname">m_doElectronCuts</code> = false<a class="headerlink" href="#_CPPv4N14METConstructor16m_doElectronCutsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor14m_doPhotonCutsE">
+<span id="_CPPv3N14METConstructor14m_doPhotonCutsE"></span><span id="_CPPv2N14METConstructor14m_doPhotonCutsE"></span><span id="METConstructor::m_doPhotonCuts__b"></span><span class="target" id="classMETConstructor_1a6ddd2543ac7781e7a8a81252e8eb5757"></span>bool <code class="sig-name descname">m_doPhotonCuts</code> = false<a class="headerlink" href="#_CPPv4N14METConstructor14m_doPhotonCutsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor11m_doTauCutsE">
+<span id="_CPPv3N14METConstructor11m_doTauCutsE"></span><span id="_CPPv2N14METConstructor11m_doTauCutsE"></span><span id="METConstructor::m_doTauCuts__b"></span><span class="target" id="classMETConstructor_1ac23eda8d2fdb22869a6213b1be00c6e2"></span>bool <code class="sig-name descname">m_doTauCuts</code> = false<a class="headerlink" href="#_CPPv4N14METConstructor11m_doTauCutsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor12m_doMuonCutsE">
+<span id="_CPPv3N14METConstructor12m_doMuonCutsE"></span><span id="_CPPv2N14METConstructor12m_doMuonCutsE"></span><span id="METConstructor::m_doMuonCuts__b"></span><span class="target" id="classMETConstructor_1a37a026f16654229cef6faa2eb2f805fe"></span>bool <code class="sig-name descname">m_doMuonCuts</code> = false<a class="headerlink" href="#_CPPv4N14METConstructor12m_doMuonCutsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor13m_doMuonElossE">
+<span id="_CPPv3N14METConstructor13m_doMuonElossE"></span><span id="_CPPv2N14METConstructor13m_doMuonElossE"></span><span id="METConstructor::m_doMuonEloss__b"></span><span class="target" id="classMETConstructor_1a912905ef2573cf6152c0cfdd749b8d9c"></span>bool <code class="sig-name descname">m_doMuonEloss</code> = false<a class="headerlink" href="#_CPPv4N14METConstructor13m_doMuonElossE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor17m_doIsolMuonElossE">
+<span id="_CPPv3N14METConstructor17m_doIsolMuonElossE"></span><span id="_CPPv2N14METConstructor17m_doIsolMuonElossE"></span><span id="METConstructor::m_doIsolMuonEloss__b"></span><span class="target" id="classMETConstructor_1a0410e7b80477513be12ffdb5fb83e40e"></span>bool <code class="sig-name descname">m_doIsolMuonEloss</code> = false<a class="headerlink" href="#_CPPv4N14METConstructor17m_doIsolMuonElossE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor10m_doJVTCutE">
+<span id="_CPPv3N14METConstructor10m_doJVTCutE"></span><span id="_CPPv2N14METConstructor10m_doJVTCutE"></span><span id="METConstructor::m_doJVTCut__b"></span><span class="target" id="classMETConstructor_1a76f8dffe7fe67098f2d2e346c334e863"></span>bool <code class="sig-name descname">m_doJVTCut</code> = false<a class="headerlink" href="#_CPPv4N14METConstructor10m_doJVTCutE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor11m_dofJVTCutE">
+<span id="_CPPv3N14METConstructor11m_dofJVTCutE"></span><span id="_CPPv2N14METConstructor11m_dofJVTCutE"></span><span id="METConstructor::m_dofJVTCut__b"></span><span class="target" id="classMETConstructor_1a46cb0ad1e58ab9be9d97139e37007872"></span>bool <code class="sig-name descname">m_dofJVTCut</code> = false<a class="headerlink" href="#_CPPv4N14METConstructor11m_dofJVTCutE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor9m_doPFlowE">
+<span id="_CPPv3N14METConstructor9m_doPFlowE"></span><span id="_CPPv2N14METConstructor9m_doPFlowE"></span><span id="METConstructor::m_doPFlow__b"></span><span class="target" id="classMETConstructor_1a6a5bf124a61c087d862f01de864dfe1c"></span>bool <code class="sig-name descname">m_doPFlow</code> = false<a class="headerlink" href="#_CPPv4N14METConstructor9m_doPFlowE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>To turn on p-flow MET calculation set m_doPFlow to true. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor26m_rebuildUsingTracksInJetsE">
+<span id="_CPPv3N14METConstructor26m_rebuildUsingTracksInJetsE"></span><span id="_CPPv2N14METConstructor26m_rebuildUsingTracksInJetsE"></span><span id="METConstructor::m_rebuildUsingTracksInJets__b"></span><span class="target" id="classMETConstructor_1a51a0b444854d3cf9d5d2a5546eb067d2"></span>bool <code class="sig-name descname">m_rebuildUsingTracksInJets</code> = false<a class="headerlink" href="#_CPPv4N14METConstructor26m_rebuildUsingTracksInJetsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Rebuild MET using tracks in calo jets. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor21m_addSoftClusterTermsE">
+<span id="_CPPv3N14METConstructor21m_addSoftClusterTermsE"></span><span id="_CPPv2N14METConstructor21m_addSoftClusterTermsE"></span><span id="METConstructor::m_addSoftClusterTerms__b"></span><span class="target" id="classMETConstructor_1a9104fdf671e1f09df64a248bce054584"></span>bool <code class="sig-name descname">m_addSoftClusterTerms</code> = false<a class="headerlink" href="#_CPPv4N14METConstructor21m_addSoftClusterTermsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><p>Include soft cluster terms if rebuilding MET using jet terms (only considered if <a class="reference internal" href="#_CPPv4N14METConstructor26m_rebuildUsingTracksInJetsE" title="METConstructor::m_rebuildUsingTracksInJets"><code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">m_rebuildUsingTracksInJets</span></code></a> is false)</p>
+ </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor23m_calculateSignificanceE">
+<span id="_CPPv3N14METConstructor23m_calculateSignificanceE"></span><span id="_CPPv2N14METConstructor23m_calculateSignificanceE"></span><span id="METConstructor::m_calculateSignificance__b"></span><span class="target" id="classMETConstructor_1a98d482d039b9c5ea49fbbe832e088d6a"></span>bool <code class="sig-name descname">m_calculateSignificance</code> = false<a class="headerlink" href="#_CPPv4N14METConstructor23m_calculateSignificanceE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Enable MET significance calculation. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor25m_significanceTreatPUJetsE">
+<span id="_CPPv3N14METConstructor25m_significanceTreatPUJetsE"></span><span id="_CPPv2N14METConstructor25m_significanceTreatPUJetsE"></span><span id="METConstructor::m_significanceTreatPUJets__b"></span><span class="target" id="classMETConstructor_1a95b54a8e7c58ae3278e9a4d9f1e9978f"></span>bool <code class="sig-name descname">m_significanceTreatPUJets</code> = true<a class="headerlink" href="#_CPPv4N14METConstructor25m_significanceTreatPUJetsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Introduce “resolution” for jets with low JVT, if the analysis is sensitive to pileup jets. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor26m_significanceSoftTermResoE">
+<span id="_CPPv3N14METConstructor26m_significanceSoftTermResoE"></span><span id="_CPPv2N14METConstructor26m_significanceSoftTermResoE"></span><span id="METConstructor::m_significanceSoftTermReso__double"></span><span class="target" id="classMETConstructor_1aa09728bec1d8a1fa69927b8c5e72d801"></span>double <code class="sig-name descname">m_significanceSoftTermReso</code> = 10.0<a class="headerlink" href="#_CPPv4N14METConstructor26m_significanceSoftTermResoE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set soft term resolution. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor12m_runNominalE">
+<span id="_CPPv3N14METConstructor12m_runNominalE"></span><span id="_CPPv2N14METConstructor12m_runNominalE"></span><span id="METConstructor::m_runNominal__b"></span><span class="target" id="classMETConstructor_1a952e1b468d0d8632ff6891c291bb0ce8"></span>bool <code class="sig-name descname">m_runNominal</code> = true<a class="headerlink" href="#_CPPv4N14METConstructor12m_runNominalE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>set to false if you want to run met systematics </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor10m_systNameE">
+<span id="_CPPv3N14METConstructor10m_systNameE"></span><span id="_CPPv2N14METConstructor10m_systNameE"></span><span id="METConstructor::m_systName__ss"></span><span class="target" id="classMETConstructor_1accc47e6d9fc3be5e928e2da0769663fe"></span>std::string <code class="sig-name descname">m_systName</code> = &quot;All&quot;<a class="headerlink" href="#_CPPv4N14METConstructor10m_systNameE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>do not change it, not useful </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor9m_systValE">
+<span id="_CPPv3N14METConstructor9m_systValE"></span><span id="_CPPv2N14METConstructor9m_systValE"></span><span id="METConstructor::m_systVal__float"></span><span class="target" id="classMETConstructor_1a8674d115a07172327407f18eff645c4d"></span>float <code class="sig-name descname">m_systVal</code> = 1.0<a class="headerlink" href="#_CPPv4N14METConstructor9m_systValE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor21m_writeSystToMetadataE">
+<span id="_CPPv3N14METConstructor21m_writeSystToMetadataE"></span><span id="_CPPv2N14METConstructor21m_writeSystToMetadataE"></span><span id="METConstructor::m_writeSystToMetadata__b"></span><span class="target" id="classMETConstructor_1a6e5d89f5bfacdccd4383852dccf9f9d7"></span>bool <code class="sig-name descname">m_writeSystToMetadata</code> = false<a class="headerlink" href="#_CPPv4N14METConstructor21m_writeSystToMetadataE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Write systematics names to metadata. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor16m_jetSystematicsE">
+<span id="_CPPv3N14METConstructor16m_jetSystematicsE"></span><span id="_CPPv2N14METConstructor16m_jetSystematicsE"></span><span id="METConstructor::m_jetSystematics__ss"></span><span class="target" id="classMETConstructor_1a0278f427b31ad3f6231f68405d02e86b"></span>std::string <code class="sig-name descname">m_jetSystematics</code> = &quot;&quot;<a class="headerlink" href="#_CPPv4N14METConstructor16m_jetSystematicsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><p>Name of jet systematics vector from  <a class="reference internal" href="JetCalibrator.html#_CPPv413JetCalibrator" title="JetCalibrator"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">JetCalibrator</span></code></a>.</p>
+ </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor16m_eleSystematicsE">
+<span id="_CPPv3N14METConstructor16m_eleSystematicsE"></span><span id="_CPPv2N14METConstructor16m_eleSystematicsE"></span><span id="METConstructor::m_eleSystematics__ss"></span><span class="target" id="classMETConstructor_1ab76b5c3debdc042d0bfd0459503bd139"></span>std::string <code class="sig-name descname">m_eleSystematics</code> = &quot;&quot;<a class="headerlink" href="#_CPPv4N14METConstructor16m_eleSystematicsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><p>Name of electron systematics vector from  <a class="reference internal" href="ElectronCalibrator.html#_CPPv418ElectronCalibrator" title="ElectronCalibrator"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ElectronCalibrator</span></code></a>.</p>
+ </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor17m_muonSystematicsE">
+<span id="_CPPv3N14METConstructor17m_muonSystematicsE"></span><span id="_CPPv2N14METConstructor17m_muonSystematicsE"></span><span id="METConstructor::m_muonSystematics__ss"></span><span class="target" id="classMETConstructor_1abee374e2ff1f51dd507af81fa402309d"></span>std::string <code class="sig-name descname">m_muonSystematics</code> = &quot;&quot;<a class="headerlink" href="#_CPPv4N14METConstructor17m_muonSystematicsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><p>Name of muon systematics vector from  <a class="reference internal" href="MuonCalibrator.html#_CPPv414MuonCalibrator" title="MuonCalibrator"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">MuonCalibrator</span></code></a>.</p>
+ </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor16m_tauSystematicsE">
+<span id="_CPPv3N14METConstructor16m_tauSystematicsE"></span><span id="_CPPv2N14METConstructor16m_tauSystematicsE"></span><span id="METConstructor::m_tauSystematics__ss"></span><span class="target" id="classMETConstructor_1a531c33a0b0e077c134eeaaba4c65071d"></span>std::string <code class="sig-name descname">m_tauSystematics</code> = &quot;&quot;<a class="headerlink" href="#_CPPv4N14METConstructor16m_tauSystematicsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><p>Name of tau systematics vector from  <a class="reference internal" href="TauCalibrator.html#_CPPv413TauCalibrator" title="TauCalibrator"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">TauCalibrator</span></code></a>.</p>
+ </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor16m_phoSystematicsE">
+<span id="_CPPv3N14METConstructor16m_phoSystematicsE"></span><span id="_CPPv2N14METConstructor16m_phoSystematicsE"></span><span id="METConstructor::m_phoSystematics__ss"></span><span class="target" id="classMETConstructor_1a2ff7db761f440a2be009d3b0dcc908d4"></span>std::string <code class="sig-name descname">m_phoSystematics</code> = &quot;&quot;<a class="headerlink" href="#_CPPv4N14METConstructor16m_phoSystematicsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><p>Name of photon systematics vector from <a class="reference internal" href="PhotonCalibrator.html#_CPPv416PhotonCalibrator" title="PhotonCalibrator"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">PhotonCalibrator</span></code></a>.</p>
+ </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor21m_outputAlgoSystNamesE">
+<span id="_CPPv3N14METConstructor21m_outputAlgoSystNamesE"></span><span id="_CPPv2N14METConstructor21m_outputAlgoSystNamesE"></span><span id="METConstructor::m_outputAlgoSystNames__ss"></span><span class="target" id="classMETConstructor_1a0ade6449d246dbbba7e6f73597dbbb4e"></span>std::string <code class="sig-name descname">m_outputAlgoSystNames</code> = &quot;&quot;<a class="headerlink" href="#_CPPv4N14METConstructor21m_outputAlgoSystNamesE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Private Members</p>
+<dl class="member">
+<dt id="_CPPv4N14METConstructor17m_metmaker_handleE">
+<span id="_CPPv3N14METConstructor17m_metmaker_handleE"></span><span id="_CPPv2N14METConstructor17m_metmaker_handleE"></span><span id="METConstructor::m_metmaker_handle__asg::AnaToolHandle:IMETMaker:"></span><span class="target" id="classMETConstructor_1ada521ca51579b0c2d3f85f275c56b1c8"></span>asg::AnaToolHandle&lt;IMETMaker&gt; <code class="sig-name descname">m_metmaker_handle</code> = {&quot;met::METMaker/METMaker&quot;, }<a class="headerlink" href="#_CPPv4N14METConstructor17m_metmaker_handleE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor16m_metSyst_handleE">
+<span id="_CPPv3N14METConstructor16m_metSyst_handleE"></span><span id="_CPPv2N14METConstructor16m_metSyst_handleE"></span><span id="METConstructor::m_metSyst_handle__asg::AnaToolHandle:IMETSystematicsTool:"></span><span class="target" id="classMETConstructor_1a1f8fcbef8b736cb2fd2ea85d552d0c23"></span>asg::AnaToolHandle&lt;IMETSystematicsTool&gt; <code class="sig-name descname">m_metSyst_handle</code> = {&quot;met::METSystematicsTool/METSystematicsTool&quot;, }<a class="headerlink" href="#_CPPv4N14METConstructor16m_metSyst_handleE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor24m_metSignificance_handleE">
+<span id="_CPPv3N14METConstructor24m_metSignificance_handleE"></span><span id="_CPPv2N14METConstructor24m_metSignificance_handleE"></span><span id="METConstructor::m_metSignificance_handle__asg::AnaToolHandle:IMETSignificance:"></span><span class="target" id="classMETConstructor_1adcaf3f73dbcf0ca2537ae2fef0db8ae3"></span>asg::AnaToolHandle&lt;IMETSignificance&gt; <code class="sig-name descname">m_metSignificance_handle</code> = {&quot;met::METSignificance/METSignificance&quot;, }<a class="headerlink" href="#_CPPv4N14METConstructor24m_metSignificance_handleE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor19m_tauSelTool_handleE">
+<span id="_CPPv3N14METConstructor19m_tauSelTool_handleE"></span><span id="_CPPv2N14METConstructor19m_tauSelTool_handleE"></span><span id="METConstructor::m_tauSelTool_handle__asg::AnaToolHandle:TauAnalysisTools::ITauSelectionTool:"></span><span class="target" id="classMETConstructor_1a36ca46cd76f7f66d0f93325080146598"></span>asg::AnaToolHandle&lt;TauAnalysisTools::ITauSelectionTool&gt; <code class="sig-name descname">m_tauSelTool_handle</code> = {&quot;TauAnalysisTools::TauSelectionTool/TauSelectionTool&quot;, }<a class="headerlink" href="#_CPPv4N14METConstructor19m_tauSelTool_handleE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor9m_sysListE">
+<span id="_CPPv3N14METConstructor9m_sysListE"></span><span id="_CPPv2N14METConstructor9m_sysListE"></span><span id="METConstructor::m_sysList__std::vector:CP::SystematicSet:"></span><span class="target" id="classMETConstructor_1aa38158b534284911d0da85828b356c82"></span>std::vector&lt;CP::SystematicSet&gt; <code class="sig-name descname">m_sysList</code><a class="headerlink" href="#_CPPv4N14METConstructor9m_sysListE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14METConstructor10m_numEventE">
+<span id="_CPPv3N14METConstructor10m_numEventE"></span><span id="_CPPv2N14METConstructor10m_numEventE"></span><span id="METConstructor::m_numEvent__i"></span><span class="target" id="classMETConstructor_1af6debb358b779ca981ae4078e9204970"></span>int <code class="sig-name descname">m_numEvent</code><a class="headerlink" href="#_CPPv4N14METConstructor10m_numEventE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ParticlePIDManager.html" class="btn btn-neutral float-right" title="Particle PID Manager" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="HelperFunctions.html" class="btn btn-neutral float-left" title="Helper Functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2017, ATLAS Collaboration
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

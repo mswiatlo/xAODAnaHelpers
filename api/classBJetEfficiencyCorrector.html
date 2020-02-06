@@ -1,0 +1,406 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Class BJetEfficiencyCorrector &mdash; xAODAnaHelpers e83c6ca documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class ClusterHistsAlgo" href="classClusterHistsAlgo.html" />
+    <link rel="prev" title="Class BasicEventSelection" href="classBasicEventSelection.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> xAODAnaHelpers
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                e83c6ca
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../Intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Installing.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../UsingUs.html">xAH_run.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Algorithms.html">Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Community.html">Community</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQs.html">xAH FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../API.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Doxygen API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">xAODAnaHelpers</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="library_root.html">Doxygen API</a> &raquo;</li>
+        
+      <li>Class BJetEfficiencyCorrector</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/classBJetEfficiencyCorrector.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="class-bjetefficiencycorrector">
+<span id="exhale-class-classbjetefficiencycorrector"></span><h1>Class BJetEfficiencyCorrector<a class="headerlink" href="#class-bjetefficiencycorrector" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_xAODAnaHelpers_BJetEfficiencyCorrector.h.html#file-xaodanahelpers-bjetefficiencycorrector-h"><span class="std std-ref">File BJetEfficiencyCorrector.h</span></a></p></li>
+</ul>
+<div class="section" id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">xAH::Algorithm</span></code> (<a class="reference internal" href="classxAH_1_1Algorithm.html#exhale-class-classxah-1-1algorithm"><span class="std std-ref">Class Algorithm</span></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv423BJetEfficiencyCorrector">
+<span id="_CPPv323BJetEfficiencyCorrector"></span><span id="_CPPv223BJetEfficiencyCorrector"></span><span id="BJetEfficiencyCorrector"></span><span class="target" id="classBJetEfficiencyCorrector"></span><em class="property">class </em><code class="sig-name descname">BJetEfficiencyCorrector</code> : <em class="property">public</em> xAH::<a class="reference internal" href="classxAH_1_1Algorithm.html#_CPPv4N3xAH9AlgorithmE" title="xAH::Algorithm">Algorithm</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N23BJetEfficiencyCorrector23BJetEfficiencyCorrectorEv">
+<span id="_CPPv3N23BJetEfficiencyCorrector23BJetEfficiencyCorrectorEv"></span><span id="_CPPv2N23BJetEfficiencyCorrector23BJetEfficiencyCorrectorEv"></span><span id="BJetEfficiencyCorrector::BJetEfficiencyCorrector"></span><span class="target" id="classBJetEfficiencyCorrector_1af6754e57e5030a11e43212bc79a3dc03"></span><code class="sig-name descname">BJetEfficiencyCorrector</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N23BJetEfficiencyCorrector8setupJobERN2EL3JobE">
+<span id="_CPPv3N23BJetEfficiencyCorrector8setupJobERN2EL3JobE"></span><span id="_CPPv2N23BJetEfficiencyCorrector8setupJobERN2EL3JobE"></span><span id="BJetEfficiencyCorrector::setupJob__EL::JobR"></span><span class="target" id="classBJetEfficiencyCorrector_1a44de0e899fe5342c516308a9fbbca166"></span>EL::StatusCode <code class="sig-name descname">setupJob</code><span class="sig-paren">(</span>EL::Job &amp;<em>job</em><span class="sig-paren">)</span><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N23BJetEfficiencyCorrector11fileExecuteEv">
+<span id="_CPPv3N23BJetEfficiencyCorrector11fileExecuteEv"></span><span id="_CPPv2N23BJetEfficiencyCorrector11fileExecuteEv"></span><span id="BJetEfficiencyCorrector::fileExecute"></span><span class="target" id="classBJetEfficiencyCorrector_1a2804b5cb253942390558ab6c7d2b1f7c"></span>EL::StatusCode <code class="sig-name descname">fileExecute</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N23BJetEfficiencyCorrector14histInitializeEv">
+<span id="_CPPv3N23BJetEfficiencyCorrector14histInitializeEv"></span><span id="_CPPv2N23BJetEfficiencyCorrector14histInitializeEv"></span><span id="BJetEfficiencyCorrector::histInitialize"></span><span class="target" id="classBJetEfficiencyCorrector_1a5b2724dbf444f2bd41b88e1673470a4b"></span>EL::StatusCode <code class="sig-name descname">histInitialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N23BJetEfficiencyCorrector11changeInputEb">
+<span id="_CPPv3N23BJetEfficiencyCorrector11changeInputEb"></span><span id="_CPPv2N23BJetEfficiencyCorrector11changeInputEb"></span><span id="BJetEfficiencyCorrector::changeInput__b"></span><span class="target" id="classBJetEfficiencyCorrector_1a4f6e98605b01da94e2cdf0ad66491d87"></span>EL::StatusCode <code class="sig-name descname">changeInput</code><span class="sig-paren">(</span>bool <em>firstFile</em><span class="sig-paren">)</span><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N23BJetEfficiencyCorrector10initializeEv">
+<span id="_CPPv3N23BJetEfficiencyCorrector10initializeEv"></span><span id="_CPPv2N23BJetEfficiencyCorrector10initializeEv"></span><span id="BJetEfficiencyCorrector::initialize"></span><span class="target" id="classBJetEfficiencyCorrector_1afcd909baa1800d60a8351c3a474afc6a"></span>EL::StatusCode <code class="sig-name descname">initialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N23BJetEfficiencyCorrector7executeEv">
+<span id="_CPPv3N23BJetEfficiencyCorrector7executeEv"></span><span id="_CPPv2N23BJetEfficiencyCorrector7executeEv"></span><span id="BJetEfficiencyCorrector::execute"></span><span class="target" id="classBJetEfficiencyCorrector_1a62e11e74282df2bdfcd81f9afda912d1"></span>EL::StatusCode <code class="sig-name descname">execute</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N23BJetEfficiencyCorrector27executeEfficiencyCorrectionEPKN4xAOD12JetContainerEPKN4xAOD9EventInfoEb">
+<span id="_CPPv3N23BJetEfficiencyCorrector27executeEfficiencyCorrectionEPKN4xAOD12JetContainerEPKN4xAOD9EventInfoEb"></span><span id="_CPPv2N23BJetEfficiencyCorrector27executeEfficiencyCorrectionEPKN4xAOD12JetContainerEPKN4xAOD9EventInfoEb"></span><span id="BJetEfficiencyCorrector::executeEfficiencyCorrection__xAOD::JetContainerCP.xAOD::EventInfoCP.b"></span><span class="target" id="classBJetEfficiencyCorrector_1ae085cb2b77a5d58dee2f41e94a877c59"></span>EL::StatusCode <code class="sig-name descname">executeEfficiencyCorrection</code><span class="sig-paren">(</span><em class="property">const</em> xAOD::JetContainer *<em>inJets</em>, <em class="property">const</em> xAOD::EventInfo *<em>eventInfo</em>, bool <em>doNominal</em><span class="sig-paren">)</span><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N23BJetEfficiencyCorrector11postExecuteEv">
+<span id="_CPPv3N23BJetEfficiencyCorrector11postExecuteEv"></span><span id="_CPPv2N23BJetEfficiencyCorrector11postExecuteEv"></span><span id="BJetEfficiencyCorrector::postExecute"></span><span class="target" id="classBJetEfficiencyCorrector_1a9d7c42e3f56b9281c17d685fb9c514fb"></span>EL::StatusCode <code class="sig-name descname">postExecute</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N23BJetEfficiencyCorrector8finalizeEv">
+<span id="_CPPv3N23BJetEfficiencyCorrector8finalizeEv"></span><span id="_CPPv2N23BJetEfficiencyCorrector8finalizeEv"></span><span id="BJetEfficiencyCorrector::finalize"></span><span class="target" id="classBJetEfficiencyCorrector_1ae750911bdf85d5f1cf0e85d370c4fefa"></span>EL::StatusCode <code class="sig-name descname">finalize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N23BJetEfficiencyCorrector12histFinalizeEv">
+<span id="_CPPv3N23BJetEfficiencyCorrector12histFinalizeEv"></span><span id="_CPPv2N23BJetEfficiencyCorrector12histFinalizeEv"></span><span id="BJetEfficiencyCorrector::histFinalize"></span><span class="target" id="classBJetEfficiencyCorrector_1ae1c1f150c0c906dc42ad0cf650c97fd0"></span>EL::StatusCode <code class="sig-name descname">histFinalize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv4N23BJetEfficiencyCorrector17m_inContainerNameE">
+<span id="_CPPv3N23BJetEfficiencyCorrector17m_inContainerNameE"></span><span id="_CPPv2N23BJetEfficiencyCorrector17m_inContainerNameE"></span><span id="BJetEfficiencyCorrector::m_inContainerName__ss"></span><span class="target" id="classBJetEfficiencyCorrector_1a9393804d7d4c9d973f33848332c73b73"></span>std::string <code class="sig-name descname">m_inContainerName</code> = &quot;&quot;<br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N23BJetEfficiencyCorrector11m_inputAlgoE">
+<span id="_CPPv3N23BJetEfficiencyCorrector11m_inputAlgoE"></span><span id="_CPPv2N23BJetEfficiencyCorrector11m_inputAlgoE"></span><span id="BJetEfficiencyCorrector::m_inputAlgo__ss"></span><span class="target" id="classBJetEfficiencyCorrector_1a00443fe92ca50492d3a7f5fea0caa229"></span>std::string <code class="sig-name descname">m_inputAlgo</code> = &quot;&quot;<br /></dt>
+<dd><p>The name of the vector containing the names of the systematically-varied jet-related containers from the upstream algorithm, which will be processed by this algorithm. </p>
+<p>Only jet calibration systematics or any other that create shallow copies of jet containers should be passed to this tool. It is advised to run this algorithm before running algorithms combining multiple calibration systematics (e.g. overlap removal). </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N23BJetEfficiencyCorrector10m_systNameE">
+<span id="_CPPv3N23BJetEfficiencyCorrector10m_systNameE"></span><span id="_CPPv2N23BJetEfficiencyCorrector10m_systNameE"></span><span id="BJetEfficiencyCorrector::m_systName__ss"></span><span class="target" id="classBJetEfficiencyCorrector_1ae5954c09c4748cbff2829165ace0ba48"></span>std::string <code class="sig-name descname">m_systName</code> = &quot;&quot;<br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N23BJetEfficiencyCorrector16m_outputSystNameE">
+<span id="_CPPv3N23BJetEfficiencyCorrector16m_outputSystNameE"></span><span id="_CPPv2N23BJetEfficiencyCorrector16m_outputSystNameE"></span><span id="BJetEfficiencyCorrector::m_outputSystName__ss"></span><span class="target" id="classBJetEfficiencyCorrector_1aec362890568ad20e80f127ae9f602fb1"></span>std::string <code class="sig-name descname">m_outputSystName</code> = &quot;BJetEfficiency_Algo&quot;<br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N23BJetEfficiencyCorrector21m_writeSystToMetadataE">
+<span id="_CPPv3N23BJetEfficiencyCorrector21m_writeSystToMetadataE"></span><span id="_CPPv2N23BJetEfficiencyCorrector21m_writeSystToMetadataE"></span><span id="BJetEfficiencyCorrector::m_writeSystToMetadata__b"></span><span class="target" id="classBJetEfficiencyCorrector_1ac1016974150b937480229b116f8101c0"></span>bool <code class="sig-name descname">m_writeSystToMetadata</code> = false<br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N23BJetEfficiencyCorrector14m_corrFileNameE">
+<span id="_CPPv3N23BJetEfficiencyCorrector14m_corrFileNameE"></span><span id="_CPPv2N23BJetEfficiencyCorrector14m_corrFileNameE"></span><span id="BJetEfficiencyCorrector::m_corrFileName__ss"></span><span class="target" id="classBJetEfficiencyCorrector_1a2c0b569456b6159056231a2f458e5fed"></span>std::string <code class="sig-name descname">m_corrFileName</code> = &quot;xAODBTaggingEfficiency/13TeV/2016-20_7-13TeV-MC15-CDI-July12_v1.root&quot;<br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N23BJetEfficiencyCorrector11m_jetAuthorE">
+<span id="_CPPv3N23BJetEfficiencyCorrector11m_jetAuthorE"></span><span id="_CPPv2N23BJetEfficiencyCorrector11m_jetAuthorE"></span><span id="BJetEfficiencyCorrector::m_jetAuthor__ss"></span><span class="target" id="classBJetEfficiencyCorrector_1a9b6724353e8ff8c0e6c7268e795d588a"></span>std::string <code class="sig-name descname">m_jetAuthor</code> = &quot;AntiKt4EMTopoJets&quot;<br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N23BJetEfficiencyCorrector12m_taggerNameE">
+<span id="_CPPv3N23BJetEfficiencyCorrector12m_taggerNameE"></span><span id="_CPPv2N23BJetEfficiencyCorrector12m_taggerNameE"></span><span id="BJetEfficiencyCorrector::m_taggerName__ss"></span><span class="target" id="classBJetEfficiencyCorrector_1a3ff3f06eaf254632f03ba1b066554230"></span>std::string <code class="sig-name descname">m_taggerName</code> = &quot;MV2c10&quot;<br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N23BJetEfficiencyCorrector20m_useDevelopmentFileE">
+<span id="_CPPv3N23BJetEfficiencyCorrector20m_useDevelopmentFileE"></span><span id="_CPPv2N23BJetEfficiencyCorrector20m_useDevelopmentFileE"></span><span id="BJetEfficiencyCorrector::m_useDevelopmentFile__b"></span><span class="target" id="classBJetEfficiencyCorrector_1a331f4787c0104b4cee0abe08d6543191"></span>bool <code class="sig-name descname">m_useDevelopmentFile</code> = true<br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N23BJetEfficiencyCorrector18m_coneFlavourLabelE">
+<span id="_CPPv3N23BJetEfficiencyCorrector18m_coneFlavourLabelE"></span><span id="_CPPv2N23BJetEfficiencyCorrector18m_coneFlavourLabelE"></span><span id="BJetEfficiencyCorrector::m_coneFlavourLabel__b"></span><span class="target" id="classBJetEfficiencyCorrector_1a54349f08eb8e794dd02110ada3eea108"></span>bool <code class="sig-name descname">m_coneFlavourLabel</code> = true<br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N23BJetEfficiencyCorrector21m_systematicsStrategyE">
+<span id="_CPPv3N23BJetEfficiencyCorrector21m_systematicsStrategyE"></span><span id="_CPPv2N23BJetEfficiencyCorrector21m_systematicsStrategyE"></span><span id="BJetEfficiencyCorrector::m_systematicsStrategy__ss"></span><span class="target" id="classBJetEfficiencyCorrector_1aa02ce63923a0056e6fb8fa71e61656fd"></span>std::string <code class="sig-name descname">m_systematicsStrategy</code> = &quot;SFEigen&quot;<br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N23BJetEfficiencyCorrector25m_errorOnTagWeightFailureE">
+<span id="_CPPv3N23BJetEfficiencyCorrector25m_errorOnTagWeightFailureE"></span><span id="_CPPv2N23BJetEfficiencyCorrector25m_errorOnTagWeightFailureE"></span><span id="BJetEfficiencyCorrector::m_errorOnTagWeightFailure__b"></span><span class="target" id="classBJetEfficiencyCorrector_1a643b469dde0afee2b87562d6ebec87a7"></span>bool <code class="sig-name descname">m_errorOnTagWeightFailure</code> = true<br /></dt>
+<dd><p>BTaggingSelectionTool throws an error on missing tagging weights. If false, a warning is given instead. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N23BJetEfficiencyCorrector13m_operatingPtE">
+<span id="_CPPv3N23BJetEfficiencyCorrector13m_operatingPtE"></span><span id="_CPPv2N23BJetEfficiencyCorrector13m_operatingPtE"></span><span id="BJetEfficiencyCorrector::m_operatingPt__ss"></span><span class="target" id="classBJetEfficiencyCorrector_1a577bff05a758e6ef355b046ccde3b9c9"></span>std::string <code class="sig-name descname">m_operatingPt</code> = &quot;FixedCutBEff_70&quot;<br /></dt>
+<dd><p>Operating point. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N23BJetEfficiencyCorrector16m_operatingPtCDIE">
+<span id="_CPPv3N23BJetEfficiencyCorrector16m_operatingPtCDIE"></span><span id="_CPPv2N23BJetEfficiencyCorrector16m_operatingPtCDIE"></span><span id="BJetEfficiencyCorrector::m_operatingPtCDI__ss"></span><span class="target" id="classBJetEfficiencyCorrector_1a1a8713a0ef5c95c4900311109ac0cc3a"></span>std::string <code class="sig-name descname">m_operatingPtCDI</code> = &quot;&quot;<br /></dt>
+<dd><p>Operating point that CDI will understand. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N23BJetEfficiencyCorrector17m_getScaleFactorsE">
+<span id="_CPPv3N23BJetEfficiencyCorrector17m_getScaleFactorsE"></span><span id="_CPPv2N23BJetEfficiencyCorrector17m_getScaleFactorsE"></span><span id="BJetEfficiencyCorrector::m_getScaleFactors__b"></span><span class="target" id="classBJetEfficiencyCorrector_1ad53c95415c8e0f684393857455356015"></span>bool <code class="sig-name descname">m_getScaleFactors</code> = false<br /></dt>
+<dd><p>will only get scale factors for calibrated working points </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N23BJetEfficiencyCorrector15m_useContinuousE">
+<span id="_CPPv3N23BJetEfficiencyCorrector15m_useContinuousE"></span><span id="_CPPv2N23BJetEfficiencyCorrector15m_useContinuousE"></span><span id="BJetEfficiencyCorrector::m_useContinuous__b"></span><span class="target" id="classBJetEfficiencyCorrector_1a7bd04969981a321081adb49c064bed5c"></span>bool <code class="sig-name descname">m_useContinuous</code> = false<br /></dt>
+<dd><p>will get tagWeight, quantile, SF and InefficiencySF </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N23BJetEfficiencyCorrector7m_decorE">
+<span id="_CPPv3N23BJetEfficiencyCorrector7m_decorE"></span><span id="_CPPv2N23BJetEfficiencyCorrector7m_decorE"></span><span id="BJetEfficiencyCorrector::m_decor__ss"></span><span class="target" id="classBJetEfficiencyCorrector_1afda9b0f228605c0dbc22196acb55f27d"></span>std::string <code class="sig-name descname">m_decor</code> = &quot;BTag&quot;<br /></dt>
+<dd><p>The decoration key written to passing objects. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N23BJetEfficiencyCorrector20m_orBJetPtUpperThresE">
+<span id="_CPPv3N23BJetEfficiencyCorrector20m_orBJetPtUpperThresE"></span><span id="_CPPv2N23BJetEfficiencyCorrector20m_orBJetPtUpperThresE"></span><span id="BJetEfficiencyCorrector::m_orBJetPtUpperThres__float"></span><span class="target" id="classBJetEfficiencyCorrector_1a9e93bf69de572283cd2e862be68e98cf"></span>float <code class="sig-name descname">m_orBJetPtUpperThres</code> = -1<br /></dt>
+<dd><p>upper pt threshold of b-jet in OR in unit of GeV, negative value means no pt threshold </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N23BJetEfficiencyCorrector23m_EfficiencyCalibrationE">
+<span id="_CPPv3N23BJetEfficiencyCorrector23m_EfficiencyCalibrationE"></span><span id="_CPPv2N23BJetEfficiencyCorrector23m_EfficiencyCalibrationE"></span><span id="BJetEfficiencyCorrector::m_EfficiencyCalibration__ss"></span><span class="target" id="classBJetEfficiencyCorrector_1a5f44c56f5b13974bb5ddf9588320d527"></span>std::string <code class="sig-name descname">m_EfficiencyCalibration</code> = &quot;&quot;<br /></dt>
+<dd><p>Calibration to use for MC (EfficiencyB/C/T/LightCalibrations), “auto” to determine from sample name. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="classClusterHistsAlgo.html" class="btn btn-neutral float-right" title="Class ClusterHistsAlgo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="classBasicEventSelection.html" class="btn btn-neutral float-left" title="Class BasicEventSelection" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2017, ATLAS Collaboration
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

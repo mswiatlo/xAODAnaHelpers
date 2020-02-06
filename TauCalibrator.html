@@ -1,0 +1,390 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>\(\tau\) &mdash; xAODAnaHelpers e83c6ca documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="\(\gamma\)" href="PhotonCalibrator.html" />
+    <link rel="prev" title="\(\mu\)" href="MuonCalibrator.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> xAODAnaHelpers
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                e83c6ca
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installing.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UsingUs.html">xAH_run.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Algorithms.html">Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Community.html">Community</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FAQs.html">xAH FAQ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="API.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Getters.html">Getting Objects</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="Calibrators.html">Calibrating Objects</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ElectronCalibrator.html"><span class="math notranslate nohighlight">\(e\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="JetCalibrator.html"><span class="math notranslate nohighlight">\(j\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="MuonCalibrator.html"><span class="math notranslate nohighlight">\(\mu\)</span></a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><span class="math notranslate nohighlight">\(\tau\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="PhotonCalibrator.html"><span class="math notranslate nohighlight">\(\gamma\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Correctors.html">Efficiency Correcting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Selectors.html">Selecting Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Histograms.html">Histograms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ToolsUsed.html">Tools Used</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Outputs.html">Producing Outputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Utilities.html">Utilities</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/library_root.html">Doxygen API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">xAODAnaHelpers</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="API.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="Calibrators.html">Calibrating Objects</a> &raquo;</li>
+        
+      <li><span class="math notranslate nohighlight">\(\tau\)</span></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/TauCalibrator.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tau">
+<h1><span class="math notranslate nohighlight">\(\tau\)</span><a class="headerlink" href="#tau" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="_CPPv413TauCalibrator">
+<span id="_CPPv313TauCalibrator"></span><span id="_CPPv213TauCalibrator"></span><span id="TauCalibrator"></span><span class="target" id="classTauCalibrator"></span><em class="property">class </em><code class="sig-name descname">TauCalibrator</code> : <em class="property">public</em> xAH::<a class="reference internal" href="api/classxAH_1_1Algorithm.html#_CPPv4N3xAH9AlgorithmE" title="xAH::Algorithm">Algorithm</a><a class="headerlink" href="#_CPPv413TauCalibrator" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N13TauCalibrator13TauCalibratorEv">
+<span id="_CPPv3N13TauCalibrator13TauCalibratorEv"></span><span id="_CPPv2N13TauCalibrator13TauCalibratorEv"></span><span id="TauCalibrator::TauCalibrator"></span><span class="target" id="classTauCalibrator_1a3b95af1bcb309693eae4114d282b59c7"></span><code class="sig-name descname">TauCalibrator</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13TauCalibrator13TauCalibratorEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N13TauCalibrator8setupJobERN2EL3JobE">
+<span id="_CPPv3N13TauCalibrator8setupJobERN2EL3JobE"></span><span id="_CPPv2N13TauCalibrator8setupJobERN2EL3JobE"></span><span id="TauCalibrator::setupJob__EL::JobR"></span><span class="target" id="classTauCalibrator_1aaf6ea69588a7514158cf6e583ee2951e"></span>EL::StatusCode <code class="sig-name descname">setupJob</code><span class="sig-paren">(</span>EL::Job &amp;<em>job</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13TauCalibrator8setupJobERN2EL3JobE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N13TauCalibrator11fileExecuteEv">
+<span id="_CPPv3N13TauCalibrator11fileExecuteEv"></span><span id="_CPPv2N13TauCalibrator11fileExecuteEv"></span><span id="TauCalibrator::fileExecute"></span><span class="target" id="classTauCalibrator_1a4a390a7cbae3beaa2e08e856bc4165cf"></span>EL::StatusCode <code class="sig-name descname">fileExecute</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13TauCalibrator11fileExecuteEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N13TauCalibrator14histInitializeEv">
+<span id="_CPPv3N13TauCalibrator14histInitializeEv"></span><span id="_CPPv2N13TauCalibrator14histInitializeEv"></span><span id="TauCalibrator::histInitialize"></span><span class="target" id="classTauCalibrator_1aeb295765fa1a23694edb22a14b0083d5"></span>EL::StatusCode <code class="sig-name descname">histInitialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13TauCalibrator14histInitializeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N13TauCalibrator11changeInputEb">
+<span id="_CPPv3N13TauCalibrator11changeInputEb"></span><span id="_CPPv2N13TauCalibrator11changeInputEb"></span><span id="TauCalibrator::changeInput__b"></span><span class="target" id="classTauCalibrator_1a40d45f22f69deaba838bd22d4891e4ca"></span>EL::StatusCode <code class="sig-name descname">changeInput</code><span class="sig-paren">(</span>bool <em>firstFile</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13TauCalibrator11changeInputEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N13TauCalibrator10initializeEv">
+<span id="_CPPv3N13TauCalibrator10initializeEv"></span><span id="_CPPv2N13TauCalibrator10initializeEv"></span><span id="TauCalibrator::initialize"></span><span class="target" id="classTauCalibrator_1af08ff7646a4ec4f79403ce2617360e25"></span>EL::StatusCode <code class="sig-name descname">initialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13TauCalibrator10initializeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N13TauCalibrator7executeEv">
+<span id="_CPPv3N13TauCalibrator7executeEv"></span><span id="_CPPv2N13TauCalibrator7executeEv"></span><span id="TauCalibrator::execute"></span><span class="target" id="classTauCalibrator_1a4eaf0a810a88c2fd35b1429d20141e6b"></span>EL::StatusCode <code class="sig-name descname">execute</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13TauCalibrator7executeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N13TauCalibrator11postExecuteEv">
+<span id="_CPPv3N13TauCalibrator11postExecuteEv"></span><span id="_CPPv2N13TauCalibrator11postExecuteEv"></span><span id="TauCalibrator::postExecute"></span><span class="target" id="classTauCalibrator_1af6ae5501b41bcd7efec8d7245a55632a"></span>EL::StatusCode <code class="sig-name descname">postExecute</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13TauCalibrator11postExecuteEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N13TauCalibrator8finalizeEv">
+<span id="_CPPv3N13TauCalibrator8finalizeEv"></span><span id="_CPPv2N13TauCalibrator8finalizeEv"></span><span id="TauCalibrator::finalize"></span><span class="target" id="classTauCalibrator_1a4b5e12145fdc00809e2d6b07817b25fe"></span>EL::StatusCode <code class="sig-name descname">finalize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13TauCalibrator8finalizeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N13TauCalibrator12histFinalizeEv">
+<span id="_CPPv3N13TauCalibrator12histFinalizeEv"></span><span id="_CPPv2N13TauCalibrator12histFinalizeEv"></span><span id="TauCalibrator::histFinalize"></span><span class="target" id="classTauCalibrator_1a4184ab555d339411dceba49875a3771d"></span>EL::StatusCode <code class="sig-name descname">histFinalize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13TauCalibrator12histFinalizeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv4N13TauCalibrator17m_inContainerNameE">
+<span id="_CPPv3N13TauCalibrator17m_inContainerNameE"></span><span id="_CPPv2N13TauCalibrator17m_inContainerNameE"></span><span id="TauCalibrator::m_inContainerName__ss"></span><span class="target" id="classTauCalibrator_1a820f537531726fe4c28d51cdc1ccf174"></span>std::string <code class="sig-name descname">m_inContainerName</code> = &quot;&quot;<a class="headerlink" href="#_CPPv4N13TauCalibrator17m_inContainerNameE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N13TauCalibrator18m_outContainerNameE">
+<span id="_CPPv3N13TauCalibrator18m_outContainerNameE"></span><span id="_CPPv2N13TauCalibrator18m_outContainerNameE"></span><span id="TauCalibrator::m_outContainerName__ss"></span><span class="target" id="classTauCalibrator_1a4b3da25b6317dac9948a4206a4c235df"></span>std::string <code class="sig-name descname">m_outContainerName</code> = &quot;&quot;<a class="headerlink" href="#_CPPv4N13TauCalibrator18m_outContainerNameE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N13TauCalibrator19m_RecommendationTagE">
+<span id="_CPPv3N13TauCalibrator19m_RecommendationTagE"></span><span id="_CPPv2N13TauCalibrator19m_RecommendationTagE"></span><span id="TauCalibrator::m_RecommendationTag__ss"></span><span class="target" id="classTauCalibrator_1a90f8a4581704d00ff1deb53ce32cea48"></span>std::string <code class="sig-name descname">m_RecommendationTag</code> = &quot;&quot;<a class="headerlink" href="#_CPPv4N13TauCalibrator19m_RecommendationTagE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N13TauCalibrator13m_applyMVATESE">
+<span id="_CPPv3N13TauCalibrator13m_applyMVATESE"></span><span id="_CPPv2N13TauCalibrator13m_applyMVATESE"></span><span id="TauCalibrator::m_applyMVATES__b"></span><span class="target" id="classTauCalibrator_1a64776046a0ffcf9adfc39a97db31fed5"></span>bool <code class="sig-name descname">m_applyMVATES</code> = false<a class="headerlink" href="#_CPPv4N13TauCalibrator13m_applyMVATESE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N13TauCalibrator18m_applyCombinedTESE">
+<span id="_CPPv3N13TauCalibrator18m_applyCombinedTESE"></span><span id="_CPPv2N13TauCalibrator18m_applyCombinedTESE"></span><span id="TauCalibrator::m_applyCombinedTES__b"></span><span class="target" id="classTauCalibrator_1accf816d84f6c7c680a1dbc9ef27ecf22"></span>bool <code class="sig-name descname">m_applyCombinedTES</code> = false<a class="headerlink" href="#_CPPv4N13TauCalibrator18m_applyCombinedTESE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N13TauCalibrator9m_setAFIIE">
+<span id="_CPPv3N13TauCalibrator9m_setAFIIE"></span><span id="_CPPv2N13TauCalibrator9m_setAFIIE"></span><span id="TauCalibrator::m_setAFII__b"></span><span class="target" id="classTauCalibrator_1ab7115b7c253cd1368d03725480883b44"></span>bool <code class="sig-name descname">m_setAFII</code> = false<a class="headerlink" href="#_CPPv4N13TauCalibrator9m_setAFIIE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N13TauCalibrator6m_sortE">
+<span id="_CPPv3N13TauCalibrator6m_sortE"></span><span id="_CPPv2N13TauCalibrator6m_sortE"></span><span id="TauCalibrator::m_sort__b"></span><span class="target" id="classTauCalibrator_1a7142913686e317918dbb8337dc15995c"></span>bool <code class="sig-name descname">m_sort</code> = true<a class="headerlink" href="#_CPPv4N13TauCalibrator6m_sortE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N13TauCalibrator20m_inputAlgoSystNamesE">
+<span id="_CPPv3N13TauCalibrator20m_inputAlgoSystNamesE"></span><span id="_CPPv2N13TauCalibrator20m_inputAlgoSystNamesE"></span><span id="TauCalibrator::m_inputAlgoSystNames__ss"></span><span class="target" id="classTauCalibrator_1a348db4a8122f0abdf07024e7bb61455e"></span>std::string <code class="sig-name descname">m_inputAlgoSystNames</code> = &quot;&quot;<a class="headerlink" href="#_CPPv4N13TauCalibrator20m_inputAlgoSystNamesE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>this is the name of the vector of names of the systematically varied containers produced by the upstream algo (e.g., the SC containers with calibration systematics) </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N13TauCalibrator21m_outputAlgoSystNamesE">
+<span id="_CPPv3N13TauCalibrator21m_outputAlgoSystNamesE"></span><span id="_CPPv2N13TauCalibrator21m_outputAlgoSystNamesE"></span><span id="TauCalibrator::m_outputAlgoSystNames__ss"></span><span class="target" id="classTauCalibrator_1a8232c2c17fa2ae20a1f8ca310ea254e3"></span>std::string <code class="sig-name descname">m_outputAlgoSystNames</code> = &quot;TauCalibrator_Syst&quot;<a class="headerlink" href="#_CPPv4N13TauCalibrator21m_outputAlgoSystNamesE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N13TauCalibrator21m_writeSystToMetadataE">
+<span id="_CPPv3N13TauCalibrator21m_writeSystToMetadataE"></span><span id="_CPPv2N13TauCalibrator21m_writeSystToMetadataE"></span><span id="TauCalibrator::m_writeSystToMetadata__b"></span><span class="target" id="classTauCalibrator_1a1e288a0913525aff84224233ffd81ff6"></span>bool <code class="sig-name descname">m_writeSystToMetadata</code> = false<a class="headerlink" href="#_CPPv4N13TauCalibrator21m_writeSystToMetadataE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Write systematics names to metadata. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Private Members</p>
+<dl class="member">
+<dt id="_CPPv4N13TauCalibrator10m_numEventE">
+<span id="_CPPv3N13TauCalibrator10m_numEventE"></span><span id="_CPPv2N13TauCalibrator10m_numEventE"></span><span id="TauCalibrator::m_numEvent__i"></span><span class="target" id="classTauCalibrator_1ac40b4fa5ca06fac6e07677432e41c2c2"></span>int <code class="sig-name descname">m_numEvent</code><a class="headerlink" href="#_CPPv4N13TauCalibrator10m_numEventE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N13TauCalibrator11m_numObjectE">
+<span id="_CPPv3N13TauCalibrator11m_numObjectE"></span><span id="_CPPv2N13TauCalibrator11m_numObjectE"></span><span id="TauCalibrator::m_numObject__i"></span><span class="target" id="classTauCalibrator_1a2967c632d1e2a17c673968b30be9a9dd"></span>int <code class="sig-name descname">m_numObject</code><a class="headerlink" href="#_CPPv4N13TauCalibrator11m_numObjectE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N13TauCalibrator21m_outAuxContainerNameE">
+<span id="_CPPv3N13TauCalibrator21m_outAuxContainerNameE"></span><span id="_CPPv2N13TauCalibrator21m_outAuxContainerNameE"></span><span id="TauCalibrator::m_outAuxContainerName__ss"></span><span class="target" id="classTauCalibrator_1a31cd3791cbac894289541c7f3c4a9584"></span>std::string <code class="sig-name descname">m_outAuxContainerName</code><a class="headerlink" href="#_CPPv4N13TauCalibrator21m_outAuxContainerNameE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N13TauCalibrator20m_outSCContainerNameE">
+<span id="_CPPv3N13TauCalibrator20m_outSCContainerNameE"></span><span id="_CPPv2N13TauCalibrator20m_outSCContainerNameE"></span><span id="TauCalibrator::m_outSCContainerName__ss"></span><span class="target" id="classTauCalibrator_1adf88d661a7c9acd657794e8e2ab29837"></span>std::string <code class="sig-name descname">m_outSCContainerName</code><a class="headerlink" href="#_CPPv4N13TauCalibrator20m_outSCContainerNameE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N13TauCalibrator23m_outSCAuxContainerNameE">
+<span id="_CPPv3N13TauCalibrator23m_outSCAuxContainerNameE"></span><span id="_CPPv2N13TauCalibrator23m_outSCAuxContainerNameE"></span><span id="TauCalibrator::m_outSCAuxContainerName__ss"></span><span class="target" id="classTauCalibrator_1a668dca2e70215d29867359ea1210f259"></span>std::string <code class="sig-name descname">m_outSCAuxContainerName</code><a class="headerlink" href="#_CPPv4N13TauCalibrator23m_outSCAuxContainerNameE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N13TauCalibrator10m_systListE">
+<span id="_CPPv3N13TauCalibrator10m_systListE"></span><span id="_CPPv2N13TauCalibrator10m_systListE"></span><span id="TauCalibrator::m_systList__std::vector:CP::SystematicSet:"></span><span class="target" id="classTauCalibrator_1ac007cd9901df03c08b37b83008b40b80"></span>std::vector&lt;CP::SystematicSet&gt; <code class="sig-name descname">m_systList</code><a class="headerlink" href="#_CPPv4N13TauCalibrator10m_systListE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N13TauCalibrator24m_tauSmearingTool_handleE">
+<span id="_CPPv3N13TauCalibrator24m_tauSmearingTool_handleE"></span><span id="_CPPv2N13TauCalibrator24m_tauSmearingTool_handleE"></span><span id="TauCalibrator::m_tauSmearingTool_handle__asg::AnaToolHandle:TauAnalysisTools::ITauSmearingTool:"></span><span class="target" id="classTauCalibrator_1a5843b065407223584297c7cf484c5b38"></span>asg::AnaToolHandle&lt;TauAnalysisTools::ITauSmearingTool&gt; <code class="sig-name descname">m_tauSmearingTool_handle</code> = {&quot;TauAnalysisTools::TauSmearingTool/TauSmearingTool&quot;, }<a class="headerlink" href="#_CPPv4N13TauCalibrator24m_tauSmearingTool_handleE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="PhotonCalibrator.html" class="btn btn-neutral float-right" title="\(\gamma\)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="MuonCalibrator.html" class="btn btn-neutral float-left" title="\(\mu\)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2017, ATLAS Collaboration
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

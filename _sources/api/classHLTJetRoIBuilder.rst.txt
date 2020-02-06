@@ -1,0 +1,25 @@
+.. _exhale_class_classHLTJetRoIBuilder:
+
+Class HLTJetRoIBuilder
+======================
+
+- Defined in :ref:`file_xAODAnaHelpers_HLTJetRoIBuilder.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public xAH::Algorithm`` (:ref:`exhale_class_classxAH_1_1Algorithm`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: HLTJetRoIBuilder
+   :members:
+   :protected-members:
+   :undoc-members:
