@@ -275,6 +275,13 @@ EL::StatusCode JetCalibrator :: initialize ()
     ANA_CHECK(m_JetTruthLabelingTool_handle.setProperty("TruthParticleContainerName" , m_truthParticleContainerName));
     ANA_CHECK(m_JetTruthLabelingTool_handle.setProperty("TruthBosonContainerName" , m_truthBosonContainerName));
     ANA_CHECK(m_JetTruthLabelingTool_handle.setProperty("TruthTopQuarkContainerName" , m_truthTopQuarkContainerName));
+    /*ANA_CHECK(m_jetTruthLabelingTool_handle.setProperty("CalibArea" , "SmoothedWZTaggers/Rel21"));
+    ANA_CHECK(m_jetTruthLabelingTool_handle.setProperty("ConfigFile", "SmoothedContainedWTagger_AntiKt10LCTopoTrimmed_FixedSignalEfficiency50_MC16d_20190410.dat"));
+    ANA_CHECK(m_jetTruthLabelingTool_handle.setProperty("DSID", ei->mcChannelNumber()));
+    ANA_CHECK(m_jetTruthLabelingTool_handle.setProperty( "TruthWBosonContainerName", "TruthBoson"));
+    ANA_CHECK(m_jetTruthLabelingTool_handle.setProperty( "TruthZBosonContainerName", "TruthBoson"));
+    ANA_CHECK(m_jetTruthLabelingTool_handle.setProperty( "TruthHBosonContainerName", "TruthBoson"));
+    ANA_CHECK(m_jetTruthLabelingTool_handle.setProperty( "TruthTopQuarkContainerName", "TruthTop"));*/
     ANA_CHECK(m_JetTruthLabelingTool_handle.setProperty("OutputLevel" , msg().level()));
     ANA_CHECK(m_JetTruthLabelingTool_handle.retrieve());
   }// if MC && largeR
@@ -453,7 +460,6 @@ EL::StatusCode JetCalibrator :: execute ()
 
       if(m_useLargeRTruthLabelingTool){
         static SG::AuxElement::ConstAccessor<int> JetTruthLabel (m_truthLabelName);
-
         // largeR jet truth labelling
         if(m_JetTruthLabelingTool_handle.isInitialized() && !JetTruthLabel.isAvailable(*jet_itr)) {
           m_JetTruthLabelingTool_handle->modifyJet(*jet_itr);
@@ -484,7 +490,6 @@ EL::StatusCode JetCalibrator :: execute ()
   for ( const auto& syst_it : m_systList ) {
 
     executeSystematic(syst_it, inJets, calibJetsSC, *vecOutContainerNames, false);
-
     if(m_mcAndPseudoData && std::string(syst_it.name()).find("JER") != std::string::npos) {
       // This is a JER uncertainty that also needs a pseudodata copy done.
       executeSystematic(syst_it, inJets, calibJetsSC, *vecOutContainerNames, true);
