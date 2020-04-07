@@ -265,7 +265,6 @@ EL::StatusCode JetCalibrator :: initialize ()
   }// if m_doCleaning
 
   // initialize largeR jet truth labelling tool
-<<<<<<< HEAD
   if(isMC() && m_useLargeRTruthLabelingTool && m_inContainerName.find("AntiKt10") != std::string::npos){
     // Truth labelling is required for systematics on largeR jets.
     // TruthLabelName typically should not be changed until new recommendations are available
@@ -279,10 +278,7 @@ EL::StatusCode JetCalibrator :: initialize ()
     /*ANA_CHECK(m_jetTruthLabelingTool_handle.setProperty("CalibArea" , "SmoothedWZTaggers/Rel21"));
     ANA_CHECK(m_jetTruthLabelingTool_handle.setProperty("ConfigFile", "SmoothedContainedWTagger_AntiKt10LCTopoTrimmed_FixedSignalEfficiency50_MC16d_20190410.dat"));
     ANA_CHECK(m_jetTruthLabelingTool_handle.setProperty("DSID", ei->mcChannelNumber()));
-    ANA_CHECK(m_jetTruthLabelingTool_handle.setProperty( "TruthWBosonContainerName", "TruthBoson"));
-    ANA_CHECK(m_jetTruthLabelingTool_handle.setProperty( "TruthZBosonContainerName", "TruthBoson"));
-    ANA_CHECK(m_jetTruthLabelingTool_handle.setProperty( "TruthHBosonContainerName", "TruthBoson"));
-    ANA_CHECK(m_jetTruthLabelingTool_handle.setProperty( "TruthTopQuarkContainerName", "TruthTop"));*/
+    */
     std::string truthBosonContainer = "TruthParticles"; // is this necessary anymore?
     if(evtStore()->contains<xAOD::TruthParticleContainer>( "TruthBoson" )){
       truthBosonContainer = "TruthBoson";
@@ -295,6 +291,10 @@ EL::StatusCode JetCalibrator :: initialize ()
     } else if(evtStore()->contains<xAOD::TruthParticleContainer>( "TruthTopQuarkWithDecayParticles" )){
       truthTopContainer = "TruthTopQuarkWithDecayParticles";
     }
+    ANA_CHECK(m_SmoothedWZTagger_handle.setProperty( "TruthWBosonContainerName", truthBosonContainer));
+    ANA_CHECK(m_SmoothedWZTagger_handle.setProperty( "TruthZBosonContainerName", truthBosonContainer));
+    ANA_CHECK(m_SmoothedWZTagger_handle.setProperty( "TruthHBosonContainerName", truthBosonContainer));
+    ANA_CHECK(m_SmoothedWZTagger_handle.setProperty( "TruthTopQuarkContainerName", truthTopContainer));
     ANA_CHECK(m_JetTruthLabelingTool_handle.setProperty("OutputLevel" , msg().level()));
     ANA_CHECK(m_JetTruthLabelingTool_handle.retrieve());
   }// if MC && largeR
