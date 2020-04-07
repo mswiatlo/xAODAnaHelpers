@@ -265,6 +265,7 @@ EL::StatusCode JetCalibrator :: initialize ()
   }// if m_doCleaning
 
   // initialize largeR jet truth labelling tool
+<<<<<<< HEAD
   if(isMC() && m_useLargeRTruthLabelingTool && m_inContainerName.find("AntiKt10") != std::string::npos){
     // Truth labelling is required for systematics on largeR jets.
     // TruthLabelName typically should not be changed until new recommendations are available
@@ -282,6 +283,18 @@ EL::StatusCode JetCalibrator :: initialize ()
     ANA_CHECK(m_jetTruthLabelingTool_handle.setProperty( "TruthZBosonContainerName", "TruthBoson"));
     ANA_CHECK(m_jetTruthLabelingTool_handle.setProperty( "TruthHBosonContainerName", "TruthBoson"));
     ANA_CHECK(m_jetTruthLabelingTool_handle.setProperty( "TruthTopQuarkContainerName", "TruthTop"));*/
+    std::string truthBosonContainer = "TruthParticles"; // is this necessary anymore?
+    if(evtStore()->contains<xAOD::TruthParticleContainer>( "TruthBoson" )){
+      truthBosonContainer = "TruthBoson";
+    } else if(evtStore()->contains<xAOD::TruthParticleContainer>( "TruthBosonsWithDecayParticles" )){
+      truthBosonContainer = "TruthBosonsWithDecayParticles";
+    }
+    std::string truthTopContainer = "TruthParticles";
+    if(evtStore()->contains<xAOD::TruthParticleContainer>( "TruthTop" )){
+      truthTopContainer = "TruthTop";
+    } else if(evtStore()->contains<xAOD::TruthParticleContainer>( "TruthTopQuarkWithDecayParticles" )){
+      truthTopContainer = "TruthTopQuarkWithDecayParticles";
+    }
     ANA_CHECK(m_JetTruthLabelingTool_handle.setProperty("OutputLevel" , msg().level()));
     ANA_CHECK(m_JetTruthLabelingTool_handle.retrieve());
   }// if MC && largeR
