@@ -387,7 +387,7 @@ EL::StatusCode BJetEfficiencyCorrector :: executeEfficiencyCorrection(const xAOD
 	  else
 	    dec_isBTagOR( *jet_itr ) = 0;
 	}
-      else
+      if(m_useContinuous || m_alwaysGetTagWeight)
 	{ // continuous b-tagging
 
 	  ANA_MSG_DEBUG(" Getting TaggerWeight and Quantile");
