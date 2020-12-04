@@ -291,9 +291,10 @@ EL::StatusCode JetCalibrator :: initialize ()
     } else if(evtStore()->contains<xAOD::TruthParticleContainer>( "TruthTopQuarkWithDecayParticles" )){
       truthTopContainer = "TruthTopQuarkWithDecayParticles";
     }
-    ANA_CHECK(m_JetTruthLabelingTool_handle.setProperty( "TruthWBosonContainerName", truthBosonContainer));
-    ANA_CHECK(m_JetTruthLabelingTool_handle.setProperty( "TruthZBosonContainerName", truthBosonContainer));
-    ANA_CHECK(m_JetTruthLabelingTool_handle.setProperty( "TruthHBosonContainerName", truthBosonContainer));
+    //ANA_CHECK(m_JetTruthLabelingTool_handle.setProperty( "TruthWBosonContainerName", truthBosonContainer));
+    //ANA_CHECK(m_JetTruthLabelingTool_handle.setProperty( "TruthZBosonContainerName", truthBosonContainer));
+    //ANA_CHECK(m_JetTruthLabelingTool_handle.setProperty( "TruthHBosonContainerName", truthBosonContainer));
+    ANA_CHECK(m_JetTruthLabelingTool_handle.setProperty( "TruthBosonContainerName" , truthBosonContainer));
     ANA_CHECK(m_JetTruthLabelingTool_handle.setProperty( "TruthTopQuarkContainerName", truthTopContainer));
     ANA_CHECK(m_JetTruthLabelingTool_handle.setProperty("OutputLevel" , msg().level()));
     ANA_CHECK(m_JetTruthLabelingTool_handle.retrieve());
