@@ -475,7 +475,7 @@ EL::StatusCode JetCalibrator :: execute ()
       if(m_useLargeRTruthLabelingTool){
         static SG::AuxElement::ConstAccessor<int> JetTruthLabel (m_truthLabelName);
         // largeR jet truth labelling
-        if(m_JetTruthLabelingTool_handle.isInitialized() && !JetTruthLabel.isAvailable(*jet_itr)) {
+        if(m_JetTruthLabelingTool_handle.isInitialized() /* && !JetTruthLabel.isAvailable(*jet_itr) */) {
           m_JetTruthLabelingTool_handle->modifyJet(*jet_itr);
         }
       }
